@@ -31,7 +31,7 @@ website:
 
 format:
   html:
-    theme: lumen
+    theme: sandstone
     toc: false
 
 execute:

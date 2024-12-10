@@ -44,4 +44,4 @@ McMaster University<br/>
 </style>
 ```
 
-[<button type="button" id="current">2025 Winder</button>](./2025-Winter/index.html)
+[<button type="button" id="current">2025 Winter</button>](./2025-Winter/index.html)
