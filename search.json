@@ -140,7 +140,7 @@
     "href": "index.html",
     "title": "ENVSOCTY 4GA3 Lab Website",
     "section": "",
-    "text": "This course is an upgrade to your basic statistics training."
+    "text": "This course provides an introduction to spatial analysis in R and theories of spatial statistics. It covers map making and the analysis of points, areas, and spatial continuous data using R."
   },
   {
     "objectID": "index.html#select-academic-yearterm",
