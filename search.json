@@ -112,6 +112,13 @@
     "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
   },
   {
+    "objectID": "2025-Winter/slides/1-intro/index.html#install-latex",
+    "href": "2025-Winter/slides/1-intro/index.html#install-latex",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Install \\(\\LaTeX\\)",
+    "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through Miktex or Texlive, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code to install it:\n\ntinytex::install_tinytex()"
+  },
+  {
     "objectID": "2025-Winter/slides/1-intro/index.html#lab-slides",
     "href": "2025-Winter/slides/1-intro/index.html#lab-slides",
     "title": "ENVSOCTY 4GA3",
