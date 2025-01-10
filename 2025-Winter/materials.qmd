@@ -5,8 +5,7 @@ title: "Materials"
 ```{=html}
 <table><thead>
   <tr>
-    <th>Assignment</th>
-    <th>Week</th>
+    <th>Lab</th>
     <th>Section</th>
     <th>Slides</th>
     <th>PDF&nbsp;</th>
@@ -14,10 +13,9 @@ title: "Materials"
 <tbody>
   <tr>
     <td>1</td>
-    <td>1</td>
-    <td>Introduction</td>
+    <td>Introduction and setting up R</td>
     <td><a href="./slides/1-intro/index.html">HTML</a></td>
-    <td><a href="./slides/1-intro/Zehui Yin Introduction.pdf">PDF</a></td>
+    <td><a href="./slides/1-intro/Introduction and setting up R.pdf">PDF</a></td>
   </tr>
 </tbody></table>
 ```

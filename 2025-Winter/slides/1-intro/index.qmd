@@ -1,7 +1,7 @@
 ---
 format: 
   revealjs:
-    pagetitle: "Zehui Yin Introduction"
+    pagetitle: "Introduction and setting up R"
     menu: false
     footer: "2025 Zehui Yin"
 ---
@@ -24,9 +24,212 @@ format:
 - **Personal Website:** [zehuiyin.github.io](https://zehuiyin.github.io/)
 - **Research Interests:** Spatial Analysis, Transportation, Travel Behaviour, Public Transit, Shared Mobility
 
-## Lab agenda
+## Agenda for today
 
-- text goes here
+- Introduction to basic concepts for coding in R
+- Getting a flavor of R syntax and style
+- Setting up R and reproducible environment on your personal computer
+
+## R and RStudio
+
+![](./images/R_logo.svg){height=150px}&emsp;&emsp;&emsp;
+![](./images/rstudio_logo.png){height=150px}
+
+- R is a free and open-source programming language for statistical computing and graphics.
+- RStudio is an integrated development environment (IDE) for coding in R.
+  - An IDE is a set of tools that helps you code.
+- We use RStudio to write our R codes.
+
+## R packages
+
+- R packages are the fundamental units of reproducible R code.
+- They can include functions, data, or both, along with documentation.
+- Think of them as plug-ins that enhance the functionality of existing software.
+- For example, web browser extensions like ad blockers add additional features that the original browser doesn't have.
+
+## Reproducible environment
+
+- An environment is the system where a program is run, including hardware and software such as operating system dependencies, programming language, packages, their configuration, and versions.
+- Just as running 1000 meters affects individuals differently, running code on different computers or with different package versions can produce varied results.
+- A reproducible environment ensures that everyone gets the same result by keeping the environment consistent.
+
+## `renv` package
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](./images/renv.png)
+:::
+
+::: {.column width="60%"}
+- `renv` is an R package that helps create reproducible environments for R projects.
+- It records the R version and all R packages along with their versions in a lockfile.
+  - A lockfile is a text file that stores all the environment information.
+:::
+
+::::
+
+## Code hosting and Github
+
+:::: {.columns}
+
+::: {.column width="15%"}
+![](./images/GitHub_Invertocat_Logo.svg){height=150px}
+:::
+
+::: {.column width="85%"}
+- Code hosting involves storing code online to facilitate sharing, management, and collaboration with others.
+- One of the most popular code hosting platforms is GitHub (owned by Microsoft).
+- Both the textbook and the companion R package used in this course are hosted on GitHub.
+- GitHub is like a cloud drive (similar to OneDrive or Dropbox) but specialized for storing code, including R scripts.
+:::
+
+::::
+
+## R basics: arthmatic operations
+
+R can be used as a calculator, using intuitive symbols for these operations:
+
+```{r, echo=TRUE}
+1 + 5
+8 - 3
+3 * 4
+9 / 3
+```
+
+## R basics: assigning values
+
+One of the cornerstones of programming languages is assignment. You can assign a value/object to a name using `<-` (suggested R style) or `=` ("Python" style).
+
+```{r, echo=TRUE}
+a <- 1
+b <- 3
+a + b
+```
+
+```{r, echo=TRUE}
+c = 7
+d = 5
+c * d
+```
+
+## R basics: built-in functions
+
+R comes with many built-in functions. The calling syntax is `function(parameter1, parameter2, ...)`. Additionally, with extra R packages, there are even more functions you can use.
+
+```{r, echo=TRUE}
+values <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+sum(values)
+```
+
+```{r, echo=TRUE}
+mean(values)
+```
+
+```{r, echo=TRUE}
+library(MASS)
+# integrate the sin function from 0 to pi.
+area(sin, 0, pi)
+```
+
+## R basics: flow control
+
+Flow control is an important component of any programming language. In R, the `if-else` statement and loops work as follows:
+
+```{r, echo=TRUE}
+x <- 6
+if (x > 5) { 
+  print("Greater than 5") 
+} else {
+  print("Less or equal to 5")
+}
+```
+
+```{r, echo=TRUE}
+for (i in 1:3) {
+  print(i)
+}
+```
+
+## R basics: custom functions
+
+To define your own function in R, you can use the following syntax. Note that the last line of code is automatically returned by R, though a "Python" style return statement is also valid in R.
+
+```{r, echo=TRUE}
+add <- function(a, b) { 
+  a + b
+}
+
+add(1, 4)
+```
+
+```{r, echo=TRUE}
+add <- function(a, b) { 
+  return(a + b)
+}
+
+add(1, 4)
+```
+
+## Download R version 4.4.2
+
+- <https://mirror.csclub.uwaterloo.ca/CRAN/>
+![](./images/download_r.png){height=500px}
+
+## Download RStudio
+
+- <https://posit.co/download/rstudio-desktop/>
+![](./images/download_rstudio.png){height=500px}
+
+## Restoring the environment
+
+Download the `Applied-Spatial-Statistics` zip file from Avenue and unzip it. You should then have a folder with the following structure:
+
+<!---
+Generated using https://tree.nathanfriend.io
+
+Text used:
+
+- Applied-Spatial-Statistics
+  - renv/
+  - .gitignore
+  - .Rprofile
+  - Applied-Spatial-Statistics.Rproj
+  - README.md
+  - README.Rmd
+  - renv.lock
+  
+--->
+
+```
+Applied-Spatial-Statistics/
+├── renv/
+├── .gitignore
+├── .Rprofile
+├── Applied-Spatial-Statistics.Rproj
+├── README.md
+├── README.Rmd
+└── renv.lock
+```
+
+- Double-click the `Applied-Spatial-Statistics.Rproj` file to open the R project.
+
+## Restoring the environment
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](./images/restore.png){width=300px}
+![](./images/restore1.png){width=300px}
+:::
+
+::: {.column width="40%"}
+- Navigate to the bottom right panel.
+- Click the Packages tab, then the renv button, and finally select the Restore Library option.
+- Click the Restore button in the pop-up panel.
+:::
+
+::::
 
 ## Lab slides
 
@@ -51,3 +254,9 @@ format:
 :::
 
 ::::
+
+## References
+
+- <https://r-pkgs.org/>
+- <https://book.the-turing-way.org/reproducible-research/renv.html>
+- <https://rstudio.github.io/renv/articles/renv.html>

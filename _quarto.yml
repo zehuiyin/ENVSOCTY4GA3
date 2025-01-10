@@ -28,6 +28,8 @@ website:
         text: Textbook
       - href: https://paezha.github.io/isdas/
         text: Companion Package
+      - href: https://github.com/paezha/Applied-Spatial-Statistics
+        text: Reproducible Environment
 
 format:
   html:
