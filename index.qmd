@@ -9,12 +9,16 @@ format: html
   #quarto-sidebar {
     display: none !important;
   }
+  
+  .quarto-secondary-nav {
+    display: none !important;
+  }
 </style>
 ```
 
 # Course Content
 
-This course is an upgrade to your basic statistics training.
+This course provides an introduction to spatial analysis in R and theories of spatial statistics. It covers map making and the analysis of points, areas, and spatial continuous data using R.
 
 # Teaching Assistant
 
