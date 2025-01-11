@@ -53,7 +53,14 @@
     "href": "2025-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
     "title": "ENVSOCTY 4GA3",
     "section": "R Markdown vs. R",
-    "text": "R Markdown vs. R\n\n\n \n\n\nR Markdown is a file format that combines R code, its results, and accompanying text.\nIt uses the file extension .Rmd.\nR code chunks are created using ```{r} … ```.\nYou can start by creating an Rmd file on the lab computer."
+    "text": "R Markdown vs. R\n\n\n\n\n\nR Markdown is a file format that combines R code, its results, and accompanying text.\nIt uses the file extension .Rmd and essentially is a plain text file integrating markdown and R.\nYou can start by creating an Rmd file on the lab computer."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "href": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown syntax",
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"title\"\nauthor: \"Zehui Yin\"\ndate: \"`r Sys.Date()`\"\noutput: html_document\n---\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**\n*italic*\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
@@ -75,6 +82,13 @@
     "title": "ENVSOCTY 4GA3",
     "section": "R basics: built-in functions",
     "text": "R basics: built-in functions\nR comes with many built-in functions. The calling syntax is function(parameter1, parameter2, ...). Additionally, with extra R packages, there are even more functions you can use.\n\nvalues &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nsum(values)\n\n[1] 55\n\n\n\nmean(values)\n\n[1] 5.5\n\n\n\nlibrary(MASS)\n# integrate the sin function from 0 to pi.\narea(sin, 0, pi)\n\n[1] 2"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\nIndexing is the process of selecting specific values from an object based on their index location. Whenever you see [] or $ in R, some form of indexing is happening.\n\nv &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nv[2]\n\n[1] 2\n\n\n\nv[2:4]\n\n[1] 2 3 4\n\n\n\ndf &lt;- data.frame(col1 = c(1, 2, 3),\n                 col2 = c(4, 5, 6))\ndf[1, 2]\n\n[1] 4\n\n\n\ndf$col1\n\n[1] 1 2 3"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-flow-control",

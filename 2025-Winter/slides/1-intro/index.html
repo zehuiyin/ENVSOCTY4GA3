@@ -280,16 +280,54 @@
 <section id="r-markdown-vs.-r" class="slide level2">
 <h2>R Markdown vs.&nbsp;R</h2>
 <div class="columns">
-<div class="column" style="width:50%;">
-<p><img data-src="./images/rmarkdown.png" height="250"> <img data-src="./images/create_r_markdown.png" height="450"></p>
-</div><div class="column" style="width:50%;">
+<div class="column" style="width:40%;">
+<p><img data-src="./images/create_r_markdown.png" height="500"></p>
+</div><div class="column" style="width:60%;">
 <ul>
 <li>R Markdown is a file format that combines R code, its results, and accompanying text.</li>
-<li>It uses the file extension <code>.Rmd</code>.</li>
-<li>R code chunks are created using ```{r} … ```.</li>
+<li>It uses the file extension <code>.Rmd</code> and essentially is a plain text file integrating markdown and R.</li>
 <li>You can start by creating an <code>Rmd</code> file on the lab computer.</li>
 </ul>
 </div></div>
+</section>
+<section id="r-markdown-syntax" class="slide level2">
+<h2>R Markdown syntax</h2>
+<style>
+div[data-code-copy="false"] button.code-copy-button {
+  display: none;
+}
+</style>
+<div data-code-copy="false">
+<div class="sourceCode" id="annotated-cell-20"><pre class="sourceCode numberSource default code-annotation-code number-lines code-with-copy code-annotated"><code class="sourceCode default"><a class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="1" onclick="event.preventDefault();">1</a><span id="annotated-cell-20-1" class="code-annotation-target"><a href="#annotated-cell-20-1"></a>---</span>
+<span id="annotated-cell-20-2"><a href="#annotated-cell-20-2"></a>title: "title"</span>
+<span id="annotated-cell-20-3"><a href="#annotated-cell-20-3"></a>author: "Zehui Yin"</span>
+<span id="annotated-cell-20-4"><a href="#annotated-cell-20-4"></a>date: "`r Sys.Date()`"</span>
+<span id="annotated-cell-20-5"><a href="#annotated-cell-20-5"></a>output: html_document</span>
+<span id="annotated-cell-20-6"><a href="#annotated-cell-20-6"></a>---</span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="2" onclick="event.preventDefault();">2</a><span id="annotated-cell-20-7" class="code-annotation-target"><a href="#annotated-cell-20-7"></a># Heading level 1</span>
+<span id="annotated-cell-20-8"><a href="#annotated-cell-20-8"></a>## Heading level 2</span>
+<span id="annotated-cell-20-9"><a href="#annotated-cell-20-9"></a>text...text...text</span>
+<span id="annotated-cell-20-10"><a href="#annotated-cell-20-10"></a>**bold**</span>
+<span id="annotated-cell-20-11"><a href="#annotated-cell-20-11"></a>*italic*</span>
+<span id="annotated-cell-20-12"><a href="#annotated-cell-20-12"></a></span>
+<a class="code-annotation-anchor" data-target-cell="annotated-cell-20" data-target-annotation="3" onclick="event.preventDefault();">3</a><span id="annotated-cell-20-13" class="code-annotation-target"><a href="#annotated-cell-20-13"></a>```{r}</span>
+<span id="annotated-cell-20-14"><a href="#annotated-cell-20-14"></a>print("Hello world!)</span>
+<span id="annotated-cell-20-15"><a href="#annotated-cell-20-15"></a>```</span><div class="code-annotation-gutter-bg"></div><div class="code-annotation-gutter"></div></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<dl class="code-annotation-container-grid">
+<dt data-target-cell="annotated-cell-20" data-target-annotation="1">1</dt>
+<dd>
+<span data-code-cell="annotated-cell-20" data-code-lines="1" data-code-annotation="1"><strong>YAML header</strong>: stores settings or meta information</span>
+</dd>
+<dt data-target-cell="annotated-cell-20" data-target-annotation="2">2</dt>
+<dd>
+<span data-code-cell="annotated-cell-20" data-code-lines="7" data-code-annotation="2"><strong>Markdown text</strong>: contains plain text in markdown format.</span>
+</dd>
+<dt data-target-cell="annotated-cell-20" data-target-annotation="3">3</dt>
+<dd>
+<span data-code-cell="annotated-cell-20" data-code-lines="13" data-code-annotation="3"><strong>R code chunk</strong>: contains R code to be executed</span>
+</dd>
+</dl>
+</div>
 </section>
 <section id="r-basics-arthmatic-operations" class="slide level2">
 <h2>R basics: arthmatic operations</h2>
@@ -359,24 +397,55 @@
 </div>
 </div>
 </section>
+<section id="r-basics-indexing" class="slide level2">
+<h2>R basics: indexing</h2>
+<p>Indexing is the process of selecting specific values from an object based on their index location. Whenever you see <code>[]</code> or <code>$</code> in R, some form of indexing is happening.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>, <span class="dv">10</span>)</span>
+<span id="cb19-2"><a></a>v[<span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a>v[<span class="dv">2</span><span class="sc">:</span><span class="dv">4</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 2 3 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>df <span class="ot">&lt;-</span> <span class="fu">data.frame</span>(<span class="at">col1 =</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>),</span>
+<span id="cb23-2"><a></a>                 <span class="at">col2 =</span> <span class="fu">c</span>(<span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>))</span>
+<span id="cb23-3"><a></a>df[<span class="dv">1</span>, <span class="dv">2</span>]</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 4</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>df<span class="sc">$</span>col1</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 1 2 3</code></pre>
+</div>
+</div>
+</section>
 <section id="r-basics-flow-control" class="slide level2">
 <h2>R basics: flow control</h2>
 <p>Flow control is an important component of any programming language. In R, the <code>if-else</code> statement and loops work as follows:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb19-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">6</span></span>
-<span id="cb19-2"><a></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">5</span>) { </span>
-<span id="cb19-3"><a></a>  <span class="fu">print</span>(<span class="st">"Greater than 5"</span>) </span>
-<span id="cb19-4"><a></a>} <span class="cf">else</span> {</span>
-<span id="cb19-5"><a></a>  <span class="fu">print</span>(<span class="st">"Less or equal to 5"</span>)</span>
-<span id="cb19-6"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb27-1"><a></a>x <span class="ot">&lt;-</span> <span class="dv">6</span></span>
+<span id="cb27-2"><a></a><span class="cf">if</span> (x <span class="sc">&gt;</span> <span class="dv">5</span>) { </span>
+<span id="cb27-3"><a></a>  <span class="fu">print</span>(<span class="st">"Greater than 5"</span>) </span>
+<span id="cb27-4"><a></a>} <span class="cf">else</span> {</span>
+<span id="cb27-5"><a></a>  <span class="fu">print</span>(<span class="st">"Less or equal to 5"</span>)</span>
+<span id="cb27-6"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] "Greater than 5"</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb21-1"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
-<span id="cb21-2"><a></a>  <span class="fu">print</span>(i)</span>
-<span id="cb21-3"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb29-1"><a></a><span class="cf">for</span> (i <span class="cf">in</span> <span class="dv">1</span><span class="sc">:</span><span class="dv">3</span>) {</span>
+<span id="cb29-2"><a></a>  <span class="fu">print</span>(i)</span>
+<span id="cb29-3"><a></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1
 [1] 2
@@ -388,21 +457,21 @@
 <h2>R basics: custom functions</h2>
 <p>To define your own function in R, you can use the following syntax. Note that the last line of code is automatically returned by R, though a “Python” style return statement is also valid in R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb23-1"><a></a>add <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) { </span>
-<span id="cb23-2"><a></a>  a <span class="sc">+</span> b</span>
-<span id="cb23-3"><a></a>}</span>
-<span id="cb23-4"><a></a></span>
-<span id="cb23-5"><a></a><span class="fu">add</span>(<span class="dv">1</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb31"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb31-1"><a></a>add <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) { </span>
+<span id="cb31-2"><a></a>  a <span class="sc">+</span> b</span>
+<span id="cb31-3"><a></a>}</span>
+<span id="cb31-4"><a></a></span>
+<span id="cb31-5"><a></a><span class="fu">add</span>(<span class="dv">1</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
 </div>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb25-1"><a></a>add <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) { </span>
-<span id="cb25-2"><a></a>  <span class="fu">return</span>(a <span class="sc">+</span> b)</span>
-<span id="cb25-3"><a></a>}</span>
-<span id="cb25-4"><a></a></span>
-<span id="cb25-5"><a></a><span class="fu">add</span>(<span class="dv">1</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb33"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb33-1"><a></a>add <span class="ot">&lt;-</span> <span class="cf">function</span>(a, b) { </span>
+<span id="cb33-2"><a></a>  <span class="fu">return</span>(a <span class="sc">+</span> b)</span>
+<span id="cb33-3"><a></a>}</span>
+<span id="cb33-4"><a></a></span>
+<span id="cb33-5"><a></a><span class="fu">add</span>(<span class="dv">1</span>, <span class="dv">4</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 5</code></pre>
 </div>
@@ -469,7 +538,7 @@ Text used:
 <p>If you already use <span class="math inline">\(\LaTeX\)</span> and have it installed through <code>MiKTeX</code> or <code>TeX Live</code>, you can skip this step.</p>
 <p>If you are unfamiliar with <span class="math inline">\(\LaTeX\)</span> and don’t have it installed yet, simply run the following R code to install it:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb28"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb28-1"><a></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb36"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb36-1"><a></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="lab-slides" class="slide level2">
