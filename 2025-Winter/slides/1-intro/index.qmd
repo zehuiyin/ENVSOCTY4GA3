@@ -327,8 +327,8 @@ Applied-Spatial-Statistics/
 
 ::: {.column width="40%"}
 - Navigate to the bottom right panel.
-- Click the Packages tab, then the renv button, and finally select the Restore Library option.
-- Click the Restore button in the pop-up panel.
+- Click the Packages tab, then the renv button, and finally select the `Restore Library` option.
+- Click the `Restore` button in the pop-up panel.
 :::
 
 ::::
