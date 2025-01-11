@@ -90,19 +90,53 @@ format:
 
 :::: {.columns}
 
-::: {.column width="50%"}
-![](./images/rmarkdown.png){height=250px}
-![](./images/create_r_markdown.png){height=450px}
+::: {.column width="40%"}
+![](./images/create_r_markdown.png){height=500px}
 :::
 
-::: {.column width="50%"}
+::: {.column width="60%"}
 - R Markdown is a file format that combines R code, its results, and accompanying text.
-- It uses the file extension `.Rmd`.
-- R code chunks are created using \`\`\`\{r\} ... \`\`\`.
+- It uses the file extension `.Rmd` and essentially is a plain text file integrating markdown and R.
 - You can start by creating an `Rmd` file on the lab computer.
 :::
 
 ::::
+
+## R Markdown syntax
+
+```{=html}
+<style>
+div[data-code-copy="false"] button.code-copy-button {
+  display: none;
+}
+</style>
+```
+
+::: {code-copy="false"}
+
+````{verbatim}
+--- # <1>
+title: "title"
+author: "Zehui Yin"
+date: "`r Sys.Date()`"
+output: html_document
+---
+# Heading level 1 # <2>
+## Heading level 2
+text...text...text
+**bold**
+*italic*
+
+```{r} # <3>
+print("Hello world!)
+```
+````
+
+1. **YAML header**: stores settings or meta information
+2. **Markdown text**: contains plain text in markdown format.
+3. **R code chunk**: contains R code to be executed
+
+:::
 
 ## R basics: arthmatic operations
 
@@ -150,6 +184,29 @@ mean(values)
 library(MASS)
 # integrate the sin function from 0 to pi.
 area(sin, 0, pi)
+```
+
+## R basics: indexing
+
+Indexing is the process of selecting specific values from an object based on their index location. Whenever you see `[]` or `$` in R, some form of indexing is happening.
+
+```{r, echo=TRUE}
+v <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+v[2]
+```
+
+```{r, echo=TRUE}
+v[2:4]
+```
+
+```{r, echo=TRUE}
+df <- data.frame(col1 = c(1, 2, 3),
+                 col2 = c(4, 5, 6))
+df[1, 2]
+```
+
+```{r, echo=TRUE}
+df$col1
 ```
 
 ## R basics: flow control
