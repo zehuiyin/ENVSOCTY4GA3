@@ -115,19 +115,19 @@ div[data-code-copy="false"] button.code-copy-button {
 ::: {code-copy="false"}
 
 ````{verbatim}
---- # <1>
-title: "title"
+---                                    # <1>
+title: "Untitled"
 author: "Zehui Yin"
-date: "`r Sys.Date()`"
 output: html_document
 ---
-# Heading level 1 # <2>
+
+# Heading level 1                      # <2>
 ## Heading level 2
 text...text...text
-**bold**
-*italic*
+**bold**   __bold__
+*italic*   _italic_
 
-```{r} # <3>
+```{r}                                 # <3>
 print("Hello world!)
 ```
 ````
@@ -192,6 +192,13 @@ Indexing is the process of selecting specific values from an object based on the
 
 ```{r, echo=TRUE}
 v <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+```
+
+```{r}
+as.data.frame(v) |> t() |> knitr::kable(row.names = F)
+```
+
+```{r, echo=TRUE}
 v[2]
 ```
 
@@ -200,9 +207,27 @@ v[2:4]
 ```
 
 ```{r, echo=TRUE}
+v[c(TRUE, T, T, T, T, TRUE,
+    FALSE, F, FALSE, F)]
+```
+
+## R basics: indexing
+
+```{r, echo=TRUE}
 df <- data.frame(col1 = c(1, 2, 3),
                  col2 = c(4, 5, 6))
+```
+
+```{r}
+knitr::kable(df)
+```
+
+```{r, echo=TRUE}
 df[1, 2]
+```
+
+```{r, echo=TRUE}
+df[, "col2"]
 ```
 
 ```{r, echo=TRUE}
