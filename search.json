@@ -60,7 +60,7 @@
     "href": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
     "title": "ENVSOCTY 4GA3",
     "section": "R Markdown syntax",
-    "text": "R Markdown syntax\n\n\n1---\ntitle: \"title\"\nauthor: \"Zehui Yin\"\ndate: \"`r Sys.Date()`\"\noutput: html_document\n---\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**\n*italic*\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
@@ -88,7 +88,14 @@
     "href": "2025-Winter/slides/1-intro/index.html#r-basics-indexing",
     "title": "ENVSOCTY 4GA3",
     "section": "R basics: indexing",
-    "text": "R basics: indexing\nIndexing is the process of selecting specific values from an object based on their index location. Whenever you see [] or $ in R, some form of indexing is happening.\n\nv &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nv[2]\n\n[1] 2\n\n\n\nv[2:4]\n\n[1] 2 3 4\n\n\n\ndf &lt;- data.frame(col1 = c(1, 2, 3),\n                 col2 = c(4, 5, 6))\ndf[1, 2]\n\n[1] 4\n\n\n\ndf$col1\n\n[1] 1 2 3"
+    "text": "R basics: indexing\nIndexing is the process of selecting specific values from an object based on their index location. Whenever you see [] or $ in R, some form of indexing is happening.\n\nv &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\n\n\nv[2]\n\n[1] 2\n\n\n\nv[2:4]\n\n[1] 2 3 4\n\n\n\nv[c(TRUE, T, T, T, T, TRUE,\n    FALSE, F, FALSE, F)]\n\n[1] 1 2 3 4 5 6"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\n\ndf &lt;- data.frame(col1 = c(1, 2, 3),\n                 col2 = c(4, 5, 6))\n\n\n\n\n\n\ncol1\ncol2\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\n\ndf[1, 2]\n\n[1] 4\n\n\n\ndf[, \"col2\"]\n\n[1] 4 5 6\n\n\n\ndf$col1\n\n[1] 1 2 3"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-flow-control",
