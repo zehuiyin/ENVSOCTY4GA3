@@ -49,11 +49,18 @@
     "text": "Code hosting and Github\n\n\n\n\n\nCode hosting involves storing code online to facilitate sharing, management, and collaboration with others.\nOne of the most popular code hosting platforms is GitHub (owned by Microsoft).\nBoth the textbook and the companion R package used in this course are hosted on GitHub.\nGitHub is like a cloud drive (similar to OneDrive or Dropbox) but specialized for storing code, including R scripts."
   },
   {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "href": "2025-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown vs. R",
+    "text": "R Markdown vs. R\n\n\n \n\n\nR Markdown is a file format that combines R code, its results, and accompanying text.\nIt uses the file extension .Rmd.\nR code chunks are created using ```{r} … ```.\nYou can start by creating an Rmd file on the lab computer."
+  },
+  {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
     "href": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
     "title": "ENVSOCTY 4GA3",
     "section": "R basics: arthmatic operations",
-    "text": "R basics: arthmatic operations\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
+    "text": "R basics: arthmatic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-assigning-values",
@@ -116,7 +123,7 @@
     "href": "2025-Winter/slides/1-intro/index.html#install-latex",
     "title": "ENVSOCTY 4GA3",
     "section": "Install \\(\\LaTeX\\)",
-    "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through Miktex or Texlive, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code to install it:\n\ntinytex::install_tinytex()"
+    "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through MiKTeX or TeX Live, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code to install it:\n\ntinytex::install_tinytex()"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#lab-slides",
