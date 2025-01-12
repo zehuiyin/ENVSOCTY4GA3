@@ -116,14 +116,14 @@
     "href": "2025-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
     "title": "ENVSOCTY 4GA3",
     "section": "Download R version 4.4.2",
-    "text": "Download R version 4.4.2\n\nhttps://mirror.csclub.uwaterloo.ca/CRAN/"
+    "text": "Download R version 4.4.2\nmirror.csclub.uwaterloo.ca/CRAN"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#download-rstudio",
     "href": "2025-Winter/slides/1-intro/index.html#download-rstudio",
     "title": "ENVSOCTY 4GA3",
     "section": "Download RStudio",
-    "text": "Download RStudio\n\nhttps://posit.co/download/rstudio-desktop/"
+    "text": "Download RStudio\nposit.co/download/rstudio-desktop"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment",
@@ -144,7 +144,7 @@
     "href": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
     "title": "ENVSOCTY 4GA3",
     "section": "RTools 4.4 for Windows users",
-    "text": "RTools 4.4 for Windows users\n\nhttps://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nIf you are using Mac or Linux, you can skip this step."
+    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#install-latex",
