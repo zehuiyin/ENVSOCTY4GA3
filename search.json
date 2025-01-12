@@ -140,6 +140,13 @@
     "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
   },
   {
+    "objectID": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "href": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "RTools 4.4 for Windows users",
+    "text": "RTools 4.4 for Windows users\n\nhttps://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nIf you are using Mac or Linux, you can skip this step."
+  },
+  {
     "objectID": "2025-Winter/slides/1-intro/index.html#install-latex",
     "href": "2025-Winter/slides/1-intro/index.html#install-latex",
     "title": "ENVSOCTY 4GA3",
