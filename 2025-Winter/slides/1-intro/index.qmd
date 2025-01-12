@@ -333,6 +333,15 @@ Applied-Spatial-Statistics/
 
 ::::
 
+## `RTools` 4.4 for Windows users
+
+- <https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/>
+- Ensure you download the `Rtools` version that matches your installed R version.
+- `Rtools` is a set of programs required on **Windows** to build R packages from source.
+- If you are using `Mac` or `Linux`, you can skip this step.
+
+![](./images/rtools.png){height=150px}
+
 ## Install $\LaTeX$
 
 $\LaTeX$ is a high-quality typesetting system. While it may seem as a language, understanding it isn't necessary for our purposes. We will use it to export `Rmd` files with results into PDF files.
