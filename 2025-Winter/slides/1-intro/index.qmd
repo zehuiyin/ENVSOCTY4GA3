@@ -275,12 +275,12 @@ add(1, 4)
 
 ## Download R version 4.4.2
 
-- <https://mirror.csclub.uwaterloo.ca/CRAN/>
+[mirror.csclub.uwaterloo.ca/CRAN](https://mirror.csclub.uwaterloo.ca/CRAN/)
 ![](./images/download_r.png){height=500px}
 
 ## Download RStudio
 
-- <https://posit.co/download/rstudio-desktop/>
+[posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/)
 ![](./images/download_rstudio.png){height=500px}
 
 ## Restoring the environment
@@ -333,14 +333,15 @@ Applied-Spatial-Statistics/
 
 ::::
 
-## `RTools` 4.4 for Windows users
+## RTools 4.4 for Windows users
 
-- <https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/>
-- Ensure you download the `Rtools` version that matches your installed R version.
-- `Rtools` is a set of programs required on **Windows** to build R packages from source.
-- If you are using `Mac` or `Linux`, you can skip this step.
+[mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/)
 
 ![](./images/rtools.png){height=150px}
+
+- Ensure you download the `Rtools` version that matches your installed R version.
+- Rtools is a set of programs required on **Windows** to build R packages from source.
+- Note: If you are using Mac or Linux, Rtools is **not** required.
 
 ## Install $\LaTeX$
 
