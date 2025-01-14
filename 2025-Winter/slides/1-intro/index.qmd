@@ -316,6 +316,24 @@ Applied-Spatial-Statistics/
 
 - Double-click the `Applied-Spatial-Statistics.Rproj` file to open the R project.
 
+## RTools 4.4 for Windows users
+
+[mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/)
+
+![](./images/rtools.png){height=150px}
+
+- Ensure you download the `Rtools` version that matches your installed R version.
+- Rtools is a set of programs required on **Windows** to build R packages from source.
+- Note: If you are using Mac or Linux, Rtools is **not** required.
+
+## Xcode and GNU Fortran for Mac users
+
+[mac.r-project.org/tools](https://mac.r-project.org/tools/)
+
+![](./images/xcode.png){height=350px}
+
+- In order to compile R for macOS, you will need **both** Xcode and GNU Fortran compiler.
+
 ## Restoring the environment
 
 :::: {.columns}
@@ -332,16 +350,6 @@ Applied-Spatial-Statistics/
 :::
 
 ::::
-
-## RTools 4.4 for Windows users
-
-[mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/)
-
-![](./images/rtools.png){height=150px}
-
-- Ensure you download the `Rtools` version that matches your installed R version.
-- Rtools is a set of programs required on **Windows** to build R packages from source.
-- Note: If you are using Mac or Linux, Rtools is **not** required.
 
 ## Install $\LaTeX$
 
