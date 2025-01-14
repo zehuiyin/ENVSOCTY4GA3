@@ -133,18 +133,25 @@
     "text": "Restoring the environment\nDownload the Applied-Spatial-Statistics zip file from Avenue and unzip it. You should then have a folder with the following structure:\n\nApplied-Spatial-Statistics/\n├── renv/\n├── .gitignore\n├── .Rprofile\n├── Applied-Spatial-Statistics.Rproj\n├── README.md\n├── README.Rmd\n└── renv.lock\n\nDouble-click the Applied-Spatial-Statistics.Rproj file to open the R project."
   },
   {
-    "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
-    "href": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Restoring the environment",
-    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
-  },
-  {
     "objectID": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
     "href": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
     "title": "ENVSOCTY 4GA3",
     "section": "RTools 4.4 for Windows users",
     "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "href": "2025-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Xcode and GNU Fortran for Mac users",
+    "text": "Xcode and GNU Fortran for Mac users\nmac.r-project.org/tools\n\n\nIn order to compile R for macOS, you will need both Xcode and GNU Fortran compiler."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "href": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Restoring the environment",
+    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#install-latex",
