@@ -20,8 +20,8 @@ title: "Materials"
   <tr>
     <td>2</td>
     <td>Mapping in R</td>
-    <td><a href="./slides/1-mapping/index.html">HTML</a></td>
-    <td><a href="./slides/1-mapping/Mapping in R.pdf">PDF</a></td>
+    <td><a href="./slides/2-mapping/index.html">HTML</a></td>
+    <td><a href="./slides/2-mapping/Mapping in R.pdf">PDF</a></td>
   </tr>
 </tbody></table>
 ```
