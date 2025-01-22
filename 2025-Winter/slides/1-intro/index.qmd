@@ -334,6 +334,17 @@ Applied-Spatial-Statistics/
 
 - In order to compile R for macOS, you will need **both** Xcode and GNU Fortran compiler.
 
+## Homebrew and GDAL for Mac users
+
+Next, use macOS Terminal to install Homebrew, and subsequently, GDAL.
+
+[brew.sh](https://brew.sh/)
+
+[formulae.brew.sh/formula/gdal](https://formulae.brew.sh/formula/gdal)
+
+![](./images/homebrew.png){height=300px}
+![](./images/gdal_mac.png){height=300px}
+
 ## Restoring the environment
 
 :::: {.columns}
