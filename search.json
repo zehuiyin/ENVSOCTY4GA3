@@ -258,6 +258,13 @@
     "text": "Xcode and GNU Fortran for Mac users\nmac.r-project.org/tools\n\n\nIn order to compile R for macOS, you will need both Xcode and GNU Fortran compiler."
   },
   {
+    "objectID": "2025-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "href": "2025-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Homebrew and GDAL for Mac users",
+    "text": "Homebrew and GDAL for Mac users\nNext, use macOS Terminal to install Homebrew, and subsequently, GDAL.\nbrew.sh\nformulae.brew.sh/formula/gdal"
+  },
+  {
     "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
     "href": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
     "title": "ENVSOCTY 4GA3",
