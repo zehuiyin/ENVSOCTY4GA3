@@ -95,7 +95,7 @@ If you do not set the seed again before rerunning the second `rbinom`, it will p
 
 ## What is $p$-value?
 
-Let's say we have two samples from two different distributions: 1) $N(5, 1)$, 2) $N(5.4, 2)$. We want to perform a statistical test to compare their means ($H_1: \overline{x_1} \neq \overline{x_2}$). The $p$-value is the area under the curve that is more extreme than the test statistic, multiplied by 2.
+Let's say we have two samples from two different distributions. We want to perform a statistical test to compare their means ($H_1: \overline{x_1} \neq \overline{x_2}$). The $p$-value is the area under the curve that is more extreme than the test statistic, multiplied by 2.
 
 ```{r, dpi=300}
 library(dplyr)
@@ -106,7 +106,7 @@ set.seed(437988)
 tibble(sim = 1:1000) |>
   rowwise() |>
   mutate(s1 = list(rnorm(100, 5, 1)),
-         s2 = list(rnorm(100, 5.4, 2))) |>
+         s2 = list(rnorm(100, 5, 2))) |>
   mutate(mean1 = mean(s1),
          mean2 = mean(s2),
          mean_diff = mean2 - mean1,
