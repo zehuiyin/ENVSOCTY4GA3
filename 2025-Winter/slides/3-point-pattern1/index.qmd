@@ -6,6 +6,19 @@ format:
     footer: "2025 Zehui Yin"
 ---
 
+## Activity Feedback
+
+I gave at least a half mark for any submission, but next time, incomplete submissions will receive a **zero**.
+
+:::{style="font-size: 0.85em;"}
+- You need to <u>use the template</u> from the **`isdas` package**.
+- You need to submit knitted **PDFs**.
+- You need to answer **all** the questions in the activity sections.
+- Some submissions have errors in the YAML header, causing the PDF to not use the correct template.
+- We have **two** activities each week, and you need to submit both.
+- You need to submit both PDFs in the **same** submission.
+:::
+
 ## Packages we use today
 
 Load the following three packages.
