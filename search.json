@@ -293,6 +293,13 @@
     "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
   },
   {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity Feedback",
+    "text": "Activity Feedback\nI gave at least a half mark for any submission, but next time, incomplete submissions will receive a zero.\n\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou need to answer all the questions in the activity sections.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both.\nYou need to submit both PDFs in the same submission."
+  },
+  {
     "objectID": "2025-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
     "href": "2025-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
     "title": "ENVSOCTY 4GA3",
