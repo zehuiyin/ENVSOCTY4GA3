@@ -339,7 +339,7 @@
     "href": "2025-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
     "title": "ENVSOCTY 4GA3",
     "section": "What is \\(p\\)-value?",
-    "text": "What is \\(p\\)-value?\nLet’s say we have two samples from two different distributions: 1) \\(N(5, 1)\\), 2) \\(N(5.4, 2)\\). We want to perform a statistical test to compare their means (\\(H_1: \\overline{x_1} \\neq \\overline{x_2}\\)). The \\(p\\)-value is the area under the curve that is more extreme than the test statistic, multiplied by 2."
+    "text": "What is \\(p\\)-value?\nLet’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (\\(H_1: \\overline{x_1} \\neq \\overline{x_2}\\)). The \\(p\\)-value is the area under the curve that is more extreme than the test statistic, multiplied by 2."
   },
   {
     "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activities-for-today",
