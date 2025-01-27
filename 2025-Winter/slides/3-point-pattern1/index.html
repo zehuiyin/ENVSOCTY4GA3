@@ -193,38 +193,61 @@
 
 
 <section id="activity-feedback" class="slide level2">
-<h2>Activity Feedback</h2>
+<h2>Activity feedback</h2>
+<div style="font-size: 0.8em;">
 <p>I gave at least a half mark for any submission, but next time, incomplete submissions will receive a <strong>zero</strong>.</p>
-<div style="font-size: 0.85em;">
 <ul>
 <li>You need to <u>use the template</u> from the <strong><code>isdas</code> package</strong>.</li>
 <li>You need to submit knitted <strong>PDFs</strong>.</li>
-<li>You need to answer <strong>all</strong> the questions in the activity sections.</li>
+<li>You should finish <strong>all</strong> the coding parts in the lab activities submission.</li>
+<li>You need to answer <strong>all</strong> the questions in the activity sections (<strong>including</strong> highlights and threshold concepts) in the in-class activity submission.</li>
 <li>Some submissions have errors in the YAML header, causing the PDF to not use the correct template.</li>
-<li>We have <strong>two</strong> activities each week, and you need to submit both.</li>
+<li>We have <strong>two</strong> activities each week, and you need to submit both in each submission.</li>
 <li>You need to submit both PDFs in the <strong>same</strong> submission.</li>
 </ul>
+</div>
+</section>
+<section id="line-breaks-in-markdown" class="slide level2">
+<h2>Line breaks in markdown</h2>
+<div style="font-size: 0.8em;">
+<p>Simply changing a line in Markdown won’t create a line break.</p>
+<p>Unlike <span class="math inline">\(\LaTeX\)</span> (<code>\newline</code>) or HTML (<code>&lt;br&gt;</code>), Markdown does not have explicit line break syntax.</p>
+<p>The following example would produce a single line sentence after knitting:</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>first line of text</span>
+<span id="cb1-2"><a></a>still the first line of text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p><br></p>
+<div style="font-size: 0.8em;">
+<p>In Markdown, line breaks are created implicitly using empty lines.</p>
+<p>The following example would produce two lines after knitting:</p>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>first line of text</span>
+<span id="cb2-2"><a></a></span>
+<span id="cb2-3"><a></a>second line of text</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="packages-we-use-today" class="slide level2">
 <h2>Packages we use today</h2>
 <p>Load the following three packages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(isdas)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(sf)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(spatstat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(isdas)</span>
+<span id="cb3-2"><a></a><span class="fu">library</span>(sf)</span>
+<span id="cb3-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb3-4"><a></a><span class="fu">library</span>(spatstat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you have trouble restoring the reproducible environment, you need to manually install the packages first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb2-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb4-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
+<span id="cb4-3"><a></a></span>
+<span id="cb4-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb4-5"><a></a></span>
+<span id="cb4-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb4-7"><a></a></span>
+<span id="cb4-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="new-package-for-today-spatstat" class="slide level2">
@@ -250,14 +273,14 @@
 <p>There is a family of functions that start with <code>r*</code> capable of generating random values from a given distribution.</p>
 <p>From a nomral distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1]  0.5185718 -0.5801848  1.7541242 -1.4321465 -1.3573983</code></pre>
 </div>
 </div>
 <p>From a binomial distribution:</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 0 1 0 1 0</code></pre>
 </div>
@@ -274,13 +297,13 @@
 <h2>Setting a seed in R</h2>
 <p>You can control the random number generation algorithm by setting a seed value in R.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
-<span id="cb7-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
+<span id="cb9-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 0 0 0 1</code></pre>
 </div>
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
-<span id="cb9-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
+<span id="cb11-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 1 0 0 0 1</code></pre>
 </div>
@@ -292,7 +315,7 @@
 <h2>What is <span class="math inline">\(p\)</span>-value?</h2>
 <p>Let’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (<span class="math inline">\(H_1: \overline{x_1} \neq \overline{x_2}\)</span>). The <span class="math inline">\(p\)</span>-value is the area under the curve that is more extreme than the test statistic, multiplied by 2.</p>
 
-<img data-src="index_files/figure-revealjs/unnamed-chunk-7-1.png" width="3000" class="r-stretch"></section>
+<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="3000" class="r-stretch"></section>
 <section id="activities-for-today" class="slide level2">
 <h2>Activities for today</h2>
 <ul>

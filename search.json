@@ -296,8 +296,15 @@
     "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
     "href": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
     "title": "ENVSOCTY 4GA3",
-    "section": "Activity Feedback",
-    "text": "Activity Feedback\nI gave at least a half mark for any submission, but next time, incomplete submissions will receive a zero.\n\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou need to answer all the questions in the activity sections.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both.\nYou need to submit both PDFs in the same submission."
+    "section": "Activity feedback",
+    "text": "Activity feedback\n\nI gave at least a half mark for any submission, but next time, incomplete submissions will receive a zero.\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou should finish all the coding parts in the lab activities submission.\nYou need to answer all the questions in the activity sections (including highlights and threshold concepts) in the in-class activity submission.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Line breaks in markdown",
+    "text": "Line breaks in markdown\n\nSimply changing a line in Markdown won’t create a line break.\nUnlike \\(\\LaTeX\\) (\\newline) or HTML (&lt;br&gt;), Markdown does not have explicit line break syntax.\nThe following example would produce a single line sentence after knitting:\n\n\nfirst line of text\nstill the first line of text\n\n\n\nIn Markdown, line breaks are created implicitly using empty lines.\nThe following example would produce two lines after knitting:\n\n\nfirst line of text\n\nsecond line of text"
   },
   {
     "objectID": "2025-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
