@@ -6,18 +6,48 @@ format:
     footer: "2025 Zehui Yin"
 ---
 
-## Activity Feedback
+## Activity feedback
 
+:::{style="font-size: 0.8em;"}
 I gave at least a half mark for any submission, but next time, incomplete submissions will receive a **zero**.
 
-:::{style="font-size: 0.85em;"}
 - You need to <u>use the template</u> from the **`isdas` package**.
 - You need to submit knitted **PDFs**.
-- You need to answer **all** the questions in the activity sections.
+- You should finish **all** the coding parts in the lab activities submission.
+- You need to answer **all** the questions in the activity sections (**including** highlights and threshold concepts) in the in-class activity submission.
 - Some submissions have errors in the YAML header, causing the PDF to not use the correct template.
-- We have **two** activities each week, and you need to submit both.
+- We have **two** activities each week, and you need to submit both in each submission.
 - You need to submit both PDFs in the **same** submission.
 :::
+
+## Line breaks in markdown
+
+:::{style="font-size: 0.8em;"}
+Simply changing a line in Markdown won't create a line break. 
+
+Unlike $\LaTeX$ (`\newline`) or HTML (`<br>`), Markdown does not have explicit line break syntax. 
+
+The following example would produce a single line sentence after knitting:
+:::
+
+```{r, echo=TRUE, eval=FALSE}
+first line of text
+still the first line of text
+```
+
+<br>
+
+:::{style="font-size: 0.8em;"}
+In Markdown, line breaks are created implicitly using empty lines. 
+
+The following example would produce two lines after knitting:
+:::
+
+```{r, echo=TRUE, eval=FALSE}
+first line of text
+
+second line of text
+```
 
 ## Packages we use today
 
