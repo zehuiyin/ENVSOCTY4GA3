@@ -70,7 +70,7 @@ $$
 x)}\sum_{i}\mathbf 1\{d_i \le r\}
 $$
 
-The $\hat{G}$ function represents the number of elements in the set of distances up to some threshold $r$, normalized by the total number of points $n$ in point pattern x.
+The $\hat{G}$ function represents the number of elements in the set of distances up to some threshold $r$, normalized by the total number of points $n$ in point pattern $\mathbf{x}$.
 
 ## Packages we use today
 
