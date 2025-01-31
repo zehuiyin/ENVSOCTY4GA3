@@ -196,6 +196,72 @@
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
   },
   {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity feedback",
+    "text": "Activity feedback\n\nDo not submit last week’s activity.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mathematical Notation remainder",
+    "text": "Mathematical Notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\chi^2\\) distribution",
+    "text": "\\(\\chi^2\\) distribution\nStrictly non-negative, right-skewed, and non-symmetric."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Cumulative distribution function",
+    "text": "Cumulative distribution function\n\\(F_X(x)=P(X \\leq x)\\)"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat{G}\\)-function",
+    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern x."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 12: Activity 5: Point Pattern Analysis II\nChapter 14: Activity 6: Point Pattern Analysis III\n\nThe hard deadline is Friday, February 7."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
+  },
+  {
+    "objectID": "2025-Winter/materials.html",
+    "href": "2025-Winter/materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
     "objectID": "2025-Winter/index.html",
     "href": "2025-Winter/index.html",
     "title": "ENVSOCTY 4GA3 Lab 1 & 2",
@@ -203,16 +269,6 @@
     "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
     "crumbs": [
       "Home"
-    ]
-  },
-  {
-    "objectID": "2025-Winter/materials.html",
-    "href": "2025-Winter/materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF",
-    "crumbs": [
-      "Materials"
     ]
   },
   {
