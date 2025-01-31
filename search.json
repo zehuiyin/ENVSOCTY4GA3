@@ -228,7 +228,7 @@
     "href": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
     "title": "ENVSOCTY 4GA3",
     "section": "\\(\\hat{G}\\)-function",
-    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern x."
+    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
   },
   {
     "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
