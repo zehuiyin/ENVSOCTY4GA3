@@ -8,12 +8,12 @@ format:
 
 ## Activity feedback
 
-- Do not submit last week's activity.
-- Some submissions have errors in the YAML header, causing the PDF to not use the correct template.
+- Do **not** submit last week's activity.
+  - Double-check what you submitted on Avenue!
 - We have **two** activities each week, and you need to submit both in each submission.
-- You need to submit both PDFs in the **same** submission.
+- A small $p$-value ($<0.05$) in the $\chi^2$ test indicates that the point pattern is not random and shows spatial dependence.
 
-## Mathematical Notation remainder
+## Mathematical notation remainder
 
 Summation notation ($\sum$):
 
@@ -71,6 +71,26 @@ x)}\sum_{i}\mathbf 1\{d_i \le r\}
 $$
 
 The $\hat{G}$ function represents the number of elements in the set of distances up to some threshold $r$, normalized by the total number of points $n$ in point pattern $\mathbf{x}$.
+
+## Pipe operator in R
+
+The `|>` is the native pipe operator introduced in R 4.1.0.
+
+It allows chained expressions in place of nested expressions to improve code readability.
+
+```{r, echo=TRUE}
+v <- c(1, 2, 3, 4, 5)
+
+sum(sqrt(v))
+```
+
+```{r, echo=TRUE}
+v |> 
+  sqrt() |>
+  sum()
+```
+
+Do not confuse it with `+` in `ggplot2`; they are **not** the same thing.
 
 ## Packages we use today
 
