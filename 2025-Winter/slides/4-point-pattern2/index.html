@@ -195,14 +195,16 @@
 <section id="activity-feedback" class="slide level2">
 <h2>Activity feedback</h2>
 <ul>
-<li>Do not submit last week’s activity.</li>
-<li>Some submissions have errors in the YAML header, causing the PDF to not use the correct template.</li>
+<li>Do <strong>not</strong> submit last week’s activity.
+<ul>
+<li>Double-check what you submitted on Avenue!</li>
+</ul></li>
 <li>We have <strong>two</strong> activities each week, and you need to submit both in each submission.</li>
-<li>You need to submit both PDFs in the <strong>same</strong> submission.</li>
+<li>A small <span class="math inline">\(p\)</span>-value (<span class="math inline">\(&lt;0.05\)</span>) in the <span class="math inline">\(\chi^2\)</span> test indicates that the point pattern is not random and shows spatial dependence.</li>
 </ul>
 </section>
 <section id="mathematical-notation-remainder" class="slide level2">
-<h2>Mathematical Notation remainder</h2>
+<h2>Mathematical notation remainder</h2>
 <p>Summation notation (<span class="math inline">\(\sum\)</span>):</p>
 <p><span class="math display">\[
 \sum_{i=1}^Qx_i=x_1 + x_2 + \cdots + x_Q
@@ -230,25 +232,47 @@ x)}\sum_{i}\mathbf 1\{d_i \le r\}
 \]</span></p>
 <p>The <span class="math inline">\(\hat{G}\)</span> function represents the number of elements in the set of distances up to some threshold <span class="math inline">\(r\)</span>, normalized by the total number of points <span class="math inline">\(n\)</span> in point pattern <span class="math inline">\(\mathbf{x}\)</span>.</p>
 </section>
+<section id="pipe-operator-in-r" class="slide level2">
+<h2>Pipe operator in R</h2>
+<p>The <code>|&gt;</code> is the native pipe operator introduced in R 4.1.0.</p>
+<p>It allows chained expressions in place of nested expressions to improve code readability.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb1-2"><a></a></span>
+<span id="cb1-3"><a></a><span class="fu">sum</span>(<span class="fu">sqrt</span>(v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.382332</code></pre>
+</div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>v <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">sqrt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">sum</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.382332</code></pre>
+</div>
+</div>
+<p>Do not confuse it with <code>+</code> in <code>ggplot2</code>; they are <strong>not</strong> the same thing.</p>
+</section>
 <section id="packages-we-use-today" class="slide level2">
 <h2>Packages we use today</h2>
 <p>Load the following three packages.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a><span class="fu">library</span>(isdas)</span>
-<span id="cb1-2"><a></a><span class="fu">library</span>(sf)</span>
-<span id="cb1-3"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb1-4"><a></a><span class="fu">library</span>(spatstat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(isdas)</span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(sf)</span>
+<span id="cb5-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-4"><a></a><span class="fu">library</span>(spatstat)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you have trouble restoring the reproducible environment, you need to manually install the packages first.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb2-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
-<span id="cb2-3"><a></a></span>
-<span id="cb2-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb2-7"><a></a></span>
-<span id="cb2-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb6-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="activities-for-today" class="slide level2">

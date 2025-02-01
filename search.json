@@ -200,14 +200,14 @@
     "href": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
     "title": "ENVSOCTY 4GA3",
     "section": "Activity feedback",
-    "text": "Activity feedback\n\nDo not submit last week’s activity.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+    "text": "Activity feedback\n\nDo not submit last week’s activity.\n\nDouble-check what you submitted on Avenue!\n\nWe have two activities each week, and you need to submit both in each submission.\nA small \\(p\\)-value (\\(&lt;0.05\\)) in the \\(\\chi^2\\) test indicates that the point pattern is not random and shows spatial dependence."
   },
   {
     "objectID": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
     "href": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
     "title": "ENVSOCTY 4GA3",
-    "section": "Mathematical Notation remainder",
-    "text": "Mathematical Notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
+    "section": "Mathematical notation remainder",
+    "text": "Mathematical notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
   },
   {
     "objectID": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
@@ -229,6 +229,13 @@
     "title": "ENVSOCTY 4GA3",
     "section": "\\(\\hat{G}\\)-function",
     "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Pipe operator in R",
+    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\n\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
   },
   {
     "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
