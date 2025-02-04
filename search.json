@@ -235,7 +235,7 @@
     "href": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
     "title": "ENVSOCTY 4GA3",
     "section": "Pipe operator in R",
-    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\n\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
+    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nThe old pipe operator is %&gt;% from magrittr package.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
   },
   {
     "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",

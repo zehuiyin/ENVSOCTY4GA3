@@ -235,11 +235,11 @@ x)}\sum_{i}\mathbf 1\{d_i \le r\}
 <section id="pipe-operator-in-r" class="slide level2">
 <h2>Pipe operator in R</h2>
 <p>The <code>|&gt;</code> is the native pipe operator introduced in R 4.1.0.</p>
+<p>The old pipe operator is <code>%&gt;%</code> from <code>magrittr</code> package.</p>
 <p>It allows chained expressions in place of nested expressions to improve code readability.</p>
 <div class="cell">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
-<span id="cb1-2"><a></a></span>
-<span id="cb1-3"><a></a><span class="fu">sum</span>(<span class="fu">sqrt</span>(v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb1-2"><a></a><span class="fu">sum</span>(<span class="fu">sqrt</span>(v))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
 <pre><code>[1] 8.382332</code></pre>
 </div>
