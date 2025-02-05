@@ -76,11 +76,12 @@ The $\hat{G}$ function represents the number of elements in the set of distances
 
 The `|>` is the native pipe operator introduced in R 4.1.0.
 
+The old pipe operator is `%>%` from `magrittr` package.
+
 It allows chained expressions in place of nested expressions to improve code readability.
 
 ```{r, echo=TRUE}
 v <- c(1, 2, 3, 4, 5)
-
 sum(sqrt(v))
 ```
 
