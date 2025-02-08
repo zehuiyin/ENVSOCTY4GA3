@@ -14,6 +14,208 @@
     "text": "Select Academic Year/Term:\n\n2025 Winter"
   },
   {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#histogram-binwidth",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#histogram-binwidth",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Histogram binwidth",
+    "text": "Histogram binwidth\n\nBinwidth has nothing to do with bandwidth in Kernel density.\nBinwidth simply controls for the size of breaks in the histogram."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#hat-f-function",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#hat-f-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat F\\)-function",
+    "text": "\\(\\hat F\\)-function\n\nEmpty space distances:\n\\[d(u, \\mathbf x) = \\min\\{\\Vert u - x_i \\Vert : x_i \\in \\mathbf x\\}\\] from a fixed location \\(u \\in \\mathbb R^2\\) to the nearest point in a point pattern \\(\\mathbf x\\) is called the empty space distance or void distance.\nThe empty space function \\(F\\):\n\\[\n\\hat F(r)=\n\\frac{1}{m}\\sum_{j}\\mathbf{1}\\{d(u_j, \\mathbf x) \\le r\\}\n\\]\nThe \\(F\\)-function measures the distribution of all distances from an arbitrary reference location \\(u\\) (random or evenly distributed) in the plane to the nearest observed event \\(u\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#hat-k-function",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#hat-k-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat K\\)-function",
+    "text": "\\(\\hat K\\)-function\n\\[\n\\hat K(r) = \\frac{1}{\\hat\\lambda \\text{\narea}(W)}\\sum_i\\sum_{i \\ne j}\\mathbf 1\\{\\Vert x_i-x_j \\Vert \\le\nr\\}\n\\]\nwhere \\(\\hat\\lambda\\) is the estimated intensity of the point patterns.\nOf the distance-based techniques that you have seen so far, \\(\\hat G\\) and \\(\\hat F\\) are often used as complements. The \\(\\hat K\\) is useful when exploring multi-scale patterns."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#simulation-to-obtain-a-confidence-interval",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#simulation-to-obtain-a-confidence-interval",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Simulation to obtain a confidence interval",
+    "text": "Simulation to obtain a confidence interval\n\nGiven the challenge of solving for the standard deviations of test statistics, we employ simulations to derive a confidence interval."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#activities-for-today",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 16: Activity 7: Point Pattern Analysis IV\nChapter 18: Activity 8: Point Pattern Analysis V\n\nThe hard deadline is Friday, February 14."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#reference",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "href": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Policy and agenda",
+    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the professor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "href": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What does each package do?",
+    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "href": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "ggplot2 package",
+    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "href": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mapping",
+    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Friday, January 24 (12:00 pm)."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#references",
+    "href": "2025-Winter/slides/2-mapping/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
+  },
+  {
+    "objectID": "2025-Winter/index.html",
+    "href": "2025-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "2025-Winter/materials.html",
+    "href": "2025-Winter/materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity feedback",
+    "text": "Activity feedback\n\nDo not submit last week’s activity.\n\nDouble-check what you submitted on Avenue!\n\nWe have two activities each week, and you need to submit both in each submission.\nA small \\(p\\)-value (\\(&lt;0.05\\)) in the \\(\\chi^2\\) test indicates that the point pattern is not random and shows spatial dependence."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mathematical notation remainder",
+    "text": "Mathematical notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\chi^2\\) distribution",
+    "text": "\\(\\chi^2\\) distribution\nStrictly non-negative, right-skewed, and non-symmetric."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Cumulative distribution function",
+    "text": "Cumulative distribution function\n\\(F_X(x)=P(X \\leq x)\\)"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat{G}\\)-function",
+    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Pipe operator in R",
+    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nThe old pipe operator is %&gt;% from magrittr package.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 12: Activity 5: Point Pattern Analysis II\nChapter 14: Activity 6: Point Pattern Analysis III\n\nThe hard deadline is Friday, February 7."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
+  },
+  {
     "objectID": "2025-Winter/slides/1-intro/index.html#section",
     "href": "2025-Winter/slides/1-intro/index.html#section",
     "title": "ENVSOCTY 4GA3",
@@ -194,166 +396,6 @@
     "title": "ENVSOCTY 4GA3",
     "section": "References",
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Activity feedback",
-    "text": "Activity feedback\n\nDo not submit last week’s activity.\n\nDouble-check what you submitted on Avenue!\n\nWe have two activities each week, and you need to submit both in each submission.\nA small \\(p\\)-value (\\(&lt;0.05\\)) in the \\(\\chi^2\\) test indicates that the point pattern is not random and shows spatial dependence."
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Mathematical notation remainder",
-    "text": "Mathematical notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
-    "title": "ENVSOCTY 4GA3",
-    "section": "\\(\\chi^2\\) distribution",
-    "text": "\\(\\chi^2\\) distribution\nStrictly non-negative, right-skewed, and non-symmetric."
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Cumulative distribution function",
-    "text": "Cumulative distribution function\n\\(F_X(x)=P(X \\leq x)\\)"
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
-    "title": "ENVSOCTY 4GA3",
-    "section": "\\(\\hat{G}\\)-function",
-    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Pipe operator in R",
-    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nThe old pipe operator is %&gt;% from magrittr package.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Packages we use today",
-    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Activities for today",
-    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 12: Activity 5: Point Pattern Analysis II\nChapter 14: Activity 6: Point Pattern Analysis III\n\nThe hard deadline is Friday, February 7."
-  },
-  {
-    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#reference",
-    "href": "2025-Winter/slides/4-point-pattern2/index.html#reference",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Reference",
-    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
-  },
-  {
-    "objectID": "2025-Winter/materials.html",
-    "href": "2025-Winter/materials.html",
-    "title": "Materials",
-    "section": "",
-    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF",
-    "crumbs": [
-      "Materials"
-    ]
-  },
-  {
-    "objectID": "2025-Winter/index.html",
-    "href": "2025-Winter/index.html",
-    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
-    "section": "",
-    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
-    "href": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Policy and agenda",
-    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the professor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
-    "href": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Packages we use today",
-    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
-    "href": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
-    "title": "ENVSOCTY 4GA3",
-    "section": "What does each package do?",
-    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
-    "href": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
-    "title": "ENVSOCTY 4GA3",
-    "section": "ggplot2 package",
-    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
-    "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
-    "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
-    "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
-    "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#mapping",
-    "href": "2025-Winter/slides/2-mapping/index.html#mapping",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Mapping",
-    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
-    "href": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Activities for today",
-    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Friday, January 24 (12:00 pm)."
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#references",
-    "href": "2025-Winter/slides/2-mapping/index.html#references",
-    "title": "ENVSOCTY 4GA3",
-    "section": "References",
-    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
   },
   {
     "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
