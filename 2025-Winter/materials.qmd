@@ -43,7 +43,7 @@ title: "Materials"
   </tr>
   <tr>
     <td>6</td>
-    <td>Point Pattern III</td>
+    <td>Area Data I</td>
     <td><a href="./slides/6-area-data1/index.html">HTML</a></td>
     <td><a href="./slides/6-area-data1/Area Data I.pdf">PDF</a></td>
   </tr>
