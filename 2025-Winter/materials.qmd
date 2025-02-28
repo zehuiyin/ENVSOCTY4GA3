@@ -47,5 +47,11 @@ title: "Materials"
     <td><a href="./slides/6-area-data1/index.html">HTML</a></td>
     <td><a href="./slides/6-area-data1/Area Data I.pdf">PDF</a></td>
   </tr>
+  <tr>
+    <td>7</td>
+    <td>Area Data II</td>
+    <td><a href="./slides/7-area-data2/index.html">HTML</a></td>
+    <td><a href="./slides/7-area-data2/Area Data II.pdf">PDF</a></td>
+  </tr>
 </tbody></table>
 ```
