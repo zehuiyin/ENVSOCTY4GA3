@@ -1,0 +1,120 @@
+---
+format: 
+  revealjs:
+    pagetitle: "Area Data III"
+    menu: false
+    footer: "2025 Zehui Yin"
+---
+
+## Reflection
+
+:::{style="font-size: 0.8em;"}
+| Category                                      | Possible Grade |
+|-----------------------------------------------|----------------|
+| Temporal Progression                          | 3              |
+| Important Aspects of the Experience           | 3              |
+| Connection to Academic Theory                 | 3              |
+| Relating to Other Contexts / Draw Connections | 6              |
+| Personal Thoughts and Feelings                | 6              |
+| Cause-and-Effect Relationships                | 6              |
+| Other Possible Responses                      | 6              |
+| Planning and Future Practices                 | 6              |
+:::
+
+## Linear regression
+
+:::{style="font-size: 0.8em;"}
+
+The theoretical regression model:
+
+$$
+\underbrace{y_i}_{\text{Dependent Variable}} = 
+  \underbrace{\beta_0}_{\text{Intercept}} + \underbrace{\beta_1x_{i1} + \beta_2x_{i2} + \cdots + \beta_jx_{ij}}_{\text{Independent Variables}} + \underbrace{\epsilon_i}_{\text{Random Error}}
+$$
+
+An estimated regression equation:
+
+$$
+\hat{y_i} = \hat{\beta_0} + \hat{\beta_1}x_{i1} + \hat{\beta_2}x_{i2} + \cdots + \hat{\beta_j}x_{ij}
+$$
+
+The loss function minimized with the OLS procedure:
+
+$$
+\sum e_i^2 = \sum (y_i - \hat{y_i})^2 = \sum (y_i - \hat{\beta_0} - \hat{\beta_1}x_{i1} - \hat{\beta_2}x_{i2} - \cdots - \hat{\beta_j}x_{ij})^2
+$$
+:::
+
+## Trend surface
+
+General form:
+
+$$
+y_i = f(lat_i,long_i) + \epsilon_i
+$$
+
+First degree:
+
+$$
+y_i = \beta_0 + \beta_1lat_i +\beta_2long_i + \epsilon_i
+$$
+
+Second degree:
+
+$$
+y_i = \beta_0 + \beta_1lat_i^2 +\beta_2lat_i + \\
+\beta_3lat_i \cdot long_i +\beta_4long_i + \beta_5long_i^2 + \epsilon_i
+$$
+
+## Spatially-varying Coefficients
+
+:::{style="font-size: 0.8em;"}
+
+**Expansion Method:**
+
+Use the trend surface function in place of a constant coefficient:
+
+$$
+y_i = f_{(lat_i, long_i)}^1 + f_{(lat_i, long_i)}^2 x_{i1} + \epsilon_i
+$$
+
+$$
+\begin{array}{l}
+f_{(lat_i, long_i)}^1 = \beta_{01} +\beta_{02}lat_i + \beta_{03}long_i\\
+f_{(lat_i, long_i)}^2 = \beta_{11} +\beta_{12}lat_i + \beta_{13}long_i
+\end{array}
+$$
+
+**Geographically Weighted Regression:**
+
+Instead of fitting a regression model to all the observations, it fits to a subset of them each time based on the bandwidth defined.
+
+It is like a spatial moving average; instead of calculating an average, we are fitting a regression model to each window.
+:::
+
+## Spatial error model
+
+$$
+y_i = \beta_0 + \beta_1x_{i1} + \beta_2x_{i2} + \cdots + \beta_jx_{ij} + \underbrace{\epsilon_i}_{\text{Random Error}}
+$$
+
+The error term is no longer independent of each other but follows an autoregressive form:
+
+$$
+\epsilon_i = \lambda \sum_k w_{ik}\epsilon_k + u_i
+$$
+
+Noting that the $u_i$ is the pure random component now.
+
+## Capstone activity expectation
+
+For lab activity submission, you need to at least conduct **descriptive statistics**.
+
+Load the data and use the `summary` method or provide some descriptive plots like histograms.
+
+## Activities for today
+
+- We will work on the following chapter from the textbook:
+  - Chapter [28](https://paezha.github.io/spatial-analysis-r/activity-13-area-data-v.html): Activity 13: Area Data V
+  - Chapter [30](https://paezha.github.io/spatial-analysis-r/activity-14-area-data-vi.html): Activity 14: Area Data VI
+- The hard deadline is **Friday**, **March 14**.
