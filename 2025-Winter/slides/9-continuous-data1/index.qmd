@@ -113,11 +113,13 @@ ggsave("./images/point2.png", p2, height = 4.5, width = 7, dpi = 300)
 ![](./images/estimate.png){width=500px}
 :::
 
+:::{style="font-size: 0.9em;"}
 The theoretical spatial continuous process: $z_i = f(u_i, v_i) + \epsilon_i$
 
 Where $\hat{f}(u_i, v_i)$ represents the point estimate for location $i$.
 
 Uncertainty is the interval that is likely to capture the true value, $z_i$.
+:::
 
 ## Accuracy and precision
 
