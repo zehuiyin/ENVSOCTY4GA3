@@ -147,7 +147,7 @@
     "href": "2025-Winter/slides/9-continuous-data1/index.html#point-estimate-and-uncertainty",
     "title": "ENVSOCTY 4GA3",
     "section": "Point estimate and uncertainty",
-    "text": "Point estimate and uncertainty\n\n\n\nThe theoretical spatial continuous process: \\(z_i = f(u_i, v_i) + \\epsilon_i\\)\nWhere \\(\\hat{f}(u_i, v_i)\\) represents the point estimate for location \\(i\\).\nUncertainty is the interval that is likely to capture the true value, \\(z_i\\)."
+    "text": "Point estimate and uncertainty\n\n\n\n\nThe theoretical spatial continuous process: \\(z_i = f(u_i, v_i) + \\epsilon_i\\)\nWhere \\(\\hat{f}(u_i, v_i)\\) represents the point estimate for location \\(i\\).\nUncertainty is the interval that is likely to capture the true value, \\(z_i\\)."
   },
   {
     "objectID": "2025-Winter/slides/9-continuous-data1/index.html#accuracy-and-precision",
