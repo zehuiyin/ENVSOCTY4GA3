@@ -4,7 +4,7 @@
     "href": "2025-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n8\nArea Data III\nHTML\nPDF",
+    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n8\nArea Data III\nHTML\nPDF\n\n\n9\nSpatially Continuous Data I\nHTML\nPDF",
     "crumbs": [
       "Materials"
     ]
@@ -115,81 +115,161 @@
     "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#area-data",
-    "href": "2025-Winter/slides/6-area-data1/index.html#area-data",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data",
     "title": "ENVSOCTY 4GA3",
-    "section": "Area data",
-    "text": "Area data\n\nWe are starting to explore area data this week.\nDue to privacy concerns, especially in the social sciences, access to point-level data is rare.\nFor instance, publicly available Canadian census data is aggregated to census geography."
+    "section": "Spatially continuous data",
+    "text": "Spatially continuous data\n\nPreviously, we explored point data and area data, which are associated with discrete events, such as store locations or individual residents.\nIn contrast, spatial phenomena can be continuous rather than discrete.\nExamples of continuous phenomena include elevation and temperature.\nContinuous data are typically stored in raster formats but can also be represented as vector points."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
-    "href": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data-1",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data-1",
     "title": "ENVSOCTY 4GA3",
-    "section": "Modifiable Areal Unit Problem (MAUP)",
-    "text": "Modifiable Areal Unit Problem (MAUP)\n\nWhen aggregating point data into different spatial units, the choice of spatial units impacts analysis results such as hypothesis tests.\nThis is because any variations within the spatial unit are lost during aggregation."
+    "section": "Spatially continuous data",
+    "text": "Spatially continuous data\n\n\n\n\n\nHere, each point represents a measurement of the underlying continuous process, rather than a discrete event.\nThe methods we’ll discuss this week are specific to continuous data and are not suitable for point pattern analysis, and vice versa."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
-    "href": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#motivation-for-spatial-interpolation",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#motivation-for-spatial-interpolation",
     "title": "ENVSOCTY 4GA3",
-    "section": "Scale effect",
-    "text": "Scale effect"
+    "section": "Motivation for spatial interpolation",
+    "text": "Motivation for spatial interpolation\n\n\n\n\n\n\nSince it is impossible to observe an entire continuous process, there are infinitely many points that remain unobserved.\nTo understand the process at a specific, unknown location, we aim to estimate its value based on available data.\nSpatial interpolation techniques address this challenge by providing methods to predict values at these unmeasured points."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
-    "href": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatial-interpolation",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatial-interpolation",
     "title": "ENVSOCTY 4GA3",
-    "section": "Zone effect",
-    "text": "Zone effect"
+    "section": "Spatial interpolation",
+    "text": "Spatial interpolation\n\nVoronoi Polygons/Tessellation:\n\nPredict the value of an unknown point by assigning it the value of the nearest known point.\n\nInverse distance weighting (IDW): \\(\\hat{z_p}=\\frac{\\sum_i\\frac{z_i}{d_{pi}^\\gamma}}{\\sum_i\\frac{1}{d_{pi}^\\gamma}}\\)\n\nHere, \\(d_{pi}\\) represents the (Euclidean) distance between the unknown point \\(p\\) and a known point \\(i\\).\n\n\\(k\\)-Point Means/\\(k\\)-Nearest Neighbours:\n\nPredict the value of an unknown point using the average value of the \\(k\\)-nearest known points."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
-    "href": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#point-estimate-and-uncertainty",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#point-estimate-and-uncertainty",
     "title": "ENVSOCTY 4GA3",
-    "section": "Gerrymandering",
-    "text": "Gerrymandering\n\nIn representative electoral systems, carefully modifying electoral district boundaries can provide advantages to a particular party."
+    "section": "Point estimate and uncertainty",
+    "text": "Point estimate and uncertainty\n\n\n\nSpatial interpolation: \\(z_i = f(u_i, v_i) + \\epsilon_i\\)\nWhere \\(\\hat{f}(u_i, v_i)\\) represents the point estimate.\nUncertainty is the interval that is likely to capture the true value, \\(z_i\\)."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
-    "href": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#accuracy-and-precision",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#accuracy-and-precision",
     "title": "ENVSOCTY 4GA3",
-    "section": "Rock and queen contiguity",
-    "text": "Rock and queen contiguity"
+    "section": "Accuracy and precision",
+    "text": "Accuracy and precision"
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
-    "href": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Spatial weight matrix",
-    "text": "Spatial weight matrix\n\n\n\n\n\n\\[\n\\textbf{W}=\\left (\\begin{array}{c c c c c c}\n0 & 1 & 1 & 0\\\\\n1 & 0 & 0 & 1\\\\\n1 & 0 & 0 & 1\\\\\n0 & 1 & 1 & 0\\\\\n\\end{array} \\right)\n\\]\n\\[\n\\textbf{W}'=\\left (\\begin{array}{c c c c c c}\n0 & 0.5 & 0.5 & 0\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0 & 0.5 & 0.5 & 0\\\\\n\\end{array} \\right)\n\\]"
-  },
-  {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
-    "href": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Linear algebra recap",
-    "text": "Linear algebra recap\n\\[\n\\mathbf{W} = \\begin{pmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{X} = \\begin{pmatrix}\nb_{11} \\\\\nb_{21}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{W} \\cdot \\mathbf{X} = \\begin{pmatrix}\na_{11}\\cdot b_{11} + a_{12} \\cdot b_{21} \\\\\na_{21}\\cdot b_{11} + a_{22} \\cdot b_{21}\n\\end{pmatrix}\n\\]"
-  },
-  {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
-    "href": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Colour scheme",
-    "text": "Colour scheme\nhttps://colorbrewer2.org/"
-  },
-  {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
-    "href": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#activities-for-today",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#activities-for-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Activities for today",
-    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 20: Activity 9: Area Data I\nChapter 22: Activity 10: Area Data II\n\nThe hard deadline is Friday, February 28."
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 32: Activity 15: Spatially Continuous Data I\nChapter 34: Activity 16: Spatially Continuous Data II\n\nThe hard deadline is Friday, March 21."
   },
   {
-    "objectID": "2025-Winter/slides/6-area-data1/index.html#reference",
-    "href": "2025-Winter/slides/6-area-data1/index.html#reference",
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#reference",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#reference",
     "title": "ENVSOCTY 4GA3",
     "section": "Reference",
-    "text": "Reference\n\nhttps://gisgeography.com/maup-modifiable-areal-unit-problem/"
+    "text": "Reference\n\nhttps://blogs.extension.msstate.edu/theriskproject/accuracy-and-precision/"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "href": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Policy and agenda",
+    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the professor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "href": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What does each package do?",
+    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "href": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "ggplot2 package",
+    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "href": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mapping",
+    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Friday, January 24 (12:00 pm)."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#references",
+    "href": "2025-Winter/slides/2-mapping/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
+  },
+  {
+    "objectID": "2025-Winter/index.html",
+    "href": "2025-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "",
+    "text": "This course provides an introduction to spatial analysis in R and theories of spatial statistics. It covers map making and the analysis of points, areas, and spatial continuous data using R."
+  },
+  {
+    "objectID": "index.html#select-academic-yearterm",
+    "href": "index.html#select-academic-yearterm",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "Select Academic Year/Term:",
+    "text": "Select Academic Year/Term:\n\n2025 Winter"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#section",
@@ -374,105 +454,81 @@
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
   },
   {
-    "objectID": "index.html",
-    "href": "index.html",
-    "title": "ENVSOCTY 4GA3 Lab Website",
-    "section": "",
-    "text": "This course provides an introduction to spatial analysis in R and theories of spatial statistics. It covers map making and the analysis of points, areas, and spatial continuous data using R."
-  },
-  {
-    "objectID": "index.html#select-academic-yearterm",
-    "href": "index.html#select-academic-yearterm",
-    "title": "ENVSOCTY 4GA3 Lab Website",
-    "section": "Select Academic Year/Term:",
-    "text": "Select Academic Year/Term:\n\n2025 Winter"
-  },
-  {
-    "objectID": "2025-Winter/index.html",
-    "href": "2025-Winter/index.html",
-    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
-    "section": "",
-    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
-    "href": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#area-data",
+    "href": "2025-Winter/slides/6-area-data1/index.html#area-data",
     "title": "ENVSOCTY 4GA3",
-    "section": "Policy and agenda",
-    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the professor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
+    "section": "Area data",
+    "text": "Area data\n\nWe are starting to explore area data this week.\nDue to privacy concerns, especially in the social sciences, access to point-level data is rare.\nFor instance, publicly available Canadian census data is aggregated to census geography."
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
-    "href": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "href": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
     "title": "ENVSOCTY 4GA3",
-    "section": "Packages we use today",
-    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
+    "section": "Modifiable Areal Unit Problem (MAUP)",
+    "text": "Modifiable Areal Unit Problem (MAUP)\n\nWhen aggregating point data into different spatial units, the choice of spatial units impacts analysis results such as hypothesis tests.\nThis is because any variations within the spatial unit are lost during aggregation."
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
-    "href": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
+    "href": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
     "title": "ENVSOCTY 4GA3",
-    "section": "What does each package do?",
-    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
+    "section": "Scale effect",
+    "text": "Scale effect"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
-    "href": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
+    "href": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
     "title": "ENVSOCTY 4GA3",
-    "section": "ggplot2 package",
-    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
+    "section": "Zone effect",
+    "text": "Zone effect"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "href": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
     "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
+    "section": "Gerrymandering",
+    "text": "Gerrymandering\n\nIn representative electoral systems, carefully modifying electoral district boundaries can provide advantages to a particular party."
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "href": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
     "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
+    "section": "Rock and queen contiguity",
+    "text": "Rock and queen contiguity"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
+    "href": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
     "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
+    "section": "Spatial weight matrix",
+    "text": "Spatial weight matrix\n\n\n\n\n\n\\[\n\\textbf{W}=\\left (\\begin{array}{c c c c c c}\n0 & 1 & 1 & 0\\\\\n1 & 0 & 0 & 1\\\\\n1 & 0 & 0 & 1\\\\\n0 & 1 & 1 & 0\\\\\n\\end{array} \\right)\n\\]\n\\[\n\\textbf{W}'=\\left (\\begin{array}{c c c c c c}\n0 & 0.5 & 0.5 & 0\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0 & 0.5 & 0.5 & 0\\\\\n\\end{array} \\right)\n\\]"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
-    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
+    "href": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
     "title": "ENVSOCTY 4GA3",
-    "section": "How layering works?",
-    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
+    "section": "Linear algebra recap",
+    "text": "Linear algebra recap\n\\[\n\\mathbf{W} = \\begin{pmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{X} = \\begin{pmatrix}\nb_{11} \\\\\nb_{21}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{W} \\cdot \\mathbf{X} = \\begin{pmatrix}\na_{11}\\cdot b_{11} + a_{12} \\cdot b_{21} \\\\\na_{21}\\cdot b_{11} + a_{22} \\cdot b_{21}\n\\end{pmatrix}\n\\]"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#mapping",
-    "href": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
+    "href": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
     "title": "ENVSOCTY 4GA3",
-    "section": "Mapping",
-    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
+    "section": "Colour scheme",
+    "text": "Colour scheme\nhttps://colorbrewer2.org/"
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
-    "href": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "href": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Activities for today",
-    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Friday, January 24 (12:00 pm)."
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 20: Activity 9: Area Data I\nChapter 22: Activity 10: Area Data II\n\nThe hard deadline is Friday, February 28."
   },
   {
-    "objectID": "2025-Winter/slides/2-mapping/index.html#references",
-    "href": "2025-Winter/slides/2-mapping/index.html#references",
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#reference",
+    "href": "2025-Winter/slides/6-area-data1/index.html#reference",
     "title": "ENVSOCTY 4GA3",
-    "section": "References",
-    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
+    "section": "Reference",
+    "text": "Reference\n\nhttps://gisgeography.com/maup-modifiable-areal-unit-problem/"
   },
   {
     "objectID": "2025-Winter/slides/7-area-data2/index.html#spatial-autocorrelation",
