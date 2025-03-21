@@ -427,7 +427,7 @@
     "href": "index.html",
     "title": "ENVSOCTY 4GA3 Lab Website",
     "section": "",
-    "text": "This course offers an introduction to spatial analysis in R and the foundational concepts of spatial statistics. It covers the creation of 2D data visualizations and mapping using ggplot2, as well as 3D interactive data visualizations using plotly. The curriculum includes point pattern and area data analysis, with a focus on complete spatial randomness, spatial autocorrelation, hotspot analysis, and spatial interpolation methods for spatially continuous data. The course emphasizes the use of the R programming language for geocomputation and the generation of dynamic documents using R Markdown."
+    "text": "This course provides an introduction to spatial analysis in R and the foundational concepts of spatial statistics. It covers the creation of 2D and 3D data visualizations and mapping using ggplot2 and plotly in R. The curriculum includes point pattern and area data analysis, with a focus on complete spatial randomness, spatial autocorrelation, hotspot analysis, and spatial interpolation methods for spatially continuous data. The course emphasizes the use of the R programming language for geocomputation and the generation of dynamic documents using R Markdown."
   },
   {
     "objectID": "index.html#select-academic-yearterm",
