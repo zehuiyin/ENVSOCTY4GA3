@@ -4,7 +4,7 @@
     "href": "2025-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "Lab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n8\nArea Data III\nHTML\nPDF\n\n\n9\nSpatially Continuous Data I\nHTML\nPDF\n\n\n10\nSpatially Continuous Data II\nHTML\nPDF",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n8\nArea Data III\nHTML\nPDF\n\n\n9\nSpatially Continuous Data I\nHTML\nPDF\n\n\n10\nSpatially Continuous Data II\nHTML\nPDF",
     "crumbs": [
       "Materials"
     ]
@@ -435,6 +435,13 @@
     "title": "ENVSOCTY 4GA3 Lab Website",
     "section": "Select Academic Year/Term:",
     "text": "Select Academic Year/Term:\n\n2025 Winter"
+  },
+  {
+    "objectID": "index.html#archive",
+    "href": "index.html#archive",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "Archive:",
+    "text": "Archive:\n\n2025 Winter"
   },
   {
     "objectID": "2025-Winter/index.html",
