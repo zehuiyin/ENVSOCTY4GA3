@@ -49,3 +49,24 @@ McMaster University<br/>
 ```
 
 [<button type="button" id="current">2025 Winter</button>](./2025-Winter/index.html)
+
+## Archive:
+
+```{=html}
+<style>
+  #previous {
+    background-color: #f0ad4e;
+    color: black;
+    padding: 10px 20px; /* Add some padding */
+    border: none; /* Remove border */
+    border-radius: 5px;
+    cursor: pointer; /* Add a pointer cursor on hover */
+  }
+
+  #previous:hover {
+    background-color: #6d4e24;
+  }
+</style>
+```
+
+[<button type="button" id="previous">2025 Winter</button>](./2025-Winter/index.html)

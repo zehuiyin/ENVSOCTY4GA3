@@ -2,6 +2,8 @@
 title: "Materials"
 ---
 
+The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.
+
 ```{=html}
 <table><thead>
   <tr>
