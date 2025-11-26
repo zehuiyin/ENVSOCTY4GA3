@@ -11,7 +11,7 @@ website:
     background: primary
   page-footer:
     background: light
-    left: "Copyright 2026, McMaster University"
+    left: "[Copyright 2026, Zehui Yin](https://raw.githubusercontent.com/zehuiyin/ENVSOCTY4GA3/refs/heads/main/LICENSE.txt)"
   sidebar:
     - id: W2026
       background: light
