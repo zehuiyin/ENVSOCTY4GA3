@@ -1,0 +1,791 @@
+[
+  {
+    "objectID": "2025-Winter/materials.html",
+    "href": "2025-Winter/materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n8\nArea Data III\nHTML\nPDF\n\n\n9\nSpatially Continuous Data I\nHTML\nPDF\n\n\n10\nSpatially Continuous Data II\nHTML\nPDF",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#spatial-dependence-in-spatially-continuous-data",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#spatial-dependence-in-spatially-continuous-data",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial dependence in spatially continuous data",
+    "text": "Spatial dependence in spatially continuous data\n\nSpatial interpolation assumes that the data exhibit positive spatial autocorrelation.\nSingle-scale autocorrelation measures, such as the global Moran’s I statistic, are not well-suited for spatially continuous data due to its smooth nature, where neighborhoods are not well-defined.\nConsequently, a measure that quantifies autocorrelation at different scales is required."
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#variographic-analyisis",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#variographic-analyisis",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Variographic analyisis",
+    "text": "Variographic analyisis\n\n\n\nWe define a binary spatial weight matrix as:\n\\[\nw_{ij}(h)=\\bigg\\{\\begin{array}{l l}\n1\\text{, if } d_{ij} = h\\\\\n0\\text{, otherwise}\\\\\n\\end{array}\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#variographic-analyisis-1",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#variographic-analyisis-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Variographic analyisis",
+    "text": "Variographic analyisis\nAutocovariance:\n\\[\nC_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i^2 - \\bar{z})(z_j^2 - \\bar{z})}}{\\sum_{i=1}^n{w_{ij}(h)}}\n\\]\nSemivariance:\n\\[\n\\hat{\\gamma}_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i - z_j)^2}}{2\\sum_{i=1}^n{w_{ij}(h)}}\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#covariogram-and-semivariogram",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#covariogram-and-semivariogram",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Covariogram and semivariogram",
+    "text": "Covariogram and semivariogram\n\n\n\nCovariogram:\n\n\nSemivariogram:\n\n\nThe autocovariance, \\(C_{z}(h)\\), and semivariance, \\(\\hat{\\gamma}_{z}(h)\\), are related as follows: \\[ C_{z}(h) = \\sigma^2 - \\hat{\\gamma}_{z}(h) \\] where \\(\\sigma^2\\) is the sample variance."
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#kriging",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#kriging",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Kriging",
+    "text": "Kriging\n\nThe theoretical spatial continuous process can be expressed as: \\(z_i = f(u_i, v_i) + \\epsilon_i\\)\nTo interpolate, we use: \\(\\hat{z_i} = \\underbrace{\\hat{f}(x_p, y_p)}_{\\text{a smooth estimator, e.g., trend surface}} + \\hat{\\epsilon_p}\\)\nHere, \\(\\hat{\\epsilon}_p = \\sum_{i=1}^n {\\lambda_{pi}\\epsilon_i}\\) and \\(\\epsilon_i = z_i - \\hat{f}(x_i, y_i)\\).\nThe expected mean squared error or prediction variance is: \\(\\sigma_{\\epsilon}^2 = E[(\\hat{\\epsilon}_p - \\epsilon_i)^2]\\).\n\nThe expectation of the prediction errors is zero (unbiassedness) Find the weights \\(\\lambda\\) that minimize the prediction variance (optimal estimator)."
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#activities-for-today",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 36: Activity 17: Spatially Continuous Data III\nChapter 38: Activity 18: Spatially Continuous Data IV\n\nThe hard deadline is Friday, March 28."
+  },
+  {
+    "objectID": "2025-Winter/slides/10-continuous-data2/index.html#reference",
+    "href": "2025-Winter/slides/10-continuous-data2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://pro.arcgis.com/en/pro-app/latest/help/analysis/geostatistical-analyst/understanding-a-semivariogram-the-range-sill-and-nugget.htm"
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#reflection",
+    "href": "2025-Winter/slides/8-area-data3/index.html#reflection",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reflection",
+    "text": "Reflection\n\n\n\n\nCategory\nPossible Grade\n\n\n\n\nTemporal Progression\n3\n\n\nImportant Aspects of the Experience\n3\n\n\nConnection to Academic Theory\n3\n\n\nRelating to Other Contexts / Draw Connections\n6\n\n\nPersonal Thoughts and Feelings\n6\n\n\nCause-and-Effect Relationships\n6\n\n\nOther Possible Responses\n6\n\n\nPlanning and Future Practices\n6"
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#linear-regression",
+    "href": "2025-Winter/slides/8-area-data3/index.html#linear-regression",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Linear regression",
+    "text": "Linear regression\n\nThe theoretical regression model:\n\\[\n\\underbrace{y_i}_{\\text{Dependent Variable}} =\n  \\underbrace{\\beta_0}_{\\text{Intercept}} + \\underbrace{\\beta_1x_{i1} + \\beta_2x_{i2} + \\cdots + \\beta_jx_{ij}}_{\\text{Independent Variables}} + \\underbrace{\\epsilon_i}_{\\text{Random Error}}\n\\]\nAn estimated regression equation:\n\\[\n\\hat{y_i} = \\hat{\\beta_0} + \\hat{\\beta_1}x_{i1} + \\hat{\\beta_2}x_{i2} + \\cdots + \\hat{\\beta_j}x_{ij}\n\\]\nThe loss function minimized with the OLS procedure:\n\\[\n\\sum e_i^2 = \\sum (y_i - \\hat{y_i})^2 = \\sum (y_i - \\hat{\\beta_0} - \\hat{\\beta_1}x_{i1} - \\hat{\\beta_2}x_{i2} - \\cdots - \\hat{\\beta_j}x_{ij})^2\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#trend-surface",
+    "href": "2025-Winter/slides/8-area-data3/index.html#trend-surface",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Trend surface",
+    "text": "Trend surface\nGeneral form:\n\\[\ny_i = f(lat_i,long_i) + \\epsilon_i\n\\]\nFirst degree:\n\\[\ny_i = \\beta_0 + \\beta_1lat_i +\\beta_2long_i + \\epsilon_i\n\\]\nSecond degree:\n\\[\ny_i = \\beta_0 + \\beta_1lat_i^2 +\\beta_2lat_i + \\\\\n\\beta_3lat_i \\cdot long_i +\\beta_4long_i + \\beta_5long_i^2 + \\epsilon_i\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#spatially-varying-coefficients",
+    "href": "2025-Winter/slides/8-area-data3/index.html#spatially-varying-coefficients",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatially-varying Coefficients",
+    "text": "Spatially-varying Coefficients\n\nExpansion Method:\nUse the trend surface function in place of a constant coefficient:\n\\[\ny_i = f_{(lat_i, long_i)}^1 + f_{(lat_i, long_i)}^2 x_{i1} + \\epsilon_i\n\\]\n\\[\n\\begin{array}{l}\nf_{(lat_i, long_i)}^1 = \\beta_{01} +\\beta_{02}lat_i + \\beta_{03}long_i\\\\\nf_{(lat_i, long_i)}^2 = \\beta_{11} +\\beta_{12}lat_i + \\beta_{13}long_i\n\\end{array}\n\\]\nGeographically Weighted Regression:\nInstead of fitting a regression model to all the observations, it fits to a subset of them each time based on the bandwidth defined.\nIt is like a spatial moving average; instead of calculating an average, we are fitting a regression model to each window."
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#spatial-error-model",
+    "href": "2025-Winter/slides/8-area-data3/index.html#spatial-error-model",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial error model",
+    "text": "Spatial error model\n\\[\ny_i = \\beta_0 + \\beta_1x_{i1} + \\beta_2x_{i2} + \\cdots + \\beta_jx_{ij} + \\underbrace{\\epsilon_i}_{\\text{Random Error}}\n\\]\nThe error term is no longer independent of each other but follows an autoregressive form:\n\\[\n\\epsilon_i = \\lambda \\sum_k w_{ik}\\epsilon_k + u_i\n\\]\nNoting that the \\(u_i\\) is the pure random component now."
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#capstone-activity-expectation",
+    "href": "2025-Winter/slides/8-area-data3/index.html#capstone-activity-expectation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Capstone activity expectation",
+    "text": "Capstone activity expectation\nFor lab activity submission, you need to at least conduct descriptive statistics.\nLoad the data and use the summary method or provide some descriptive plots like histograms."
+  },
+  {
+    "objectID": "2025-Winter/slides/8-area-data3/index.html#activities-for-today",
+    "href": "2025-Winter/slides/8-area-data3/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 28: Activity 13: Area Data V\nChapter 30: Activity 14: Area Data VI\n\nThe hard deadline is Friday, March 14."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity feedback",
+    "text": "Activity feedback\n\nDo not submit last week’s activity.\n\nDouble-check what you submitted on Avenue!\n\nWe have two activities each week, and you need to submit both in each submission.\nA small \\(p\\)-value (\\(&lt;0.05\\)) in the \\(\\chi^2\\) test indicates that the point pattern is not random and shows spatial dependence."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mathematical notation remainder",
+    "text": "Mathematical notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\chi^2\\) distribution",
+    "text": "\\(\\chi^2\\) distribution\nStrictly non-negative, right-skewed, and non-symmetric."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Cumulative distribution function",
+    "text": "Cumulative distribution function\n\\(F_X(x)=P(X \\leq x)\\)"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat{G}\\)-function",
+    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Pipe operator in R",
+    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nThe old pipe operator is %&gt;% from magrittr package.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 12: Activity 5: Point Pattern Analysis II\nChapter 14: Activity 6: Point Pattern Analysis III\n\nThe hard deadline is Friday, February 7."
+  },
+  {
+    "objectID": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "href": "2025-Winter/slides/4-point-pattern2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#area-data",
+    "href": "2025-Winter/slides/6-area-data1/index.html#area-data",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Area data",
+    "text": "Area data\n\nWe are starting to explore area data this week.\nDue to privacy concerns, especially in the social sciences, access to point-level data is rare.\nFor instance, publicly available Canadian census data is aggregated to census geography."
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "href": "2025-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Modifiable Areal Unit Problem (MAUP)",
+    "text": "Modifiable Areal Unit Problem (MAUP)\n\nWhen aggregating point data into different spatial units, the choice of spatial units impacts analysis results such as hypothesis tests.\nThis is because any variations within the spatial unit are lost during aggregation."
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
+    "href": "2025-Winter/slides/6-area-data1/index.html#scale-effect",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Scale effect",
+    "text": "Scale effect"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
+    "href": "2025-Winter/slides/6-area-data1/index.html#zone-effect",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Zone effect",
+    "text": "Zone effect"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "href": "2025-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Gerrymandering",
+    "text": "Gerrymandering\n\nIn representative electoral systems, carefully modifying electoral district boundaries can provide advantages to a particular party."
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "href": "2025-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Rock and queen contiguity",
+    "text": "Rock and queen contiguity"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
+    "href": "2025-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial weight matrix",
+    "text": "Spatial weight matrix\n\n\n\n\n\n\\[\n\\textbf{W}=\\left (\\begin{array}{c c c c c c}\n0 & 1 & 1 & 0\\\\\n1 & 0 & 0 & 1\\\\\n1 & 0 & 0 & 1\\\\\n0 & 1 & 1 & 0\\\\\n\\end{array} \\right)\n\\]\n\\[\n\\textbf{W}'=\\left (\\begin{array}{c c c c c c}\n0 & 0.5 & 0.5 & 0\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0 & 0.5 & 0.5 & 0\\\\\n\\end{array} \\right)\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
+    "href": "2025-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Linear algebra recap",
+    "text": "Linear algebra recap\n\\[\n\\mathbf{W} = \\begin{pmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{X} = \\begin{pmatrix}\nb_{11} \\\\\nb_{21}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{W} \\cdot \\mathbf{X} = \\begin{pmatrix}\na_{11}\\cdot b_{11} + a_{12} \\cdot b_{21} \\\\\na_{21}\\cdot b_{11} + a_{22} \\cdot b_{21}\n\\end{pmatrix}\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
+    "href": "2025-Winter/slides/6-area-data1/index.html#colour-scheme",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Colour scheme",
+    "text": "Colour scheme\nhttps://colorbrewer2.org/"
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "href": "2025-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 20: Activity 9: Area Data I\nChapter 22: Activity 10: Area Data II\n\nThe hard deadline is Friday, February 28."
+  },
+  {
+    "objectID": "2025-Winter/slides/6-area-data1/index.html#reference",
+    "href": "2025-Winter/slides/6-area-data1/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://gisgeography.com/maup-modifiable-areal-unit-problem/"
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#spatial-autocorrelation",
+    "href": "2025-Winter/slides/7-area-data2/index.html#spatial-autocorrelation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial autocorrelation",
+    "text": "Spatial autocorrelation\n\nEverything is related to everything else, but near things are more related than distant things.\n—Tobler, W. R."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#global-morans-i",
+    "href": "2025-Winter/slides/7-area-data2/index.html#global-morans-i",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Global Moran’s \\(I\\)",
+    "text": "Global Moran’s \\(I\\)\n\\[\nI = \\frac{n \\sum_i \\sum_j w_{ij}(Y_i - \\overline Y)(Y_j - \\overline Y)}\n{(\\sum_{i \\neq j} w_{ij}) \\sum_i (Y_i - \\overline Y)^2}\n\\]\nWhen we use a row-standardized spatial weight matrix, \\(W^{st}\\), and denote \\(z_i \\equiv (Y_i-\\overline{Y})\\):\n\\[\nI = \\frac{\\sum_{i=1}^n{z_i\\sum_{j=1}^n{w_{ij}^{st}z_j}}}{\\sum_{i=1}^{n}{z_i^2}}\n\\]"
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#global-morans-i-interpretation",
+    "href": "2025-Winter/slides/7-area-data2/index.html#global-morans-i-interpretation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Global Moran’s \\(I\\) interpretation",
+    "text": "Global Moran’s \\(I\\) interpretation\n\nMoran’s \\(I\\) values usually range from –1 to 1.\nValues significantly above the expected value indicate positive spatial autocorrelation or clustering.\nValues significantly below the expected value indicate negative spatial autocorrelation or dispersion."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#local-morans-i",
+    "href": "2025-Winter/slides/7-area-data2/index.html#local-morans-i",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Local Moran’s \\(I\\)",
+    "text": "Local Moran’s \\(I\\)\n\n\\[\nI_i = \\frac{n (Y_i - \\overline Y)}{\\sum_j (Y_j - \\overline Y)^2} \\sum_j w_{ij}(Y_j - e Y)\n\\]\nNoting that\n\\[\nI = \\frac{1}{\\sum_{i \\neq j} w_{ij}}\\sum_i I_i\n\\]\nWhen we use a row-standardized spatial weight matrix, \\(W^{st}\\), we have \\(I = \\frac{\\sum_i I_i}{n} = \\overline{I_i}\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#multiple-testing",
+    "href": "2025-Winter/slides/7-area-data2/index.html#multiple-testing",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Multiple testing",
+    "text": "Multiple testing\n\nThe \\(\\alpha\\) in hypothesis testing is the probability of making a type I error (false positive).\nIn our context, it means concluding that a truly random spatial pattern is non-random, thus rejecting the null hypothesis.\nWhen running multiple tests simultaneously using overlapping information, we are more likely to encounter these types of errors purely due to chance.\nTherefore, we must adjust \\(p\\)-values (downward) to ensure that we maintain the desired \\(\\alpha\\) level.\nOne way to do this is Bonferroni correction: \\(\\alpha_{adjusted}=\\frac{\\alpha}{m}\\), where \\(m\\) is the number of simultaneous tests."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#plotly-package",
+    "href": "2025-Winter/slides/7-area-data2/index.html#plotly-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "plotly package",
+    "text": "plotly package\n\nThe plotly package in R is a binding to the open-source JavaScript graphing library, plotly.js. It excels at creating interactive web graphics, including maps and figures.\nHowever, it does not support knitting the Rmd file into a PDF since PDFs are static files, unlike HTML outputs.\nTo include plotly graphics in a knitted PDF, take a screenshot of the output and insert the screenshot as a static image in the PDF file:\n\n\n```{r, eval=FALSE}\nSome R codes that you do not want to evaluate during knitting.\n```\n![](path-to-image)"
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#functions-in-r-recap",
+    "href": "2025-Winter/slides/7-area-data2/index.html#functions-in-r-recap",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Functions in R recap",
+    "text": "Functions in R recap\nFunctions in R use the following syntax. Note that any thing wrapped in &lt;...&gt; indicates that it is just a name and can be called anything you like.\n```{r}\n&lt;function_name&gt; &lt;- function(&lt;parameter1&gt;, &lt;parameter2&gt;) { \n  Some R codes to execute based on the inputs\n  and at last return an output\n}\n\nfunction_name(&lt;object1&gt;, \n              parameter2 = &lt;object2&gt;)\n```\nYou only need to define functions once in your code. Then, you can call it by its name."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#activities-for-today",
+    "href": "2025-Winter/slides/7-area-data2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 24: Activity 11: Area Data III\nChapter 26: Activity 12: Area Data IV\n\nThe hard deadline is Friday, March 7."
+  },
+  {
+    "objectID": "2025-Winter/slides/7-area-data2/index.html#reference",
+    "href": "2025-Winter/slides/7-area-data2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.paulamoraga.com/book-spatial/spatial-autocorrelation.html"
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "",
+    "text": "This course provides an introduction to spatial analysis in R and the foundational concepts of spatial statistics. It covers the creation of 2D and 3D data visualizations and mapping using ggplot2 and plotly in R. The curriculum includes point pattern and area data analysis, with a focus on complete spatial randomness, spatial autocorrelation, hotspot analysis, and spatial interpolation methods for spatially continuous data. The course emphasizes the use of the R programming language for geocomputation and the generation of dynamic documents using R Markdown."
+  },
+  {
+    "objectID": "index.html#select-academic-yearterm",
+    "href": "index.html#select-academic-yearterm",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "Select Academic Year/Term:",
+    "text": "Select Academic Year/Term:\n\n2026 Winter"
+  },
+  {
+    "objectID": "index.html#archive",
+    "href": "index.html#archive",
+    "title": "ENVSOCTY 4GA3 Lab Website",
+    "section": "Archive:",
+    "text": "Archive:\n\n2025 Winter"
+  },
+  {
+    "objectID": "2026-Winter/index.html",
+    "href": "2026-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nTBD",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "2026-Winter/materials.html",
+    "href": "2026-Winter/materials.html",
+    "title": "Materials",
+    "section": "",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nTBD",
+    "crumbs": [
+      "Materials"
+    ]
+  },
+  {
+    "objectID": "2025-Winter/index.html",
+    "href": "2025-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2025 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1 Tuesday 2:30 PM – 4:20 PM Lab 2 Monday 4:30 PM – 6:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#section",
+    "href": "2025-Winter/slides/1-intro/index.html#section",
+    "title": "ENVSOCTY 4GA3",
+    "section": "",
+    "text": "Zehui Yin  First-year PhD Student in Geography at SEES\n\n\nEmail: yinz39@mcmaster.ca\n\n\nPlease use your McMaster email address.\nPlease put the course code ENVSOCTY 4GA3 in the subject line.\nPlease include your name and student number in the body of the email.\nI will try to reply within 24 hours (please expect longer delays during weekends/holidays).\n\n\nPersonal Website: zehuiyin.github.io\nResearch Interests: Spatial Analysis, Transportation, Travel Behaviour, Public Transit, Shared Mobility"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#agenda-for-today",
+    "href": "2025-Winter/slides/1-intro/index.html#agenda-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavor of R syntax and style\nSetting up R and reproducible environment on your personal computer"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-and-rstudio",
+    "href": "2025-Winter/slides/1-intro/index.html#r-and-rstudio",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n    \n\nR is a free and open-source programming language for statistical computing and graphics.\nRStudio is an integrated development environment (IDE) for coding in R.\n\nAn IDE is a set of tools that helps you code.\n\nWe use RStudio to write our R codes."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-packages",
+    "href": "2025-Winter/slides/1-intro/index.html#r-packages",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R packages",
+    "text": "R packages\n\nR packages are the fundamental units of reproducible R code.\nThey can include functions, data, or both, along with documentation.\nThink of them as plug-ins that enhance the functionality of existing software.\nFor example, web browser extensions like ad blockers add additional features that the original browser doesn’t have."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#reproducible-environment",
+    "href": "2025-Winter/slides/1-intro/index.html#reproducible-environment",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reproducible environment",
+    "text": "Reproducible environment\n\nAn environment is the system where a program is run, including hardware and software such as operating system dependencies, programming language, packages, their configuration, and versions.\nJust as running 1000 meters affects individuals differently, running code on different computers or with different package versions can produce varied results.\nA reproducible environment ensures that everyone gets the same result by keeping the environment consistent."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#renv-package",
+    "href": "2025-Winter/slides/1-intro/index.html#renv-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "renv package",
+    "text": "renv package\n\n\n\n\n\nrenv is an R package that helps create reproducible environments for R projects.\nIt records the R version and all R packages along with their versions in a lockfile.\n\nA lockfile is a text file that stores all the environment information."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#code-hosting-and-github",
+    "href": "2025-Winter/slides/1-intro/index.html#code-hosting-and-github",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Code hosting and Github",
+    "text": "Code hosting and Github\n\n\n\n\n\nCode hosting involves storing code online to facilitate sharing, management, and collaboration with others.\nOne of the most popular code hosting platforms is GitHub (owned by Microsoft).\nBoth the textbook and the companion R package used in this course are hosted on GitHub.\nGitHub is like a cloud drive (similar to OneDrive or Dropbox) but specialized for storing code, including R scripts."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "href": "2025-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown vs. R",
+    "text": "R Markdown vs. R\n\n\n\n\n\nR Markdown is a file format that combines R code, its results, and accompanying text.\nIt uses the file extension .Rmd and essentially is a plain text file integrating markdown and R.\nYou can start by creating an Rmd file on the lab computer."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "href": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown syntax",
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: arthmatic operations",
+    "text": "R basics: arthmatic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-assigning-values",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-assigning-values",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: assigning values",
+    "text": "R basics: assigning values\nOne of the cornerstones of programming languages is assignment. You can assign a value/object to a name using &lt;- (suggested R style) or = (“Python” style).\n\na &lt;- 1\nb &lt;- 3\na + b\n\n[1] 4\n\n\n\nc = 7\nd = 5\nc * d\n\n[1] 35"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-built-in-functions",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-built-in-functions",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: built-in functions",
+    "text": "R basics: built-in functions\nR comes with many built-in functions. The calling syntax is function(parameter1, parameter2, ...). Additionally, with extra R packages, there are even more functions you can use.\n\nvalues &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nsum(values)\n\n[1] 55\n\n\n\nmean(values)\n\n[1] 5.5\n\n\n\nlibrary(MASS)\n# integrate the sin function from 0 to pi.\narea(sin, 0, pi)\n\n[1] 2"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\nIndexing is the process of selecting specific values from an object based on their index location. Whenever you see [] or $ in R, some form of indexing is happening.\n\nv &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\n\n\nv[2]\n\n[1] 2\n\n\n\nv[2:4]\n\n[1] 2 3 4\n\n\n\nv[c(TRUE, T, T, T, T, TRUE,\n    FALSE, F, FALSE, F)]\n\n[1] 1 2 3 4 5 6"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\n\ndf &lt;- data.frame(col1 = c(1, 2, 3),\n                 col2 = c(4, 5, 6))\n\n\n\n\n\n\ncol1\ncol2\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\n\ndf[1, 2]\n\n[1] 4\n\n\n\ndf[, \"col2\"]\n\n[1] 4 5 6\n\n\n\ndf$col1\n\n[1] 1 2 3"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-flow-control",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-flow-control",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: flow control",
+    "text": "R basics: flow control\nFlow control is an important component of any programming language. In R, the if-else statement and loops work as follows:\n\nx &lt;- 6\nif (x &gt; 5) { \n  print(\"Greater than 5\") \n} else {\n  print(\"Less or equal to 5\")\n}\n\n[1] \"Greater than 5\"\n\n\n\nfor (i in 1:3) {\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-custom-functions",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-custom-functions",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: custom functions",
+    "text": "R basics: custom functions\nTo define your own function in R, you can use the following syntax. Note that the last line of code is automatically returned by R, though a “Python” style return statement is also valid in R.\n\nadd &lt;- function(a, b) { \n  a + b\n}\n\nadd(1, 4)\n\n[1] 5\n\n\n\nadd &lt;- function(a, b) { \n  return(a + b)\n}\n\nadd(1, 4)\n\n[1] 5"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
+    "href": "2025-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Download R version 4.4.2",
+    "text": "Download R version 4.4.2\nmirror.csclub.uwaterloo.ca/CRAN"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#download-rstudio",
+    "href": "2025-Winter/slides/1-intro/index.html#download-rstudio",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Download RStudio",
+    "text": "Download RStudio\nposit.co/download/rstudio-desktop"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment",
+    "href": "2025-Winter/slides/1-intro/index.html#restoring-the-environment",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Restoring the environment",
+    "text": "Restoring the environment\nDownload the Applied-Spatial-Statistics zip file from Avenue and unzip it. You should then have a folder with the following structure:\n\nApplied-Spatial-Statistics/\n├── renv/\n├── .gitignore\n├── .Rprofile\n├── Applied-Spatial-Statistics.Rproj\n├── README.md\n├── README.Rmd\n└── renv.lock\n\nDouble-click the Applied-Spatial-Statistics.Rproj file to open the R project."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "href": "2025-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "RTools 4.4 for Windows users",
+    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "href": "2025-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Xcode and GNU Fortran for Mac users",
+    "text": "Xcode and GNU Fortran for Mac users\nmac.r-project.org/tools\n\n\nIn order to compile R for macOS, you will need both Xcode and GNU Fortran compiler."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "href": "2025-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Homebrew and GDAL for Mac users",
+    "text": "Homebrew and GDAL for Mac users\nNext, use macOS Terminal to install Homebrew, and subsequently, GDAL.\nbrew.sh\nformulae.brew.sh/formula/gdal"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "href": "2025-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Restoring the environment",
+    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#install-latex",
+    "href": "2025-Winter/slides/1-intro/index.html#install-latex",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Install \\(\\LaTeX\\)",
+    "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through MiKTeX or TeX Live, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code to install it:\n\ntinytex::install_tinytex()"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#lab-slides",
+    "href": "2025-Winter/slides/1-intro/index.html#lab-slides",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Lab slides",
+    "text": "Lab slides\n\n\n\n\n\n\n\nYou can access all the lab slides by scanning the QR code or by visiting the URL directly.\nzehuiyin.github.io/ENVSOCTY4GA3"
+  },
+  {
+    "objectID": "2025-Winter/slides/1-intro/index.html#references",
+    "href": "2025-Winter/slides/1-intro/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#activity-feedback",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity feedback",
+    "text": "Activity feedback\n\nI gave at least a half mark for any submission, but next time, incomplete submissions will receive a zero.\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou should finish all the coding parts in the lab activities submission.\nYou need to answer all the questions in the activity sections (highlights and threshold concepts are optional) in the in-class activity submission.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Line breaks in markdown",
+    "text": "Line breaks in markdown\n\nSimply changing a line in Markdown won’t create a line break.\nUnlike \\(\\LaTeX\\) (\\newline) or HTML (&lt;br&gt;), Markdown does not have explicit line break syntax.\nThe following example would produce a single line sentence after knitting:\n\n\nfirst line of text\nstill the first line of text\n\n\n\nIn Markdown, line breaks are created implicitly using empty lines.\nThe following example would produce two lines after knitting:\n\n\nfirst line of text\n\nsecond line of text"
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
+    "title": "ENVSOCTY 4GA3",
+    "section": "New package for today: spatstat",
+    "text": "New package for today: spatstat\nspatstat is an R package for spatial statistics with a strong focus on analyzing spatial point patterns in 2D.\nYou can find documentation for this package at:\n\nhttps://spatstat.org/\nhttps://spatstat.org/resources/spatstatQuickref.pdf"
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Random vs. deterministirc process",
+    "text": "Random vs. deterministirc process\nLet’s denote the probability of an event occurring at point \\((x,y)\\) as \\(Prob(Event_{(x,y)})\\). The points are located within a unit square ranging from 0 to 1.\n\nA random process: \\(Prob(Event_{(x,y)}) = B(n = 1, p = 0.5)\\)\nA deterministic process:\\(Prob(Event_{(x,y)}) = x\\)\nA stochastic process: \\(Prob(Event_{(x,y)}) = x - x \\cdot B(n = 1, p = 0.5)\\)"
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Generate random values from a distribution",
+    "text": "Generate random values from a distribution\nThere is a family of functions that start with r* capable of generating random values from a given distribution.\nFrom a nomral distribution:\n\nrnorm(n = 5, mean = 0, sd = 1)\n\n[1]  0.5185718 -0.5801848  1.7541242 -1.4321465 -1.3573983\n\n\nFrom a binomial distribution:\n\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 0 1 0 1 0\n\n\nThese functions are very useful for simulations."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Random number generator and seed",
+    "text": "Random number generator and seed\nIn computers, there is no true random number generator; they all use pseudo-random number generators. This means that the random numbers produced by computers are just the output of a very complex function based on an input, or seed.\nAs a result, if we know the seed, we can perfectly predict the random numbers generated by a computer’s random number generator.\nTypically, computers use the current time as the seed (R uses this approach)."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Setting a seed in R",
+    "text": "Setting a seed in R\nYou can control the random number generation algorithm by setting a seed value in R.\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\n\nNote that the seed in R is actually a vector, a sequence of values, and set.seed changes this vector to a particular state.\nIf you do not set the seed again before rerunning the second rbinom, it will produce different results."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What is \\(p\\)-value?",
+    "text": "What is \\(p\\)-value?\nLet’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (\\(H_1: \\overline{x_1} \\neq \\overline{x_2}\\)). The \\(p\\)-value is the area under the curve that is more extreme than the test statistic, multiplied by 2."
+  },
+  {
+    "objectID": "2025-Winter/slides/3-point-pattern1/index.html#activities-for-today",
+    "href": "2025-Winter/slides/3-point-pattern1/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 8: Activity 3: Maps as Processes\nChapter 10: Activity 4: Point Pattern Analysis I\n\nThe hard deadline is Friday, January 31 (12:00 pm)."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatially continuous data",
+    "text": "Spatially continuous data\n\nPreviously, we explored point data and area data, which are associated with discrete events, such as store locations or individual residents.\nIn contrast, spatial phenomena can be continuous rather than discrete.\nExamples of continuous phenomena include elevation and temperature.\nContinuous data are typically stored in raster formats but can also be represented as vector points."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data-1",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatially-continuous-data-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatially continuous data",
+    "text": "Spatially continuous data\n\n\n\n\n\nHere, each point represents a measurement of the underlying continuous process, rather than a discrete event.\nThe methods we’ll discuss this week are specific to continuous data and are not suitable for point pattern analysis, and vice versa."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#motivation-for-spatial-interpolation",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#motivation-for-spatial-interpolation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Motivation for spatial interpolation",
+    "text": "Motivation for spatial interpolation\n\n\n\n\n\n\nSince it is impossible to observe an entire continuous process, there are infinitely many points that remain unobserved.\nTo understand the process at a specific, unknown location, we aim to estimate its value based on available data.\nSpatial interpolation techniques address this challenge by providing methods to predict values at these unmeasured points."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#spatial-interpolation",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#spatial-interpolation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial interpolation",
+    "text": "Spatial interpolation\n\nVoronoi Polygons/Tessellation:\n\nPredict the value of an unknown point by assigning it the value of the nearest known point.\n\nInverse distance weighting (IDW): \\(\\hat{z_p}=\\frac{\\sum_i\\frac{z_i}{d_{pi}^\\gamma}}{\\sum_i\\frac{1}{d_{pi}^\\gamma}}\\)\n\nHere, \\(d_{pi}\\) represents the (Euclidean) distance between the unknown point \\(p\\) and a known point \\(i\\).\n\n\\(k\\)-Point Means/\\(k\\)-Nearest Neighbours:\n\nPredict the value of an unknown point using the average value of the \\(k\\)-nearest known points."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#point-estimate-and-uncertainty",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#point-estimate-and-uncertainty",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Point estimate and uncertainty",
+    "text": "Point estimate and uncertainty\n\n\n\n\nThe theoretical spatial continuous process: \\(z_i = f(u_i, v_i) + \\epsilon_i\\)\nWhere \\(\\hat{f}(u_i, v_i)\\) represents the point estimate for location \\(i\\).\nUncertainty is the interval that is likely to capture the true value, \\(z_i\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#accuracy-and-precision",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#accuracy-and-precision",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Accuracy and precision",
+    "text": "Accuracy and precision"
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#activities-for-today",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 32: Activity 15: Spatially Continuous Data I\nChapter 34: Activity 16: Spatially Continuous Data II\n\nThe hard deadline is Friday, March 21."
+  },
+  {
+    "objectID": "2025-Winter/slides/9-continuous-data1/index.html#reference",
+    "href": "2025-Winter/slides/9-continuous-data1/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://blogs.extension.msstate.edu/theriskproject/accuracy-and-precision/"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "href": "2025-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Policy and agenda",
+    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the professor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "href": "2025-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What does each package do?",
+    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "href": "2025-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "ggplot2 package",
+    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "href": "2025-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "href": "2025-Winter/slides/2-mapping/index.html#mapping",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mapping",
+    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "href": "2025-Winter/slides/2-mapping/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Friday, January 24 (12:00 pm)."
+  },
+  {
+    "objectID": "2025-Winter/slides/2-mapping/index.html#references",
+    "href": "2025-Winter/slides/2-mapping/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#histogram-binwidth",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#histogram-binwidth",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Histogram binwidth",
+    "text": "Histogram binwidth\n\nBinwidth has nothing to do with bandwidth in Kernel density.\nBinwidth simply controls for the size of breaks in the histogram."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#hat-f-function",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#hat-f-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat F\\)-function",
+    "text": "\\(\\hat F\\)-function\n\nEmpty space distances:\n\\[d(u, \\mathbf x) = \\min\\{\\Vert u - x_i \\Vert : x_i \\in \\mathbf x\\}\\] from a fixed location \\(u \\in \\mathbb R^2\\) to the nearest point in a point pattern \\(\\mathbf x\\) is called the empty space distance or void distance.\nThe empty space function \\(F\\):\n\\[\n\\hat F(r)=\n\\frac{1}{m}\\sum_{j}\\mathbf{1}\\{d(u_j, \\mathbf x) \\le r\\}\n\\]\nThe \\(F\\)-function measures the distribution of all distances from an arbitrary reference location \\(u\\) (random or evenly distributed) in the plane to the nearest observed event \\(u\\)."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#hat-k-function",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#hat-k-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat K\\)-function",
+    "text": "\\(\\hat K\\)-function\n\\[\n\\hat K(r) = \\frac{1}{\\hat\\lambda \\text{\narea}(W)}\\sum_i\\sum_{i \\ne j}\\mathbf 1\\{\\Vert x_i-x_j \\Vert \\le\nr\\}\n\\]\nwhere \\(\\hat\\lambda\\) is the estimated intensity of the point patterns.\nOf the distance-based techniques that you have seen so far, \\(\\hat G\\) and \\(\\hat F\\) are often used as complements. The \\(\\hat K\\) is useful when exploring multi-scale patterns."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#simulation-to-obtain-a-confidence-interval",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#simulation-to-obtain-a-confidence-interval",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Simulation to obtain a confidence interval",
+    "text": "Simulation to obtain a confidence interval\n\nGiven the challenge of solving for the standard deviations of test statistics, we employ simulations to derive a confidence interval."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#activities-for-today",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 16: Activity 7: Point Pattern Analysis IV\nChapter 18: Activity 8: Point Pattern Analysis V\n\nThe hard deadline is Friday, February 14."
+  },
+  {
+    "objectID": "2025-Winter/slides/5-point-pattern3/index.html#reference",
+    "href": "2025-Winter/slides/5-point-pattern3/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
+  }
+]
