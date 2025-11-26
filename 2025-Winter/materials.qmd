@@ -1,0 +1,78 @@
+---
+title: "Materials"
+sidebar: w2025
+---
+
+The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.
+
+```{=html}
+<table><thead>
+  <tr>
+    <th>Lab</th>
+    <th>Section</th>
+    <th>Slides</th>
+    <th>PDF&nbsp;</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>Introduction and setting up R</td>
+    <td><a href="./slides/1-intro/index.html">HTML</a></td>
+    <td><a href="./slides/1-intro/Introduction and setting up R.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>2</td>
+    <td>Mapping in R</td>
+    <td><a href="./slides/2-mapping/index.html">HTML</a></td>
+    <td><a href="./slides/2-mapping/Mapping in R.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>3</td>
+    <td>Point Pattern I</td>
+    <td><a href="./slides/3-point-pattern1/index.html">HTML</a></td>
+    <td><a href="./slides/3-point-pattern1/Point Pattern I.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>4</td>
+    <td>Point Pattern II</td>
+    <td><a href="./slides/4-point-pattern2/index.html">HTML</a></td>
+    <td><a href="./slides/4-point-pattern2/Point Pattern II.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>5</td>
+    <td>Point Pattern III</td>
+    <td><a href="./slides/5-point-pattern3/index.html">HTML</a></td>
+    <td><a href="./slides/5-point-pattern3/Point Pattern III.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>6</td>
+    <td>Area Data I</td>
+    <td><a href="./slides/6-area-data1/index.html">HTML</a></td>
+    <td><a href="./slides/6-area-data1/Area Data I.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>7</td>
+    <td>Area Data II</td>
+    <td><a href="./slides/7-area-data2/index.html">HTML</a></td>
+    <td><a href="./slides/7-area-data2/Area Data II.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>8</td>
+    <td>Area Data III</td>
+    <td><a href="./slides/8-area-data3/index.html">HTML</a></td>
+    <td><a href="./slides/8-area-data3/Area Data III.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>9</td>
+    <td>Spatially Continuous Data I</td>
+    <td><a href="./slides/9-continuous-data1/index.html">HTML</a></td>
+    <td><a href="./slides/9-continuous-data1/Spatially Continuous Data I.pdf">PDF</a></td>
+  </tr>
+  <tr>
+    <td>10</td>
+    <td>Spatially Continuous Data II</td>
+    <td><a href="./slides/10-continuous-data2/index.html">HTML</a></td>
+    <td><a href="./slides/10-continuous-data2/Spatially Continuous Data II.pdf">PDF</a></td>
+  </tr>
+</tbody></table>
+```

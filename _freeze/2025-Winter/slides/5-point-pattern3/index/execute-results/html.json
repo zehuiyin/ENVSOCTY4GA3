@@ -1,0 +1,21 @@
+{
+  "hash": "183ac68638cae513247cc9b62ba17479",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\nformat: \n  revealjs:\n    pagetitle: \"Point Pattern III\"\n    menu: false\n    footer: \"2025 Zehui Yin\"\n---\n\n\n\n## Histogram binwidth\n\n- Binwidth has nothing to do with bandwidth in Kernel density.\n- Binwidth simply controls for the size of breaks in the histogram.\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-revealjs/unnamed-chunk-1-1.png){width=1536}\n:::\n:::\n\n\n\n## $\\hat F$-function\n\n:::{style=\"font-size: 0.8em;\"}\nEmpty space distances: \n\n$$d(u, \\mathbf x) = \\min\\{\\Vert u - x_i \\Vert : x_i \\in \\mathbf x\\}$$\nfrom a fixed location $u \\in \\mathbb R^2$ to the nearest point in a point pattern $\\mathbf x$ is called the empty space distance or void distance.\n\nThe empty space function $F$:\n\n$$\n\\hat F(r)=\n\\frac{1}{m}\\sum_{j}\\mathbf{1}\\{d(u_j, \\mathbf x) \\le r\\}\n$$\n\nThe $F$-function measures the distribution of all distances from an arbitrary reference location $u$ (random or evenly distributed) in the plane to the nearest observed event $u$.\n:::\n\n## $\\hat K$-function\n\n$$\n\\hat K(r) = \\frac{1}{\\hat\\lambda \\text{\narea}(W)}\\sum_i\\sum_{i \\ne j}\\mathbf 1\\{\\Vert x_i-x_j \\Vert \\le\nr\\}\n$$\n\nwhere $\\hat\\lambda$ is the estimated intensity of the point patterns.\n\nOf the distance-based techniques that you have seen so far, $\\hat G$ and $\\hat F$ are often used as complements. The $\\hat K$ is useful when exploring multi-scale patterns.\n\n## Simulation to obtain a confidence interval\n\n:::{style=\"font-size: 0.8em;\"}\nGiven the challenge of solving for the standard deviations of test statistics, we employ simulations to derive a confidence interval.\n:::\n\n\n\n::: {.cell}\n::: {.cell-output-display}\n![](index_files/figure-revealjs/unnamed-chunk-2-1.png){width=3000}\n:::\n:::\n\n\n\n## Activities for today\n\n- We will work on the following chapter from the textbook:\n  - Chapter [16](https://paezha.github.io/spatial-analysis-r/activity-7-point-pattern-analysis-iv.html): Activity 7: Point Pattern Analysis IV\n  - Chapter [18](https://paezha.github.io/spatial-analysis-r/activity-8-point-pattern-analysis-v.html): Activity 8: Point Pattern Analysis V\n- The hard deadline is **Friday**, **February 14**.\n\n## Reference\n\n- <https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html>\n",
+    "supporting": [
+      "index_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {
+      "include-after-body": [
+        "\n<script>\n  // htmlwidgets need to know to resize themselves when slides are shown/hidden.\n  // Fire the \"slideenter\" event (handled by htmlwidgets.js) when the current\n  // slide changes (different for each slide format).\n  (function () {\n    // dispatch for htmlwidgets\n    function fireSlideEnter() {\n      const event = window.document.createEvent(\"Event\");\n      event.initEvent(\"slideenter\", true, true);\n      window.document.dispatchEvent(event);\n    }\n\n    function fireSlideChanged(previousSlide, currentSlide) {\n      fireSlideEnter();\n\n      // dispatch for shiny\n      if (window.jQuery) {\n        if (previousSlide) {\n          window.jQuery(previousSlide).trigger(\"hidden\");\n        }\n        if (currentSlide) {\n          window.jQuery(currentSlide).trigger(\"shown\");\n        }\n      }\n    }\n\n    // hookup for slidy\n    if (window.w3c_slidy) {\n      window.w3c_slidy.add_observer(function (slide_num) {\n        // slide_num starts at position 1\n        fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);\n      });\n    }\n\n  })();\n</script>\n\n"
+      ]
+    },
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

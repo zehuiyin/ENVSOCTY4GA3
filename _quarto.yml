@@ -1,0 +1,59 @@
+project:
+  type: website
+  output-dir: docs
+
+website:
+  title: "ENVSOCTY 4GA3"
+  favicon: favicon.png
+  search:
+    location: sidebar
+  navbar:
+    background: primary
+  page-footer:
+    background: light
+    left: "Copyright 2026, McMaster University"
+  sidebar:
+    - id: W2026
+      background: light
+      pinned: true
+      align: center
+      style: docked
+      contents:
+        - href: 2026-Winter/index.qmd
+          text: Home
+        - href: 2026-Winter/materials.qmd
+          text: Materials
+        - href: https://avenue.mcmaster.ca/
+          text: Avenue to Learn
+        - href: https://paezha.github.io/spatial-analysis-r/
+          text: Textbook
+        - href: https://paezha.github.io/isdas/
+          text: Companion Package
+        - href: https://github.com/paezha/Applied-Spatial-Statistics
+          text: Reproducible Environment
+    - id: W2025
+      background: light
+      pinned: true
+      align: center
+      style: docked
+      contents:
+        - href: 2025-Winter/index.qmd
+          text: Home
+        - href: 2025-Winter/materials.qmd
+          text: Materials
+        - href: https://avenue.mcmaster.ca/
+          text: Avenue to Learn
+        - href: https://paezha.github.io/spatial-analysis-r/
+          text: Textbook
+        - href: https://paezha.github.io/isdas/
+          text: Companion Package
+        - href: https://github.com/paezha/Applied-Spatial-Statistics
+          text: Reproducible Environment
+
+format:
+  html:
+    theme: sandstone
+    toc: false
+
+execute:
+  freeze: auto

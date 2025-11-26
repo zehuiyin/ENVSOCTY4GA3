@@ -1,0 +1,24 @@
+---
+title: "Materials"
+sidebar: w2026
+---
+
+The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.
+
+```{=html}
+<table><thead>
+  <tr>
+    <th>Lab</th>
+    <th>Section</th>
+    <th>Slides</th>
+    <th>PDF&nbsp;</th>
+  </tr></thead>
+<tbody>
+  <tr>
+    <td>1</td>
+    <td>TBD</td>
+    <td></td>
+    <td></td>
+  </tr>
+</tbody></table>
+```
