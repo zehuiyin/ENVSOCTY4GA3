@@ -20,4 +20,17 @@ McMaster University<br/>
 
 # Lab Time
 
-TBD
+
+```{=html}
+Lab 1
+&nbsp;&nbsp;
+Thursday
+&nbsp;&nbsp;
+12:30 PM – 2:20 PM
+<br>
+Lab 2
+&nbsp;&nbsp;
+Friday
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+10:30 AM – 12:20 PM
+```

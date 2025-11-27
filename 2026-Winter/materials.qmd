@@ -17,8 +17,8 @@ The slides provide a high-level overview of key concepts and helpful coding tips
   <tr>
     <td>1</td>
     <td>TBD</td>
-    <td></td>
-    <td></td>
+    <td>-</td>
+    <td>-</td>
   </tr>
 </tbody></table>
 ```
