@@ -216,7 +216,7 @@
 <h2>Agenda for today</h2>
 <ul>
 <li>Introduction to basic concepts for coding in R</li>
-<li>Getting a flavor of R syntax and style</li>
+<li>Getting a flavour of R syntax and style</li>
 <li>Setting up R and reproducible environment on your personal computer
 <ul>
 <li>Instructions for both Windows and Mac systems</li>
@@ -236,9 +236,11 @@
 </p>
 </div><div class="column" style="width:65%;">
 <ul>
-<li><p>You can access all the lab slides by scanning the QR code or by visiting the URL directly.</p></li>
-<li><p><a href="https://zehuiyin.github.io/ENVSOCTY4GA3/">zehuiyin.github.io/ENVSOCTY4GA3</a></p></li>
-<li><p>Slides from previous years are also available. You can take a peek, though I’ll make some updates this year—likely not major ones.</p></li>
+<li>You can access all the lab slides by scanning the QR code or by visiting the URL below directly.
+<ul>
+<li><a href="https://zehuiyin.github.io/ENVSOCTY4GA3/">zehuiyin.github.io/ENVSOCTY4GA3</a></li>
+</ul></li>
+<li>Slides from previous years are also available. You can take a peek, though I’ll make some updates this year—likely not major ones.</li>
 </ul>
 </div></div>
 </section>
@@ -385,8 +387,8 @@ div[data-code-copy="false"] button.code-copy-button {
 </div>
 </div></div>
 </section>
-<section id="r-basics-arthmatic-operations" class="slide level2">
-<h2>R basics: arthmatic operations</h2>
+<section id="r-basics-arithmetic-operations" class="slide level2">
+<h2>R basics: arithmetic operations</h2>
 <p>You can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.</p>
 <p>R can be used as a calculator, using intuitive symbols for these operations:</p>
 <div class="cell">
@@ -682,6 +684,25 @@ Text used:
 <p>If you are unfamiliar with <span class="math inline">\(\LaTeX\)</span> and don’t have it installed yet, simply run the following R code in the console to install it:</p>
 <div class="cell">
 <div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb42"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb42-1"><a></a>tinytex<span class="sc">::</span><span class="fu">install_tinytex</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</div>
+</section>
+<section id="finish-setup-of-the-r-environment" class="slide level2">
+<h2>Finish setup of the R environment</h2>
+<div style="font-size: 29px;">
+<p>After completing all the steps above, you should now have a fully functional R environment.</p>
+<p>You should keep the folder <code>Applied-Spatial-Statistics</code> on your computer.</p>
+<ul>
+<li>You may rename it to anything you like, but make sure you know where it is located (its directory path).</li>
+<li>Starting next week, you will be working inside this folder.</li>
+<li>All lab activity code files (<code>Rmd</code> files) will be stored here.
+<ul>
+<li>This is <strong>mandatory</strong> because the <code>renv</code> package ties the environment (R packages) to this project folder.
+<ul>
+<li>Similar to Python virtual environments, it is not a system‑wide setup (for R packages).</li>
+</ul></li>
+<li>If you remove the folder or try to run the code outside of it, you will need to restore the environment again.</li>
+</ul></li>
+</ul>
 </div>
 </section>
 <section id="references" class="slide level2">

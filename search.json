@@ -343,14 +343,14 @@
     "href": "2026-Winter/slides/1-intro/index.html#agenda-for-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Agenda for today",
-    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavor of R syntax and style\nSetting up R and reproducible environment on your personal computer\n\nInstructions for both Windows and Mac systems\nA demo on a Windows machine\n\nIf you are using Linux, I expect you already have the technical skills to install R on your own computer :)"
+    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavour of R syntax and style\nSetting up R and reproducible environment on your personal computer\n\nInstructions for both Windows and Mac systems\nA demo on a Windows machine\n\nIf you are using Linux, I expect you already have the technical skills to install R on your own computer :)"
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#lab-slides",
     "href": "2026-Winter/slides/1-intro/index.html#lab-slides",
     "title": "ENVSOCTY 4GA3",
     "section": "Lab slides",
-    "text": "Lab slides\n\n\n\n\n\n\n\nYou can access all the lab slides by scanning the QR code or by visiting the URL directly.\nzehuiyin.github.io/ENVSOCTY4GA3\nSlides from previous years are also available. You can take a peek, though I’ll make some updates this year—likely not major ones."
+    "text": "Lab slides\n\n\n\n\n\n\n\nYou can access all the lab slides by scanning the QR code or by visiting the URL below directly.\n\nzehuiyin.github.io/ENVSOCTY4GA3\n\nSlides from previous years are also available. You can take a peek, though I’ll make some updates this year—likely not major ones."
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#r-and-rstudio",
@@ -409,11 +409,11 @@
     "text": "Markdown syntax\n\n\n\n\n\n\nMarkdown is a simple and easy-to-use markup language for formatting documents.\n\nNot for computational purposes.\nOnly for text formatting/typesetting.\n\nFor basic markdown sytanx refer to: www.markdownguide.org/basic-syntax\nMarkdown cheatsheet: www.markdownguide.org/cheat-sheet"
   },
   {
-    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
-    "href": "2026-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-arithmetic-operations",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-arithmetic-operations",
     "title": "ENVSOCTY 4GA3",
-    "section": "R basics: arthmatic operations",
-    "text": "R basics: arthmatic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
+    "section": "R basics: arithmetic operations",
+    "text": "R basics: arithmetic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-assigning-values",
@@ -514,6 +514,13 @@
     "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through MiKTeX or TeX Live, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code in the console to install it:\n\ntinytex::install_tinytex()"
   },
   {
+    "objectID": "2026-Winter/slides/1-intro/index.html#finish-setup-of-the-r-environment",
+    "href": "2026-Winter/slides/1-intro/index.html#finish-setup-of-the-r-environment",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Finish setup of the R environment",
+    "text": "Finish setup of the R environment\n\nAfter completing all the steps above, you should now have a fully functional R environment.\nYou should keep the folder Applied-Spatial-Statistics on your computer.\n\nYou may rename it to anything you like, but make sure you know where it is located (its directory path).\nStarting next week, you will be working inside this folder.\nAll lab activity code files (Rmd files) will be stored here.\n\nThis is mandatory because the renv package ties the environment (R packages) to this project folder.\n\nSimilar to Python virtual environments, it is not a system‑wide setup (for R packages).\n\nIf you remove the folder or try to run the code outside of it, you will need to restore the environment again."
+  },
+  {
     "objectID": "2026-Winter/slides/1-intro/index.html#references",
     "href": "2026-Winter/slides/1-intro/index.html#references",
     "title": "ENVSOCTY 4GA3",
@@ -562,7 +569,7 @@
     "href": "2025-Winter/slides/1-intro/index.html#agenda-for-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Agenda for today",
-    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavor of R syntax and style\nSetting up R and reproducible environment on your personal computer"
+    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavour of R syntax and style\nSetting up R and reproducible environment on your personal computer"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-and-rstudio",
@@ -614,11 +621,11 @@
     "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
   },
   {
-    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
-    "href": "2025-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arithmetic-operations",
+    "href": "2025-Winter/slides/1-intro/index.html#r-basics-arithmetic-operations",
     "title": "ENVSOCTY 4GA3",
-    "section": "R basics: arthmatic operations",
-    "text": "R basics: arthmatic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
+    "section": "R basics: arithmetic operations",
+    "text": "R basics: arithmetic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-assigning-values",
