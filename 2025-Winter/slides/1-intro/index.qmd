@@ -27,7 +27,7 @@ format:
 ## Agenda for today
 
 - Introduction to basic concepts for coding in R
-- Getting a flavor of R syntax and style
+- Getting a flavour of R syntax and style
 - Setting up R and reproducible environment on your personal computer
 
 ## R and RStudio
@@ -138,7 +138,7 @@ print("Hello world!)
 
 :::
 
-## R basics: arthmatic operations
+## R basics: arithmetic operations
 
 You can start by trying out R on the lab computer. Later, we'll set it up on your personal computer.
 
