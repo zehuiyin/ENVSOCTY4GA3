@@ -22,4 +22,4 @@ The slides provide a high-level overview of key concepts and helpful coding tips
   </tr>
 </tbody></table>
 ```
-<sup>1</sup> A pre‑recorded video is available on Avenue.
+<sup>1</sup> A pre‑recorded video is available on [Avenue](https://avenue.mcmaster.ca/).
