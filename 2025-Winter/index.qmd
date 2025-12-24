@@ -20,5 +20,5 @@ McMaster University<br/>
 
 # Lab Time
 
-Lab 1 Tuesday 2:30 PM – 4:20 PM<br/>
-Lab 2 Monday  4:30 PM – 6:20 PM
+Lab 1 Tuesday 2:30 PM -- 4:20 PM<br/>
+Lab 2 Monday  4:30 PM -- 6:20 PM
