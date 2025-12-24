@@ -332,6 +332,195 @@
     "text": "Archive:\n\n2025 Winter"
   },
   {
+    "objectID": "2026-Winter/slides/1-intro/index.html#section",
+    "href": "2026-Winter/slides/1-intro/index.html#section",
+    "title": "ENVSOCTY 4GA3",
+    "section": "",
+    "text": "Zehui Yin  PhD Student in Geography at SEES\n\n\n\nEmail: yinz39@mcmaster.ca\n\nPlease use your McMaster email address.\nPlease put the course code ENVSOCTY 4GA3 in the subject line.\nPlease include your name and student number in the body of the email.\nI will try to reply within 24 hours (please expect longer delays during weekends/holidays).\n\nPersonal Website: zehuiyin.github.io\nResearch Interests: Spatial Analysis, Econometrics, Machine Learning, Transportation Planning, Public Transit, and Micromobility"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#agenda-for-today",
+    "href": "2026-Winter/slides/1-intro/index.html#agenda-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Agenda for today",
+    "text": "Agenda for today\n\nIntroduction to basic concepts for coding in R\nGetting a flavor of R syntax and style\nSetting up R and reproducible environment on your personal computer\n\nInstructions for both Windows and Mac systems\nA demo on a Windows machine\n\nIf you are using Linux, I expect you already have the technical skills to install R on your own computer :)"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#lab-slides",
+    "href": "2026-Winter/slides/1-intro/index.html#lab-slides",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Lab slides",
+    "text": "Lab slides\n\n\n\n\n\n\n\nYou can access all the lab slides by scanning the QR code or by visiting the URL directly.\nzehuiyin.github.io/ENVSOCTY4GA3\nSlides from previous years are also available. You can take a peek, though I’ll make some updates this year—likely not major ones."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-and-rstudio",
+    "href": "2026-Winter/slides/1-intro/index.html#r-and-rstudio",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R and RStudio",
+    "text": "R and RStudio\n    \n\nR is a free and open-source programming language for statistical computing and graphics.\nRStudio is an integrated development environment (IDE) for coding in R.\n\nAn IDE is a set of tools that helps you code.\n\nWe use RStudio to write our R codes."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-packages",
+    "href": "2026-Winter/slides/1-intro/index.html#r-packages",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R packages",
+    "text": "R packages\n\n\nR packages are the fundamental units of reproducible R code.\nThey can include functions, data, or both, along with documentation.\nThink of them as plug-ins that enhance the functionality of existing software.\nFor example, web browser extensions like ad blockers add additional features that the original browser doesn’t have.\nIn this course, we use additional R packages to work with geospatial data in R."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#reproducible-environment",
+    "href": "2026-Winter/slides/1-intro/index.html#reproducible-environment",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reproducible environment",
+    "text": "Reproducible environment\n\n\nAn environment is the system where a program is run, including hardware and software such as operating system dependencies, programming language, packages, their configuration, and versions.\nJust as running 1000 meters affects individuals differently, running code on different computers or with different package versions can produce varied results.\nA reproducible environment ensures that everyone gets the same result by keeping the environment consistent.\n\nIdeally, we would run the same program on the same system with the same software versions for maximum reproducibility.\nIn practice, we typically focus on ensuring that key software—such as R and R package versions—is the same."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#renv-package",
+    "href": "2026-Winter/slides/1-intro/index.html#renv-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "renv package",
+    "text": "renv package\n\n\n\n\n\nrenv is an R package that helps create reproducible environments for R projects.\nIt records the R version and all R packages along with their versions in a lockfile.\n\nA lockfile is a text file that stores all the environment information."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#code-hosting-and-github",
+    "href": "2026-Winter/slides/1-intro/index.html#code-hosting-and-github",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Code hosting and Github",
+    "text": "Code hosting and Github\n\n\n\n\n\nCode hosting involves storing code online to facilitate sharing, management, and collaboration with others.\nOne of the most popular code hosting platforms is GitHub (owned by Microsoft).\nBoth the textbook and the companion R package used in this course are hosted on GitHub.\nGitHub is like a cloud drive (similar to OneDrive or Dropbox) but specialized for storing code (more specifically plain text files), including R scripts."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "href": "2026-Winter/slides/1-intro/index.html#r-markdown-vs.-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown vs. R",
+    "text": "R Markdown vs. R\n\n\n\n\n\n\nR Markdown is a file format that combines R code, its results (after knitting), and accompanying text.\nIt uses the file extension .Rmd and essentially is a plain text file integrating markdown and R.\n\nWhen you knit the file, the code is executed, the results are inserted, and the document is rendered into formats such as PDF, HTML, or other report file types.\n\nYou can start by creating an Rmd file on the lab computer."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "href": "2026-Winter/slides/1-intro/index.html#r-markdown-syntax",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R Markdown syntax",
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#markdown-syntax",
+    "href": "2026-Winter/slides/1-intro/index.html#markdown-syntax",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Markdown syntax",
+    "text": "Markdown syntax\n\n\n\n\n\n\nMarkdown is a simple and easy-to-use markup language for formatting documents.\n\nNot for computational purposes.\nOnly for text formatting/typesetting.\n\nFor basic markdown sytanx refer to: www.markdownguide.org/basic-syntax\nMarkdown cheatsheet: www.markdownguide.org/cheat-sheet"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-arthmatic-operations",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: arthmatic operations",
+    "text": "R basics: arthmatic operations\nYou can start by trying out R on the lab computer. Later, we’ll set it up on your personal computer.\nR can be used as a calculator, using intuitive symbols for these operations:\n\n1 + 5\n\n[1] 6\n\n8 - 3\n\n[1] 5\n\n3 * 4\n\n[1] 12\n\n9 / 3\n\n[1] 3"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-assigning-values",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-assigning-values",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: assigning values",
+    "text": "R basics: assigning values\nOne of the cornerstones of programming languages is assignment. You can assign a value/object to a name using &lt;- (suggested R style) or = (“Python” style).\n\na &lt;- 1\nb &lt;- 3\na + b\n\n[1] 4\n\n\n\nc = 7\nd = 5\nc * d\n\n[1] 35"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-built-in-functions",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-built-in-functions",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: built-in functions",
+    "text": "R basics: built-in functions\nR comes with many built-in functions. The calling syntax is function(parameter1, parameter2, ...). Additionally, with extra R packages, there are even more functions you can use.\n\nvalues &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\nsum(values)\n\n[1] 55\n\n\n\nmean(values)\n\n[1] 5.5\n\n\n\nlibrary(MASS)\n# integrate the sin function from 0 to pi.\narea(sin, 0, pi)\n\n[1] 2"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-indexing",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\nIndexing is the process of selecting specific values from an object based on their index location. Whenever you see [] or $ in R, some form of indexing is happening.\n\nv &lt;- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)\n\n\n\n\n\n\n1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n\n\n\n\n\n\nv[2]\n\n[1] 2\n\n\n\nv[2:4]\n\n[1] 2 3 4\n\n\n\nv[c(TRUE, T, T, T, T, TRUE,\n    FALSE, F, FALSE, F)]\n\n[1] 1 2 3 4 5 6"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-indexing-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: indexing",
+    "text": "R basics: indexing\n\ndf &lt;- data.frame(col1 = c(1, 2, 3),\n                 col2 = c(4, 5, 6))\n\n\n\n\n\n\ncol1\ncol2\n\n\n\n\n1\n4\n\n\n2\n5\n\n\n3\n6\n\n\n\n\n\n\ndf[1, 2]\n\n[1] 4\n\n\n\ndf[, \"col2\"]\n\n[1] 4 5 6\n\n\n\ndf$col1\n\n[1] 1 2 3"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-flow-control",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-flow-control",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: flow control",
+    "text": "R basics: flow control\nFlow control is an important component of any programming language. In R, the if-else statement and loops work as follows:\n\nx &lt;- 6\nif (x &gt; 5) { \n  print(\"Greater than 5\") \n} else {\n  print(\"Less or equal to 5\")\n}\n\n[1] \"Greater than 5\"\n\n\n\nfor (i in 1:3) {\n  print(i)\n}\n\n[1] 1\n[1] 2\n[1] 3"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#r-basics-custom-functions",
+    "href": "2026-Winter/slides/1-intro/index.html#r-basics-custom-functions",
+    "title": "ENVSOCTY 4GA3",
+    "section": "R basics: custom functions",
+    "text": "R basics: custom functions\nTo define your own function in R, you can use the following syntax. Note that the last line of code is automatically returned by R, though a “Python” style return statement is also valid in R.\n\nadd &lt;- function(a, b) { \n  a + b\n}\n\nadd(1, 4)\n\n[1] 5\n\n\n\nadd &lt;- function(a, b) { \n  return(a + b)\n}\n\nadd(1, 4)\n\n[1] 5"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
+    "href": "2026-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Download R version 4.4.2",
+    "text": "Download R version 4.4.2\nmirror.csclub.uwaterloo.ca/CRAN"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#download-rstudio",
+    "href": "2026-Winter/slides/1-intro/index.html#download-rstudio",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Download RStudio",
+    "text": "Download RStudio\nposit.co/download/rstudio-desktop"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#restoring-the-environment",
+    "href": "2026-Winter/slides/1-intro/index.html#restoring-the-environment",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Restoring the environment",
+    "text": "Restoring the environment\nDownload the Applied-Spatial-Statistics zip file from Avenue (or directly from GitHub: github.com/paezha/Applied-Spatial-Statistics) and unzip it. You should then have a folder with the following structure:\n\nApplied-Spatial-Statistics/\n├── renv/\n├── .gitignore\n├── .Rprofile\n├── Applied-Spatial-Statistics.Rproj\n├── README.md\n├── README.Rmd\n└── renv.lock\n\nDouble-click the Applied-Spatial-Statistics.Rproj file to open the R project."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "href": "2026-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "RTools 4.4 for Windows users",
+    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "href": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Xcode and GNU Fortran for Mac users",
+    "text": "Xcode and GNU Fortran for Mac users\nmac.r-project.org/tools\n\n\nIn order to compile R for macOS, you will need both Xcode and GNU Fortran compiler."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "href": "2026-Winter/slides/1-intro/index.html#homebrew-and-gdal-for-mac-users",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Homebrew and GDAL for Mac users",
+    "text": "Homebrew and GDAL for Mac users\nNext, use macOS Terminal to install Homebrew, and subsequently, GDAL.\nbrew.sh\nformulae.brew.sh/formula/gdal"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "href": "2026-Winter/slides/1-intro/index.html#restoring-the-environment-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Restoring the environment",
+    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#install-latex",
+    "href": "2026-Winter/slides/1-intro/index.html#install-latex",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Install \\(\\LaTeX\\)",
+    "text": "Install \\(\\LaTeX\\)\n\\(\\LaTeX\\) is a high-quality typesetting system. While it may seem as a language, understanding it isn’t necessary for our purposes. We will use it to export Rmd files with results into PDF files.\nIf you already use \\(\\LaTeX\\) and have it installed through MiKTeX or TeX Live, you can skip this step.\nIf you are unfamiliar with \\(\\LaTeX\\) and don’t have it installed yet, simply run the following R code in the console to install it:\n\ntinytex::install_tinytex()"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#references",
+    "href": "2026-Winter/slides/1-intro/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
+  },
+  {
     "objectID": "2026-Winter/index.html",
     "href": "2026-Winter/index.html",
     "title": "ENVSOCTY 4GA3 Lab 1 & 2",
@@ -346,7 +535,7 @@
     "href": "2026-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nTBD\n-\n-",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R (a pre‑recorded video is provided on Avenue)\nHTML\nPDF",
     "crumbs": [
       "Materials"
     ]
