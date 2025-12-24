@@ -1,0 +1,441 @@
+---
+format: 
+  revealjs:
+    pagetitle: "Introduction and setting up R"
+    menu: false
+    footer: "2026 Zehui Yin"
+---
+
+##
+
+<div style="text-align: center;">
+  <b style="font-size: 68px;">Zehui Yin</b>
+  <br>
+  PhD Student in Geography at SEES
+</div>
+
+<div style="font-size: 32px;">
+- **Email:** [yinz39@mcmaster.ca](mailto:yinz39@mcmaster.ca)
+  - Please use your McMaster email address.
+  - Please put the course code *ENVSOCTY 4GA3* in the subject line.
+  - Please include your name and student number in the body of the email.
+  - I will try to reply within 24 hours (please expect longer delays during weekends/holidays).
+- **Personal Website:** [zehuiyin.github.io](https://zehuiyin.github.io/)
+- **Research Interests:** Spatial Analysis, Econometrics, Machine Learning, Transportation Planning, Public Transit, and Micromobility
+</div>
+
+## Agenda for today
+
+- Introduction to basic concepts for coding in R
+- Getting a flavor of R syntax and style
+- Setting up R and reproducible environment on your personal computer
+  - Instructions for both Windows and Mac systems
+  - A demo on a Windows machine
+  <div style="font-size: 20px;">
+    If you are using Linux, I expect you already have the technical skills to install R on your own computer :)
+  </div>
+
+## Lab slides
+
+:::: {.columns}
+
+::: {.column width="35%"}
+
+```{=html}
+<p>
+<img src="../../../2025-Winter/slides/1-intro/images/qr_code.svg" style="width:100%;"/>
+</p>
+```
+
+:::
+
+::: {.column width="65%"}
+
+- You can access all the lab slides by scanning the QR code or by visiting the URL directly.
+
+- [zehuiyin.github.io/ENVSOCTY4GA3](https://zehuiyin.github.io/ENVSOCTY4GA3/)
+
+- Slides from previous years are also available. You can take a peek, though I'll make some updates this year---likely not major ones.
+
+:::
+
+::::
+
+## R and RStudio
+
+![](../../../2025-Winter/slides/1-intro/images/R_logo.svg){height=150px}&emsp;&emsp;&emsp;
+![](../../../2025-Winter/slides/1-intro/images/rstudio_logo.png){height=150px}
+
+- R is a free and open-source programming language for statistical computing and graphics.
+- RStudio is an integrated development environment (IDE) for coding in R.
+  - An IDE is a set of tools that helps you code.
+- We use RStudio to write our R codes.
+
+## R packages
+
+<div style="font-size: 37px;">
+- R packages are the fundamental units of reproducible R code.
+- They can include functions, data, or both, along with documentation.
+- Think of them as plug-ins that enhance the functionality of existing software.
+- For example, web browser extensions like ad blockers add additional features that the original browser doesn't have.
+- In this course, we use additional R packages to work with geospatial data in R.
+</div>
+
+## Reproducible environment
+
+<div style="font-size: 32px;">
+- An environment is the system where a program is run, including hardware and software such as operating system dependencies, programming language, packages, their configuration, and versions.
+- Just as running 1000 meters affects individuals differently, running code on different computers or with different package versions can produce varied results.
+- A reproducible environment ensures that everyone gets the same result by keeping the environment consistent.
+  - Ideally, we would run the same program on the same system with the same software versions for maximum reproducibility.
+  - In practice, we typically focus on ensuring that key software---such as R and R package versions---is the same.
+</div>
+
+## `renv` package
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](../../../2025-Winter/slides/1-intro/images/renv.png)
+:::
+
+::: {.column width="60%"}
+- `renv` is an R package that helps create reproducible environments for R projects.
+- It records the R version and all R packages along with their versions in a lockfile.
+  - A lockfile is a text file that stores all the environment information.
+:::
+
+::::
+
+## Code hosting and Github
+
+:::: {.columns}
+
+::: {.column width="15%"}
+![](../../../2025-Winter/slides/1-intro/images/GitHub_Invertocat_Logo.svg){height=150px}
+:::
+
+::: {.column width="85%"}
+- Code hosting involves storing code online to facilitate sharing, management, and collaboration with others.
+- One of the most popular code hosting platforms is GitHub (owned by Microsoft).
+- Both the textbook and the companion R package used in this course are hosted on GitHub.
+- GitHub is like a cloud drive (similar to OneDrive or Dropbox) but specialized for storing code (more specifically plain text files), including R scripts.
+:::
+
+::::
+
+## R Markdown vs. R
+
+:::: {.columns}
+
+::: {.column width="40%"}
+![](../../../2025-Winter/slides/1-intro/images/create_r_markdown.png){height=500px}
+:::
+
+::: {.column width="60%"}
+<div style="font-size: 32px;">
+- R Markdown is a file format that combines R code, its results (after knitting), and accompanying text.
+- It uses the file extension `.Rmd` and essentially is a plain text file integrating markdown and R.
+  - When you knit the file, the code is executed, the results are inserted, and the document is rendered into formats such as PDF, HTML, or other report file types.
+- You can start by creating an `Rmd` file on the lab computer.
+</div>
+:::
+
+::::
+
+## R Markdown syntax
+
+```{=html}
+<style>
+div[data-code-copy="false"] button.code-copy-button {
+  display: none;
+}
+</style>
+```
+
+::: {code-copy="false"}
+
+````{verbatim}
+---                                    # <1>
+title: "Untitled"
+author: "Zehui Yin"
+output: html_document
+---
+
+# Heading level 1                      # <2>
+## Heading level 2
+text...text...text
+**bold**   __bold__
+*italic*   _italic_
+
+```{r}                                 # <3>
+print("Hello world!)
+```
+````
+
+1. **YAML header**: stores settings or meta information
+2. **Markdown text**: contains plain text in markdown format.
+3. **R code chunk**: contains R code to be executed
+
+:::
+
+## Markdown syntax
+
+:::: {.columns}
+
+::: {.column width="50%"}
+![](./images/md_syntax.png){height=500px}
+:::
+
+::: {.column width="50%"}
+<div style="font-size: 32px;">
+- Markdown is a simple and easy-to-use markup language for formatting documents.
+  - Not for computational purposes.
+  - Only for text formatting/typesetting.
+- For basic markdown sytanx refer to: [www.markdownguide.org/basic-syntax](https://www.markdownguide.org/basic-syntax/)
+- Markdown cheatsheet: [www.markdownguide.org/cheat-sheet](https://www.markdownguide.org/cheat-sheet/)
+</div>
+:::
+::::
+
+## R basics: arthmatic operations
+
+You can start by trying out R on the lab computer. Later, we'll set it up on your personal computer.
+
+R can be used as a calculator, using intuitive symbols for these operations:
+
+```{r, echo=TRUE}
+1 + 5
+8 - 3
+3 * 4
+9 / 3
+```
+
+## R basics: assigning values
+
+One of the cornerstones of programming languages is assignment. You can assign a value/object to a name using `<-` (suggested R style) or `=` ("Python" style).
+
+```{r, echo=TRUE}
+a <- 1
+b <- 3
+a + b
+```
+
+```{r, echo=TRUE}
+c = 7
+d = 5
+c * d
+```
+
+## R basics: built-in functions
+
+R comes with many built-in functions. The calling syntax is `function(parameter1, parameter2, ...)`. Additionally, with extra R packages, there are even more functions you can use.
+
+```{r, echo=TRUE}
+values <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+sum(values)
+```
+
+```{r, echo=TRUE}
+mean(values)
+```
+
+```{r, echo=TRUE}
+library(MASS)
+# integrate the sin function from 0 to pi.
+area(sin, 0, pi)
+```
+
+## R basics: indexing
+
+Indexing is the process of selecting specific values from an object based on their index location. Whenever you see `[]` or `$` in R, some form of indexing is happening.
+
+```{r, echo=TRUE}
+v <- c(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+```
+
+```{r}
+as.data.frame(v) |> t() |> knitr::kable(row.names = F)
+```
+
+```{r, echo=TRUE}
+v[2]
+```
+
+```{r, echo=TRUE}
+v[2:4]
+```
+
+```{r, echo=TRUE}
+v[c(TRUE, T, T, T, T, TRUE,
+    FALSE, F, FALSE, F)]
+```
+
+## R basics: indexing
+
+```{r, echo=TRUE}
+df <- data.frame(col1 = c(1, 2, 3),
+                 col2 = c(4, 5, 6))
+```
+
+```{r}
+knitr::kable(df)
+```
+
+```{r, echo=TRUE}
+df[1, 2]
+```
+
+```{r, echo=TRUE}
+df[, "col2"]
+```
+
+```{r, echo=TRUE}
+df$col1
+```
+
+## R basics: flow control
+
+Flow control is an important component of any programming language. In R, the `if-else` statement and loops work as follows:
+
+```{r, echo=TRUE}
+x <- 6
+if (x > 5) { 
+  print("Greater than 5") 
+} else {
+  print("Less or equal to 5")
+}
+```
+
+```{r, echo=TRUE}
+for (i in 1:3) {
+  print(i)
+}
+```
+
+## R basics: custom functions
+
+To define your own function in R, you can use the following syntax. Note that the last line of code is automatically returned by R, though a "Python" style return statement is also valid in R.
+
+```{r, echo=TRUE}
+add <- function(a, b) { 
+  a + b
+}
+
+add(1, 4)
+```
+
+```{r, echo=TRUE}
+add <- function(a, b) { 
+  return(a + b)
+}
+
+add(1, 4)
+```
+
+## Download R version 4.4.2
+
+[mirror.csclub.uwaterloo.ca/CRAN](https://mirror.csclub.uwaterloo.ca/CRAN/)
+![](../../../2025-Winter/slides/1-intro/images/download_r.png){height=500px}
+
+## Download RStudio
+
+[posit.co/download/rstudio-desktop](https://posit.co/download/rstudio-desktop/)
+![](../../../2025-Winter/slides/1-intro/images/download_rstudio.png){height=500px}
+
+## Restoring the environment
+
+Download the `Applied-Spatial-Statistics` zip file from Avenue (or directly from GitHub: [github.com/paezha/Applied-Spatial-Statistics](https://github.com/paezha/Applied-Spatial-Statistics/)) and **unzip** it. You should then have a folder with the following structure:
+
+<!---
+Generated using https://tree.nathanfriend.io
+
+Text used:
+
+- Applied-Spatial-Statistics
+  - renv/
+  - .gitignore
+  - .Rprofile
+  - Applied-Spatial-Statistics.Rproj
+  - README.md
+  - README.Rmd
+  - renv.lock
+  
+--->
+
+```
+Applied-Spatial-Statistics/
+├── renv/
+├── .gitignore
+├── .Rprofile
+├── Applied-Spatial-Statistics.Rproj
+├── README.md
+├── README.Rmd
+└── renv.lock
+```
+
+- Double-click the `Applied-Spatial-Statistics.Rproj` file to open the R project.
+
+## RTools 4.4 for Windows users
+
+[mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/)
+
+![](../../../2025-Winter/slides/1-intro/images/rtools.png){height=150px}
+
+- Ensure you download the `Rtools` version that matches your installed R version.
+- Rtools is a set of programs required on **Windows** to build R packages from source.
+- Note: If you are using Mac or Linux, Rtools is **not** required.
+
+## Xcode and GNU Fortran for Mac users
+
+[mac.r-project.org/tools](https://mac.r-project.org/tools/)
+
+![](../../../2025-Winter/slides/1-intro/images/xcode.png){height=350px}
+
+- In order to compile R for macOS, you will need **both** Xcode and GNU Fortran compiler.
+
+## Homebrew and GDAL for Mac users
+
+Next, use macOS Terminal to install Homebrew, and subsequently, GDAL.
+
+[brew.sh](https://brew.sh/)
+
+[formulae.brew.sh/formula/gdal](https://formulae.brew.sh/formula/gdal)
+
+![](../../../2025-Winter/slides/1-intro/images/homebrew.png){height=300px}
+![](../../../2025-Winter/slides/1-intro/images/gdal_mac.png){height=300px}
+
+## Restoring the environment
+
+:::: {.columns}
+
+::: {.column width="60%"}
+![](../../../2025-Winter/slides/1-intro/images/restore.png){width=300px}
+![](../../../2025-Winter/slides/1-intro/images/restore1.png){width=300px}
+:::
+
+::: {.column width="40%"}
+- Navigate to the bottom right panel.
+- Click the Packages tab, then the renv button, and finally select the `Restore Library` option.
+- Click the `Restore` button in the pop-up panel.
+:::
+
+::::
+
+## Install $\LaTeX$
+
+$\LaTeX$ is a high-quality typesetting system. While it may seem as a language, understanding it isn't necessary for our purposes. We will use it to export `Rmd` files with results into PDF files.
+
+If you already use $\LaTeX$ and have it installed through `MiKTeX` or `TeX Live`, you can skip this step.
+
+If you are unfamiliar with $\LaTeX$ and don't have it installed yet, simply run the following R code in the console to install it:
+
+```{r, echo=TRUE, eval=FALSE}
+tinytex::install_tinytex()
+```
+
+## References
+
+- <https://r-pkgs.org/>
+- <https://book.the-turing-way.org/reproducible-research/renv.html>
+- <https://rstudio.github.io/renv/articles/renv.html>
