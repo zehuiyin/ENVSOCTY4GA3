@@ -462,7 +462,14 @@
     "href": "2026-Winter/slides/1-intro/index.html#download-r-version-4.4.2",
     "title": "ENVSOCTY 4GA3",
     "section": "Download R version 4.4.2",
-    "text": "Download R version 4.4.2\nmirror.csclub.uwaterloo.ca/CRAN"
+    "text": "Download R version 4.4.2\nWe will be using a previous release of R for this course rather than the latest version. All course materials and code examples were tested exclusively on this specific R release.\nmirror.csclub.uwaterloo.ca/CRAN"
+  },
+  {
+    "objectID": "2026-Winter/slides/1-intro/index.html#getting-previous-releases-of-r",
+    "href": "2026-Winter/slides/1-intro/index.html#getting-previous-releases-of-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Getting previous releases of R",
+    "text": "Getting previous releases of R\n\n\nWindows systems: mirror.csclub.uwaterloo.ca/CRAN/bin/windows/base/old\nMac systems:\n\nApple silicon (ARM): mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-arm64/base\nIntel based: mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-x86_64/base"
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#download-rstudio",
@@ -483,7 +490,7 @@
     "href": "2026-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
     "title": "ENVSOCTY 4GA3",
     "section": "RTools 4.4 for Windows users",
-    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
+    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the RTools version that matches your installed R version.\nRTools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
@@ -504,7 +511,7 @@
     "href": "2026-Winter/slides/1-intro/index.html#restoring-the-environment-1",
     "title": "ENVSOCTY 4GA3",
     "section": "Restoring the environment",
-    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nClick the Packages tab, then the renv button, and finally select the Restore Library option.\nClick the Restore button in the pop-up panel."
+    "text": "Restoring the environment\n\n\n \n\n\nNavigate to the bottom right panel.\nSelect the Packages tab, then click the Restore option.\nClick the Restore button in the pop-up panel (as shown in the right figure)."
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#install-latex",

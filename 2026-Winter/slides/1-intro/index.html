@@ -603,7 +603,20 @@ div[data-code-copy="false"] button.code-copy-button {
 </section>
 <section id="download-r-version-4.4.2" class="slide level2">
 <h2>Download R version 4.4.2</h2>
-<p><a href="https://mirror.csclub.uwaterloo.ca/CRAN/">mirror.csclub.uwaterloo.ca/CRAN</a> <img data-src="../../../2025-Winter/slides/1-intro/images/download_r.png" height="500"></p>
+<p>We will be using a <strong>previous release</strong> of R for this course rather than the latest version. All course materials and code examples were tested exclusively on this specific R release.</p>
+<p><a href="https://mirror.csclub.uwaterloo.ca/CRAN/">mirror.csclub.uwaterloo.ca/CRAN</a> <img data-src="../../../2025-Winter/slides/1-intro/images/download_r.png" height="350"></p>
+</section>
+<section id="getting-previous-releases-of-r" class="slide level2">
+<h2>Getting previous releases of R</h2>
+<p><img data-src="./images/old_r.png" height="300"></p>
+<div style="font-size: 30px;">
+<p>Windows systems: <a href="https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/base/old/">mirror.csclub.uwaterloo.ca/CRAN/bin/windows/base/old</a></p>
+<p>Mac systems:</p>
+<ul>
+<li>Apple silicon (ARM): <a href="https://mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-arm64/base/">mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-arm64/base</a></li>
+<li>Intel based: <a href="https://mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-x86_64/base/">mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-x86_64/base</a></li>
+</ul>
+</div>
 </section>
 <section id="download-rstudio" class="slide level2">
 <h2>Download RStudio</h2>
@@ -642,10 +655,10 @@ Text used:
 <section id="rtools-4.4-for-windows-users" class="slide level2">
 <h2>RTools 4.4 for Windows users</h2>
 <p><a href="https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/">mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools</a></p>
-<p><img data-src="../../../2025-Winter/slides/1-intro/images/rtools.png" height="150"></p>
+<p><img data-src="./images/rtools.png" height="150"></p>
 <ul>
-<li>Ensure you download the <code>Rtools</code> version that matches your installed R version.</li>
-<li>Rtools is a set of programs required on <strong>Windows</strong> to build R packages from source.</li>
+<li>Ensure you download the <code>RTools</code> version that matches your installed R version.</li>
+<li><code>RTools</code> is a set of programs required on <strong>Windows</strong> to build R packages from source.</li>
 <li>Note: If you are using Mac or Linux, Rtools is <strong>not</strong> required.</li>
 </ul>
 </section>
@@ -654,12 +667,12 @@ Text used:
 <p><a href="https://mac.r-project.org/tools/">mac.r-project.org/tools</a></p>
 <p><img data-src="../../../2025-Winter/slides/1-intro/images/xcode.png" height="350"></p>
 <ul>
-<li>In order to compile R for macOS, you will need <strong>both</strong> Xcode and GNU Fortran compiler.</li>
+<li>In order to compile R for macOS, you will need <strong>both</strong> <code>Xcode</code> and <code>GNU Fortran compiler</code>.</li>
 </ul>
 </section>
 <section id="homebrew-and-gdal-for-mac-users" class="slide level2">
 <h2>Homebrew and GDAL for Mac users</h2>
-<p>Next, use macOS Terminal to install Homebrew, and subsequently, GDAL.</p>
+<p>Next, use macOS Terminal to install <code>Homebrew</code>, and subsequently, <code>GDAL</code>.</p>
 <p><a href="https://brew.sh/">brew.sh</a></p>
 <p><a href="https://formulae.brew.sh/formula/gdal">formulae.brew.sh/formula/gdal</a></p>
 <p><img data-src="../../../2025-Winter/slides/1-intro/images/homebrew.png" height="300"> <img data-src="../../../2025-Winter/slides/1-intro/images/gdal_mac.png" height="300"></p>
@@ -668,13 +681,13 @@ Text used:
 <h2>Restoring the environment</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
-<p><img data-src="../../../2025-Winter/slides/1-intro/images/restore.png" width="300"> <img data-src="../../../2025-Winter/slides/1-intro/images/restore1.png" width="300"></p>
+<p><img data-src="./images/restore.png" width="300"> <img data-src="./images/restore1.png" width="300"></p>
 </div><div class="column" style="width:40%;">
-<ul>
+<ol type="1">
 <li>Navigate to the bottom right panel.</li>
-<li>Click the Packages tab, then the renv button, and finally select the <code>Restore Library</code> option.</li>
-<li>Click the <code>Restore</code> button in the pop-up panel.</li>
-</ul>
+<li>Select the Packages tab, then click the <code>Restore</code> option.</li>
+<li>Click the <code>Restore</code> button in the pop-up panel (as shown in the right figure).</li>
+</ol>
 </div></div>
 </section>
 <section id="install-latex" class="slide level2">
