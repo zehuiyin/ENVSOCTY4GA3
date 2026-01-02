@@ -334,8 +334,23 @@ add(1, 4)
 
 ## Download R version 4.4.2
 
+We will be using a **previous release** of R for this course rather than the latest version. All course materials and code examples were tested exclusively on this specific R release.
+
 [mirror.csclub.uwaterloo.ca/CRAN](https://mirror.csclub.uwaterloo.ca/CRAN/)
-![](../../../2025-Winter/slides/1-intro/images/download_r.png){height=500px}
+![](../../../2025-Winter/slides/1-intro/images/download_r.png){height=350px}
+
+## Getting previous releases of R
+
+![](./images/old_r.png){height=300px}
+
+:::{style="font-size: 30px;"}
+Windows systems: [mirror.csclub.uwaterloo.ca/CRAN/bin/windows/base/old](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/base/old/)
+
+Mac systems:
+
+  - Apple silicon (ARM): [mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-arm64/base](https://mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-arm64/base/)
+  - Intel based: [mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-x86_64/base](https://mirror.csclub.uwaterloo.ca/CRAN/bin/macosx/big-sur-x86_64/base/)
+:::
 
 ## Download RStudio
 
@@ -379,10 +394,10 @@ Applied-Spatial-Statistics/
 
 [mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools](https://mirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools/)
 
-![](../../../2025-Winter/slides/1-intro/images/rtools.png){height=150px}
+![](./images/rtools.png){height=150px}
 
-- Ensure you download the `Rtools` version that matches your installed R version.
-- Rtools is a set of programs required on **Windows** to build R packages from source.
+- Ensure you download the `RTools` version that matches your installed R version.
+- `RTools` is a set of programs required on **Windows** to build R packages from source.
 - Note: If you are using Mac or Linux, Rtools is **not** required.
 
 ## Xcode and GNU Fortran for Mac users
@@ -391,11 +406,11 @@ Applied-Spatial-Statistics/
 
 ![](../../../2025-Winter/slides/1-intro/images/xcode.png){height=350px}
 
-- In order to compile R for macOS, you will need **both** Xcode and GNU Fortran compiler.
+- In order to compile R for macOS, you will need **both** `Xcode` and `GNU Fortran compiler`.
 
 ## Homebrew and GDAL for Mac users
 
-Next, use macOS Terminal to install Homebrew, and subsequently, GDAL.
+Next, use macOS Terminal to install `Homebrew`, and subsequently, `GDAL`.
 
 [brew.sh](https://brew.sh/)
 
@@ -409,14 +424,14 @@ Next, use macOS Terminal to install Homebrew, and subsequently, GDAL.
 :::: {.columns}
 
 ::: {.column width="60%"}
-![](../../../2025-Winter/slides/1-intro/images/restore.png){width=300px}
-![](../../../2025-Winter/slides/1-intro/images/restore1.png){width=300px}
+![](./images/restore.png){width=300px}
+![](./images/restore1.png){width=300px}
 :::
 
 ::: {.column width="40%"}
-- Navigate to the bottom right panel.
-- Click the Packages tab, then the renv button, and finally select the `Restore Library` option.
-- Click the `Restore` button in the pop-up panel.
+1. Navigate to the bottom right panel.
+2. Select the Packages tab, then click the `Restore` option.
+3. Click the `Restore` button in the pop-up panel (as shown in the right figure).
 :::
 
 ::::
