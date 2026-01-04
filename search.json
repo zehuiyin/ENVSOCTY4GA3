@@ -406,7 +406,7 @@
     "href": "2026-Winter/slides/1-intro/index.html#r-markdown-syntax",
     "title": "ENVSOCTY 4GA3",
     "section": "R Markdown syntax",
-    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!\")\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#markdown-syntax",
@@ -497,7 +497,7 @@
     "href": "2026-Winter/slides/1-intro/index.html#rtools-4.4-for-windows-users",
     "title": "ENVSOCTY 4GA3",
     "section": "RTools 4.4 for Windows users",
-    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the RTools version that matches your installed R version.\nRTools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, Rtools is not required."
+    "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the RTools version that matches your installed R version.\nRTools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, RTools is not required."
   },
   {
     "objectID": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
@@ -632,7 +632,7 @@
     "href": "2025-Winter/slides/1-intro/index.html#r-markdown-syntax",
     "title": "ENVSOCTY 4GA3",
     "section": "R Markdown syntax",
-    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!)\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
+    "text": "R Markdown syntax\n\n\n1---\ntitle: \"Untitled\"\nauthor: \"Zehui Yin\"\noutput: html_document\n---\n\n2# Heading level 1\n## Heading level 2\ntext...text...text\n**bold**   __bold__\n*italic*   _italic_\n\n3```{r}\nprint(\"Hello world!\")\n```\n\n1\n\nYAML header: stores settings or meta information\n\n2\n\nMarkdown text: contains plain text in markdown format.\n\n3\n\nR code chunk: contains R code to be executed"
   },
   {
     "objectID": "2025-Winter/slides/1-intro/index.html#r-basics-arithmetic-operations",
