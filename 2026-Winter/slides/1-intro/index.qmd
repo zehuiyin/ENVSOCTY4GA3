@@ -186,7 +186,7 @@ text...text...text
 *italic*   _italic_
 
 ```{r}                                 # <3>
-print("Hello world!)
+print("Hello world!")
 ```
 ````
 
@@ -416,7 +416,7 @@ Applied-Spatial-Statistics/
 
 - Ensure you download the `RTools` version that matches your installed R version.
 - `RTools` is a set of programs required on **Windows** to build R packages from source.
-- Note: If you are using Mac or Linux, Rtools is **not** required.
+- Note: If you are using Mac or Linux, `RTools` is **not** required.
 
 ## Xcode and GNU Fortran for Mac users
 
