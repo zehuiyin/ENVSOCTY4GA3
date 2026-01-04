@@ -8,6 +8,24 @@ format:
 
 ##
 
+:::: {style="display: flex; flex-direction: column; justify-content: center; height: 100%;"}
+
+::: {style="text-align: center;font-size: 60px; margin-bottom: 30px;"}
+**ENVSOCTY 4GA3**
+
+Lab 1: Introduction and setting up R
+:::
+
+::: {style="text-align: center;font-size: 40px;"}
+Zehui Yin
+
+*Winter 2026*
+:::
+
+::::
+
+##
+
 <div style="text-align: center;">
   <b style="font-size: 68px;">Zehui Yin</b>
   <br>
