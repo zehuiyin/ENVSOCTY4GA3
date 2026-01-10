@@ -20,6 +20,12 @@ The slides provide a high-level overview of key concepts and helpful coding tips
     <td><a href="./slides/1-intro/index.html">HTML</a></td>
     <td><a href="./slides/1-intro/Introduction and setting up R.pdf">PDF</a></td>
   </tr>
+  <tr>
+    <td>2</td>
+    <td>Mapping in R</td>
+    <td><a href="./slides/2-mapping/index.html">HTML</a></td>
+    <td><a href="./slides/2-mapping/Mapping in R.pdf">PDF</a></td>
+  </tr>
 </tbody></table>
 ```
 <sup>1</sup> A pre‑recorded video is available on [Avenue](https://avenue.mcmaster.ca/).
