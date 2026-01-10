@@ -332,6 +332,93 @@
     "text": "Archive:\n\n2025 Winter"
   },
   {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "href": "2026-Winter/slides/2-mapping/index.html#policy-and-agenda",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Policy and agenda",
+    "text": "Policy and agenda\n\nYou need to finish the weekly reading before coming to the lab.\nActivity is marked as satisfactory completion or not:\n\nPoor quality submissions will result in a 0.\nSuspicious AI-generated content will be flagged (manually) and forwarded to the instructor.\n\nWe will work on activities during the lab:\n\nThe focus is more on how to code rather than on theories."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "href": "2026-Winter/slides/2-mapping/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")"
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "href": "2026-Winter/slides/2-mapping/index.html#what-does-each-package-do",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What does each package do?",
+    "text": "What does each package do?\n\nisdas: The course companion package containing all the data we will use.\nsf: The GIS package that enables us to work with vector data.\ntidyverse: A meta-package that encompasses plotting, data manipulation, and additional functionality."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "href": "2026-Winter/slides/2-mapping/index.html#ggplot2-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "ggplot2 package",
+    "text": "ggplot2 package\n\n\n\n\n\nggplot2 is one of the packages included in tidyverse.\nIt enables us to use the Grammar of Graphics to create plots.\nIt creates plots through overlaying layers created using geom_*."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#how-layering-works",
+    "href": "2026-Winter/slides/2-mapping/index.html#how-layering-works",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg)\nFirst, we create a canvas."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "href": "2026-Winter/slides/2-mapping/index.html#how-layering-works-1",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy)\nThen, we assign which variables go to which axis."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "href": "2026-Winter/slides/2-mapping/index.html#how-layering-works-2",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point()\nWe add data points to the plot."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "href": "2026-Winter/slides/2-mapping/index.html#how-layering-works-3",
+    "title": "ENVSOCTY 4GA3",
+    "section": "How layering works?",
+    "text": "How layering works?\n\n\nggplot(data = mpg) +\n  aes(x = displ,\n      y = hwy) +\n  geom_point() +\n  geom_smooth()\nFinally, we add an (default: local polynomial) regression line to the points."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#mapping",
+    "href": "2026-Winter/slides/2-mapping/index.html#mapping",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Mapping",
+    "text": "Mapping\nMapping an sf object (vector data) is straightforward. We use geom_sf for this purpose.\n\nggplot(data = nc) +\n  geom_sf(aes(fill = AREA))"
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#activities-for-today",
+    "href": "2026-Winter/slides/2-mapping/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 4: Activity: Statistical Maps I\nChapter 6: Activity 2: Statistical Maps II\n\nThe hard deadline is Tuesday, January 20 (8:00 am)."
+  },
+  {
+    "objectID": "2026-Winter/slides/2-mapping/index.html#references",
+    "href": "2026-Winter/slides/2-mapping/index.html#references",
+    "title": "ENVSOCTY 4GA3",
+    "section": "References",
+    "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
+  },
+  {
+    "objectID": "2026-Winter/index.html",
+    "href": "2026-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "2026-Winter/slides/1-intro/index.html#section",
     "href": "2026-Winter/slides/1-intro/index.html#section",
     "title": "ENVSOCTY 4GA3",
@@ -542,21 +629,11 @@
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
   },
   {
-    "objectID": "2026-Winter/index.html",
-    "href": "2026-Winter/index.html",
-    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
-    "section": "",
-    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "2026-Winter/materials.html",
     "href": "2026-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
     "crumbs": [
       "Materials"
     ]
