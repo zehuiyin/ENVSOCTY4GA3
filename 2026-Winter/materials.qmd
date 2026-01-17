@@ -26,6 +26,12 @@ The slides provide a high-level overview of key concepts and helpful coding tips
     <td><a href="./slides/2-mapping/index.html">HTML</a></td>
     <td><a href="./slides/2-mapping/Mapping in R.pdf">PDF</a></td>
   </tr>
+  <tr>
+    <td>3</td>
+    <td>Point Pattern I</td>
+    <td><a href="./slides/3-point-pattern1/index.html">HTML</a></td>
+    <td><a href="./slides/3-point-pattern1/Point Pattern I.pdf">PDF</a></td>
+  </tr>
 </tbody></table>
 ```
 <sup>1</sup> A pre‑recorded video is available on [Avenue](https://avenue.mcmaster.ca/).
