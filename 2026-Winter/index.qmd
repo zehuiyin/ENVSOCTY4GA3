@@ -18,8 +18,11 @@ School of Earth, Environment & Society<br/>
 McMaster University<br/>
 {{< fa envelope >}} [yinz39@mcmaster.ca](mailto:yinz39@mcmaster.ca)
 
-# Lab Time
+# Office Hours
 
+On-demand 15- or 30-minute Zoom meetings, available by request. Please email me to book a time.
+
+# Lab Time
 
 ```{=html}
 Lab 1
