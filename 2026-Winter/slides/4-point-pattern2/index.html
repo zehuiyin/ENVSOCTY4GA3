@@ -10,7 +10,7 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>ENVSOCTY 4GA3 – Point Pattern I</title>
+  <title>ENVSOCTY 4GA3 – Point Pattern II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -193,143 +193,114 @@
     <div class="slides">
 
 
-<section id="activity-submission-remainder" class="slide level2">
-<h2>Activity submission remainder</h2>
-<div style="font-size: 0.9em;">
+<section id="activity-feedback" class="slide level2">
+<h2>Activity feedback</h2>
+<div style="font-size: 0.7em;">
 <ul>
-<li>You need to <u>use the template</u> from the <strong><code>isdas</code> package</strong>.</li>
-<li>You need to submit knitted <strong>PDFs</strong>.</li>
-<li>You should finish <strong>all</strong> the coding parts in the lab activities submission.</li>
-<li>You need to answer <strong>all</strong> the questions in the activity sections (highlights and threshold concepts are optional) in the in-class activity submission.</li>
+<li>Assignments are evaluated as Satisfactory / Partially Satisfactory / Not Satisfactory, corresponding to full, half, or zero marks.
+<ul>
+<li>Late submissions more than one hour past the deadline were penalized according to the syllabus (<strong>20%</strong> on the first day, <strong>10%</strong> for each additional day).</li>
+</ul></li>
+<li>Knit your document regularly as you work so that errors can be identified and corrected early.
+<ul>
+<li>For this activity, submissions that did not knit successfully incurred a <strong>20%</strong> penalty (this will increase to <strong>50%</strong> next time).</li>
+</ul></li>
+<li>Choose colour schemes carefully:
+<ul>
+<li>Use a diverging colour scheme only when there is a meaningful neutral or zero reference level.</li>
+</ul></li>
 <li>We have <strong>two</strong> activities each week, and you need to submit both in each submission.</li>
-<li>You need to submit both PDFs in the <strong>same</strong> submission.</li>
+<li>A small <span class="math inline">\(p\)</span>-value (<span class="math inline">\(&lt;0.05\)</span>) in the <span class="math inline">\(\chi^2\)</span> test indicates that the point pattern is not random and shows spatial dependence.</li>
 </ul>
 </div>
 </section>
-<section id="line-breaks-in-markdown" class="slide level2">
-<h2>Line breaks in markdown</h2>
-<div style="font-size: 0.8em;">
-<p>Simply changing a line in Markdown won’t create a line break.</p>
-<p>Unlike <span class="math inline">\(\LaTeX\)</span> (<code>\newline</code>) or HTML (<code>&lt;br&gt;</code>), Markdown does not have explicit line break syntax.</p>
-<p>The following example would produce a single line sentence after knitting:</p>
+<section id="mathematical-notation-remainder" class="slide level2">
+<h2>Mathematical notation remainder</h2>
+<p>Summation notation (<span class="math inline">\(\sum\)</span>):</p>
+<p><span class="math display">\[
+\sum_{i=1}^Qx_i=x_1 + x_2 + \cdots + x_Q
+\]</span></p>
+<p>For all notation (<span class="math inline">\(\forall\)</span>):</p>
+<p><span class="math display">\[
+x_k = 1 \hspace{0.2cm} \forall k\rightarrow x=1
+\]</span></p>
+</section>
+<section id="chi2-distribution" class="slide level2">
+<h2><span class="math inline">\(\chi^2\)</span> distribution</h2>
+<p>Strictly non-negative, right-skewed, and non-symmetric.</p>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="960" class="r-stretch"></section>
+<section id="cumulative-distribution-function" class="slide level2">
+<h2>Cumulative distribution function</h2>
+<p><span class="math inline">\(F_X(x)=P(X \leq x)\)</span></p>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="960" class="r-stretch"></section>
+<section id="hatg-function" class="slide level2">
+<h2><span class="math inline">\(\hat{G}\)</span>-function</h2>
+<p><span class="math display">\[
+\hat{G}(r) = \frac{1}{n(\mathbf
+x)}\sum_{i}\mathbf 1\{d_i \le r\}
+\]</span></p>
+<p>The <span class="math inline">\(\hat{G}\)</span> function represents the number of elements in the set of distances up to some threshold <span class="math inline">\(r\)</span>, normalized by the total number of points <span class="math inline">\(n\)</span> in point pattern <span class="math inline">\(\mathbf{x}\)</span>.</p>
+</section>
+<section id="pipe-operator-in-r" class="slide level2">
+<h2>Pipe operator in R</h2>
+<p>The <code>|&gt;</code> is the native pipe operator introduced in R 4.1.0.</p>
+<p>The old pipe operator is <code>%&gt;%</code> from <code>magrittr</code> package.</p>
+<p>It allows chained expressions in place of nested expressions to improve code readability.</p>
+<div class="cell">
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>v <span class="ot">&lt;-</span> <span class="fu">c</span>(<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>)</span>
+<span id="cb1-2"><a></a><span class="fu">sum</span>(<span class="fu">sqrt</span>(v))</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.382332</code></pre>
+</div>
 </div>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a></a>first line of text</span>
-<span id="cb1-2"><a></a>still the first line of text</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a>v <span class="sc">|&gt;</span> </span>
+<span id="cb3-2"><a></a>  <span class="fu">sqrt</span>() <span class="sc">|&gt;</span></span>
+<span id="cb3-3"><a></a>  <span class="fu">sum</span>()</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="cell-output cell-output-stdout">
+<pre><code>[1] 8.382332</code></pre>
 </div>
-<p><br></p>
-<div style="font-size: 0.8em;">
-<p>In Markdown, line breaks are created implicitly using empty lines.</p>
-<p>The following example would produce two lines after knitting:</p>
 </div>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a></a>first line of text</span>
-<span id="cb2-2"><a></a></span>
-<span id="cb2-3"><a></a>second line of text</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
+<p>Do not confuse it with <code>+</code> in <code>ggplot2</code>; they are <strong>not</strong> the same thing.</p>
 </section>
 <section id="packages-we-use-today" class="slide level2">
 <h2>Packages we use today</h2>
 <p>Load the following three packages.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a></a><span class="fu">library</span>(isdas)</span>
-<span id="cb3-2"><a></a><span class="fu">library</span>(sf)</span>
-<span id="cb3-3"><a></a><span class="fu">library</span>(tidyverse)</span>
-<span id="cb3-4"><a></a><span class="fu">library</span>(spatstat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">library</span>(isdas)</span>
+<span id="cb5-2"><a></a><span class="fu">library</span>(sf)</span>
+<span id="cb5-3"><a></a><span class="fu">library</span>(tidyverse)</span>
+<span id="cb5-4"><a></a><span class="fu">library</span>(spatstat)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 <p>If you have trouble restoring the reproducible environment, you need to manually install the packages first.</p>
 <div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
-<span id="cb4-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
-<span id="cb4-5"><a></a></span>
-<span id="cb4-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
-<span id="cb4-7"><a></a></span>
-<span id="cb4-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a></a><span class="fu">install.packages</span>(<span class="st">"remotes"</span>)</span>
+<span id="cb6-2"><a></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"paezha/isdas"</span>)</span>
+<span id="cb6-3"><a></a></span>
+<span id="cb6-4"><a></a><span class="fu">install.packages</span>(<span class="st">"sf"</span>)</span>
+<span id="cb6-5"><a></a></span>
+<span id="cb6-6"><a></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>)</span>
+<span id="cb6-7"><a></a></span>
+<span id="cb6-8"><a></a><span class="fu">install.packages</span>(<span class="st">"spatstat"</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
-</section>
-<section id="new-package-for-today-spatstat" class="slide level2">
-<h2>New package for today: <code>spatstat</code></h2>
-<p><code>spatstat</code> is an R package for spatial statistics with a strong focus on analyzing spatial point patterns in 2D.</p>
-<p>You can find documentation for this package at:</p>
-<ul>
-<li><a href="https://spatstat.org/" class="uri">https://spatstat.org/</a></li>
-<li><a href="https://spatstat.org/resources/spatstatQuickref.pdf" class="uri">https://spatstat.org/resources/spatstatQuickref.pdf</a></li>
-</ul>
-</section>
-<section id="random-vs.-deterministirc-process" class="slide level2">
-<h2>Random vs.&nbsp;deterministirc process</h2>
-<p>Let’s denote the probability of an event occurring at point <span class="math inline">\((x,y)\)</span> as <span class="math inline">\(Prob(Event_{(x,y)})\)</span>. The points are located within a unit square ranging from 0 to 1.</p>
-<ul>
-<li>A random process: <span class="math inline">\(Prob(Event_{(x,y)}) = B(n = 1, p = 0.5)\)</span></li>
-<li>A deterministic process:<br><span class="math inline">\(Prob(Event_{(x,y)}) = x\)</span></li>
-<li>A stochastic process: <span class="math inline">\(Prob(Event_{(x,y)}) = x - x \cdot B(n = 1, p = 0.5)\)</span></li>
-</ul>
-</section>
-<section id="generate-random-values-from-a-distribution" class="slide level2">
-<h2>Generate random values from a distribution</h2>
-<p>There is a family of functions that start with <code>r*</code> capable of generating random values from a given distribution.</p>
-<p>From a nomral distribution:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a></a><span class="fu">rnorm</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">mean =</span> <span class="dv">0</span>, <span class="at">sd =</span> <span class="dv">1</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1]  0.5185718 -0.5801848  1.7541242 -1.4321465 -1.3573983</code></pre>
-</div>
-</div>
-<p>From a binomial distribution:</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 0 1 0 1 0</code></pre>
-</div>
-</div>
-<p>These functions are very useful for simulations.</p>
-</section>
-<section id="random-number-generator-and-seed" class="slide level2">
-<h2>Random number generator and seed</h2>
-<p>In computers, there is no true random number generator; they all use pseudo-random number generators. This means that the random numbers produced by computers are just the output of a very complex function based on an input, or seed.</p>
-<p>As a result, if we know the seed, we can perfectly predict the random numbers generated by a computer’s random number generator.</p>
-<p>Typically, computers use the current time as the seed (R uses this approach).</p>
-</section>
-<section id="setting-a-seed-in-r" class="slide level2">
-<h2>Setting a seed in R</h2>
-<p>You can control the random number generation algorithm by setting a seed value in R.</p>
-<div class="cell">
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
-<span id="cb9-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 0 0 0 1</code></pre>
-</div>
-<div class="code-copy-outer-scaffold"><div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a></a><span class="fu">set.seed</span>(<span class="dv">437988</span>)</span>
-<span id="cb11-2"><a></a><span class="fu">rbinom</span>(<span class="at">n =</span> <span class="dv">5</span>, <span class="at">size =</span> <span class="dv">1</span>, <span class="at">prob =</span> <span class="fl">0.5</span>)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>[1] 1 0 0 0 1</code></pre>
-</div>
-</div>
-<p>Note that the seed in R is actually a vector, a sequence of values, and <code>set.seed</code> changes this vector to a particular state.</p>
-<p>If you do not set the seed again before rerunning the second <code>rbinom</code>, it will produce different results.</p>
-</section>
-<section id="what-is-p-value" class="slide level2">
-<h2>What is <span class="math inline">\(p\)</span>-value?</h2>
-<p>Let’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (<span class="math inline">\(H_1: \overline{x_1} \neq \overline{x_2}\)</span>). The <span class="math inline">\(p\)</span>-value is the area under the curve that is more extreme than the test statistic, multiplied by 2.</p>
-
-<img data-src="index_files/figure-revealjs/unnamed-chunk-9-1.png" width="3000" class="r-stretch"></section>
-<section id="online-office-hours" class="slide level2">
-<h2>Online Office Hours</h2>
-<p>If you need additional help, especially while working on your course project, you’re welcome to book a 15- or 30-minute online office hour with me.</p>
-<p>Please email me at <strong>yinz39@mcmaster.ca</strong> with a brief <strong>description of your question</strong> and several <strong>possible meeting times</strong>.</p>
-<p>I’ll follow up to confirm the appointment and share a Zoom link.</p>
 </section>
 <section id="activities-for-today" class="slide level2">
 <h2>Activities for today</h2>
 <ul>
 <li>We will work on the following chapter from the textbook:
 <ul>
-<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-3-maps-as-processes.html">8</a>: Activity 3: Maps as Processes</li>
-<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-4-point-pattern-analysis-i.html">10</a>: Activity 4: Point Pattern Analysis I</li>
+<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-5-point-pattern-analysis-ii.html">12</a>: Activity 5: Point Pattern Analysis II</li>
+<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-6-point-pattern-analysis-iii.html">14</a>: Activity 6: Point Pattern Analysis III</li>
 </ul></li>
-<li>The hard deadline is <strong>Tuesday</strong>, <strong>January 27</strong> (<strong>8:00 am</strong>).</li>
+<li>The hard deadline is <strong>Tuesday</strong>, <strong>February 3</strong> (<strong>8:00 am</strong>).</li>
+</ul>
+</section>
+<section id="reference" class="slide level2">
+<h2>Reference</h2>
+<ul>
+<li><a href="https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html" class="uri">https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html</a></li>
 </ul>
 
 

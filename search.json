@@ -409,6 +409,93 @@
     "text": "References\n\nhttps://ggplot2.tidyverse.org/\nhttps://metricsf20.classes.ryansafner.com/slides/1.3-slides#1"
   },
   {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#activity-submission-remainder",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#activity-submission-remainder",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activity submission remainder",
+    "text": "Activity submission remainder\n\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou should finish all the coding parts in the lab activities submission.\nYou need to answer all the questions in the activity sections (highlights and threshold concepts are optional) in the in-class activity submission.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Line breaks in markdown",
+    "text": "Line breaks in markdown\n\nSimply changing a line in Markdown won’t create a line break.\nUnlike \\(\\LaTeX\\) (\\newline) or HTML (&lt;br&gt;), Markdown does not have explicit line break syntax.\nThe following example would produce a single line sentence after knitting:\n\n\nfirst line of text\nstill the first line of text\n\n\n\nIn Markdown, line breaks are created implicitly using empty lines.\nThe following example would produce two lines after knitting:\n\n\nfirst line of text\n\nsecond line of text"
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Packages we use today",
+    "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
+    "title": "ENVSOCTY 4GA3",
+    "section": "New package for today: spatstat",
+    "text": "New package for today: spatstat\nspatstat is an R package for spatial statistics with a strong focus on analyzing spatial point patterns in 2D.\nYou can find documentation for this package at:\n\nhttps://spatstat.org/\nhttps://spatstat.org/resources/spatstatQuickref.pdf"
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Random vs. deterministirc process",
+    "text": "Random vs. deterministirc process\nLet’s denote the probability of an event occurring at point \\((x,y)\\) as \\(Prob(Event_{(x,y)})\\). The points are located within a unit square ranging from 0 to 1.\n\nA random process: \\(Prob(Event_{(x,y)}) = B(n = 1, p = 0.5)\\)\nA deterministic process:\\(Prob(Event_{(x,y)}) = x\\)\nA stochastic process: \\(Prob(Event_{(x,y)}) = x - x \\cdot B(n = 1, p = 0.5)\\)"
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Generate random values from a distribution",
+    "text": "Generate random values from a distribution\nThere is a family of functions that start with r* capable of generating random values from a given distribution.\nFrom a nomral distribution:\n\nrnorm(n = 5, mean = 0, sd = 1)\n\n[1]  0.5185718 -0.5801848  1.7541242 -1.4321465 -1.3573983\n\n\nFrom a binomial distribution:\n\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 0 1 0 1 0\n\n\nThese functions are very useful for simulations."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Random number generator and seed",
+    "text": "Random number generator and seed\nIn computers, there is no true random number generator; they all use pseudo-random number generators. This means that the random numbers produced by computers are just the output of a very complex function based on an input, or seed.\nAs a result, if we know the seed, we can perfectly predict the random numbers generated by a computer’s random number generator.\nTypically, computers use the current time as the seed (R uses this approach)."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Setting a seed in R",
+    "text": "Setting a seed in R\nYou can control the random number generation algorithm by setting a seed value in R.\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\n\nNote that the seed in R is actually a vector, a sequence of values, and set.seed changes this vector to a particular state.\nIf you do not set the seed again before rerunning the second rbinom, it will produce different results."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
+    "title": "ENVSOCTY 4GA3",
+    "section": "What is \\(p\\)-value?",
+    "text": "What is \\(p\\)-value?\nLet’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (\\(H_1: \\overline{x_1} \\neq \\overline{x_2}\\)). The \\(p\\)-value is the area under the curve that is more extreme than the test statistic, multiplied by 2."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#online-office-hours",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#online-office-hours",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Online Office Hours",
+    "text": "Online Office Hours\nIf you need additional help, especially while working on your course project, you’re welcome to book a 15- or 30-minute online office hour with me.\nPlease email me at yinz39@mcmaster.ca with a brief description of your question and several possible meeting times.\nI’ll follow up to confirm the appointment and share a Zoom link."
+  },
+  {
+    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#activities-for-today",
+    "href": "2026-Winter/slides/3-point-pattern1/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 8: Activity 3: Maps as Processes\nChapter 10: Activity 4: Point Pattern Analysis I\n\nThe hard deadline is Tuesday, January 27 (8:00 am)."
+  },
+  {
+    "objectID": "2026-Winter/index.html",
+    "href": "2026-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nOffice Hours\nOn-demand 15- or 30-minute Zoom meetings, available by request. Please email me to book a time.\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "2026-Winter/slides/1-intro/index.html#section",
     "href": "2026-Winter/slides/1-intro/index.html#section",
     "title": "ENVSOCTY 4GA3",
@@ -619,98 +706,74 @@
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
   },
   {
-    "objectID": "2026-Winter/index.html",
-    "href": "2026-Winter/index.html",
-    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
-    "section": "",
-    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nOffice Hours\nOn-demand 15- or 30-minute Zoom meetings, available by request. Please email me to book a time.\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#activity-feedback",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#activity-feedback",
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#activity-feedback",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#activity-feedback",
     "title": "ENVSOCTY 4GA3",
     "section": "Activity feedback",
-    "text": "Activity feedback\n\nI gave at least a half mark for any submission, but next time, incomplete submissions will receive a zero.\n\nYou need to use the template from the isdas package.\nYou need to submit knitted PDFs.\nYou should finish all the coding parts in the lab activities submission.\nYou need to answer all the questions in the activity sections (highlights and threshold concepts are optional) in the in-class activity submission.\nSome submissions have errors in the YAML header, causing the PDF to not use the correct template.\nWe have two activities each week, and you need to submit both in each submission.\nYou need to submit both PDFs in the same submission."
+    "text": "Activity feedback\n\n\nAssignments are evaluated as Satisfactory / Partially Satisfactory / Not Satisfactory, corresponding to full, half, or zero marks.\n\nLate submissions more than one hour past the deadline were penalized according to the syllabus (20% on the first day, 10% for each additional day).\n\nKnit your document regularly as you work so that errors can be identified and corrected early.\n\nFor this activity, submissions that did not knit successfully incurred a 20% penalty (this will increase to 50% next time).\n\nChoose colour schemes carefully:\n\nUse a diverging colour scheme only when there is a meaningful neutral or zero reference level.\n\nWe have two activities each week, and you need to submit both in each submission.\nA small \\(p\\)-value (\\(&lt;0.05\\)) in the \\(\\chi^2\\) test indicates that the point pattern is not random and shows spatial dependence."
   },
   {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#line-breaks-in-markdown",
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#mathematical-notation-remainder",
     "title": "ENVSOCTY 4GA3",
-    "section": "Line breaks in markdown",
-    "text": "Line breaks in markdown\n\nSimply changing a line in Markdown won’t create a line break.\nUnlike \\(\\LaTeX\\) (\\newline) or HTML (&lt;br&gt;), Markdown does not have explicit line break syntax.\nThe following example would produce a single line sentence after knitting:\n\n\nfirst line of text\nstill the first line of text\n\n\n\nIn Markdown, line breaks are created implicitly using empty lines.\nThe following example would produce two lines after knitting:\n\n\nfirst line of text\n\nsecond line of text"
+    "section": "Mathematical notation remainder",
+    "text": "Mathematical notation remainder\nSummation notation (\\(\\sum\\)):\n\\[\n\\sum_{i=1}^Qx_i=x_1 + x_2 + \\cdots + x_Q\n\\]\nFor all notation (\\(\\forall\\)):\n\\[\nx_k = 1 \\hspace{0.2cm} \\forall k\\rightarrow x=1\n\\]"
   },
   {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#packages-we-use-today",
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#chi2-distribution",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\chi^2\\) distribution",
+    "text": "\\(\\chi^2\\) distribution\nStrictly non-negative, right-skewed, and non-symmetric."
+  },
+  {
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#cumulative-distribution-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Cumulative distribution function",
+    "text": "Cumulative distribution function\n\\(F_X(x)=P(X \\leq x)\\)"
+  },
+  {
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#hatg-function",
+    "title": "ENVSOCTY 4GA3",
+    "section": "\\(\\hat{G}\\)-function",
+    "text": "\\(\\hat{G}\\)-function\n\\[\n\\hat{G}(r) = \\frac{1}{n(\\mathbf\nx)}\\sum_{i}\\mathbf 1\\{d_i \\le r\\}\n\\]\nThe \\(\\hat{G}\\) function represents the number of elements in the set of distances up to some threshold \\(r\\), normalized by the total number of points \\(n\\) in point pattern \\(\\mathbf{x}\\)."
+  },
+  {
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#pipe-operator-in-r",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Pipe operator in R",
+    "text": "Pipe operator in R\nThe |&gt; is the native pipe operator introduced in R 4.1.0.\nThe old pipe operator is %&gt;% from magrittr package.\nIt allows chained expressions in place of nested expressions to improve code readability.\n\nv &lt;- c(1, 2, 3, 4, 5)\nsum(sqrt(v))\n\n[1] 8.382332\n\n\n\nv |&gt; \n  sqrt() |&gt;\n  sum()\n\n[1] 8.382332\n\n\nDo not confuse it with + in ggplot2; they are not the same thing."
+  },
+  {
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#packages-we-use-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Packages we use today",
     "text": "Packages we use today\nLoad the following three packages.\n\nlibrary(isdas)\nlibrary(sf)\nlibrary(tidyverse)\nlibrary(spatstat)\n\nIf you have trouble restoring the reproducible environment, you need to manually install the packages first.\n\ninstall.packages(\"remotes\")\nremotes::install_github(\"paezha/isdas\")\n\ninstall.packages(\"sf\")\n\ninstall.packages(\"tidyverse\")\n\ninstall.packages(\"spatstat\")"
   },
   {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#new-package-for-today-spatstat",
-    "title": "ENVSOCTY 4GA3",
-    "section": "New package for today: spatstat",
-    "text": "New package for today: spatstat\nspatstat is an R package for spatial statistics with a strong focus on analyzing spatial point patterns in 2D.\nYou can find documentation for this package at:\n\nhttps://spatstat.org/\nhttps://spatstat.org/resources/spatstatQuickref.pdf"
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#random-vs.-deterministirc-process",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Random vs. deterministirc process",
-    "text": "Random vs. deterministirc process\nLet’s denote the probability of an event occurring at point \\((x,y)\\) as \\(Prob(Event_{(x,y)})\\). The points are located within a unit square ranging from 0 to 1.\n\nA random process: \\(Prob(Event_{(x,y)}) = B(n = 1, p = 0.5)\\)\nA deterministic process:\\(Prob(Event_{(x,y)}) = x\\)\nA stochastic process: \\(Prob(Event_{(x,y)}) = x - x \\cdot B(n = 1, p = 0.5)\\)"
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#generate-random-values-from-a-distribution",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Generate random values from a distribution",
-    "text": "Generate random values from a distribution\nThere is a family of functions that start with r* capable of generating random values from a given distribution.\nFrom a nomral distribution:\n\nrnorm(n = 5, mean = 0, sd = 1)\n\n[1]  0.5185718 -0.5801848  1.7541242 -1.4321465 -1.3573983\n\n\nFrom a binomial distribution:\n\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 0 1 0 1 0\n\n\nThese functions are very useful for simulations."
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#random-number-generator-and-seed",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Random number generator and seed",
-    "text": "Random number generator and seed\nIn computers, there is no true random number generator; they all use pseudo-random number generators. This means that the random numbers produced by computers are just the output of a very complex function based on an input, or seed.\nAs a result, if we know the seed, we can perfectly predict the random numbers generated by a computer’s random number generator.\nTypically, computers use the current time as the seed (R uses this approach)."
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#setting-a-seed-in-r",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Setting a seed in R",
-    "text": "Setting a seed in R\nYou can control the random number generation algorithm by setting a seed value in R.\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\nset.seed(437988)\nrbinom(n = 5, size = 1, prob = 0.5)\n\n[1] 1 0 0 0 1\n\n\nNote that the seed in R is actually a vector, a sequence of values, and set.seed changes this vector to a particular state.\nIf you do not set the seed again before rerunning the second rbinom, it will produce different results."
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#what-is-p-value",
-    "title": "ENVSOCTY 4GA3",
-    "section": "What is \\(p\\)-value?",
-    "text": "What is \\(p\\)-value?\nLet’s say we have two samples from two different distributions. We want to perform a statistical test to compare their means (\\(H_1: \\overline{x_1} \\neq \\overline{x_2}\\)). The \\(p\\)-value is the area under the curve that is more extreme than the test statistic, multiplied by 2."
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#online-office-hours",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#online-office-hours",
-    "title": "ENVSOCTY 4GA3",
-    "section": "Online Office Hours",
-    "text": "Online Office Hours\nIf you need additional help, especially while working on your course project, you’re welcome to book a 15- or 30-minute online office hour with me.\nPlease email me at yinz39@mcmaster.ca with a brief description of your question and several possible meeting times.\nI’ll follow up to confirm the appointment and share a Zoom link."
-  },
-  {
-    "objectID": "2026-Winter/slides/3-point-pattern1/index.html#activities-for-today",
-    "href": "2026-Winter/slides/3-point-pattern1/index.html#activities-for-today",
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#activities-for-today",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#activities-for-today",
     "title": "ENVSOCTY 4GA3",
     "section": "Activities for today",
-    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 8: Activity 3: Maps as Processes\nChapter 10: Activity 4: Point Pattern Analysis I\n\nThe hard deadline is Tuesday, January 27 (8:00 am)."
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 12: Activity 5: Point Pattern Analysis II\nChapter 14: Activity 6: Point Pattern Analysis III\n\nThe hard deadline is Tuesday, February 3 (8:00 am)."
+  },
+  {
+    "objectID": "2026-Winter/slides/4-point-pattern2/index.html#reference",
+    "href": "2026-Winter/slides/4-point-pattern2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
   },
   {
     "objectID": "2026-Winter/materials.html",
     "href": "2026-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
     "crumbs": [
       "Materials"
     ]
