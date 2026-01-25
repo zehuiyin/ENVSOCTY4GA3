@@ -1,0 +1,135 @@
+---
+format: 
+  revealjs:
+    pagetitle: "Point Pattern II"
+    menu: false
+    footer: "2026 Zehui Yin"
+---
+
+## Activity feedback
+
+:::{style="font-size: 0.7em;"}
+- Assignments are evaluated as Satisfactory / Partially Satisfactory / Not Satisfactory, corresponding to full, half, or zero marks.
+  - Late submissions more than one hour past the deadline were penalized according to the syllabus (**20%** on the first day, **10%** for each additional day).
+- Knit your document regularly as you work so that errors can be identified and corrected early.
+  - For this activity, submissions that did not knit successfully incurred a **20%** penalty (this will increase to **50%** next time).
+- Choose colour schemes carefully:
+  - Use a diverging colour scheme only when there is a meaningful neutral or zero reference level.
+- We have **two** activities each week, and you need to submit both in each submission.
+- A small $p$-value ($<0.05$) in the $\chi^2$ test indicates that the point pattern is not random and shows spatial dependence.
+:::
+
+## Mathematical notation remainder
+
+Summation notation ($\sum$):
+
+$$
+\sum_{i=1}^Qx_i=x_1 + x_2 + \cdots + x_Q
+$$
+
+For all notation ($\forall$):
+
+$$
+x_k = 1 \hspace{0.2cm} \forall k\rightarrow x=1
+$$
+
+## $\chi^2$ distribution
+
+Strictly non-negative, right-skewed, and non-symmetric.
+
+```{r}
+library(ggplot2)
+library(dplyr)
+set.seed(437988)
+
+rchisq(10000, df = 10) |> as.data.frame() |>
+  `colnames<-`("chi") |>
+  ggplot() + 
+  geom_histogram(aes(x = chi),
+                 binwidth = 2) +
+  labs(x = "", y = "Frequency") +
+  theme_bw()
+```
+
+## Cumulative distribution function
+
+$F_X(x)=P(X \leq x)$
+
+```{r}
+rchisq(10000, df = 10) |> 
+  ecdf() |> 
+  quantile(probs = seq(0, 0.99, 0.025)) |>
+  as.data.frame() |>
+  `colnames<-`("chi") |>
+  mutate(prob = seq(0, 0.99, 0.025)) |>
+  ggplot() + 
+  geom_point(aes(x = chi, y = prob)) +
+  geom_line(aes(x = chi, y = prob)) +
+  labs(x = "Chi-squared", y = "Proportion") +
+  theme_bw()
+```
+
+## $\hat{G}$-function
+
+$$
+\hat{G}(r) = \frac{1}{n(\mathbf
+x)}\sum_{i}\mathbf 1\{d_i \le r\}
+$$
+
+The $\hat{G}$ function represents the number of elements in the set of distances up to some threshold $r$, normalized by the total number of points $n$ in point pattern $\mathbf{x}$.
+
+## Pipe operator in R
+
+The `|>` is the native pipe operator introduced in R 4.1.0.
+
+The old pipe operator is `%>%` from `magrittr` package.
+
+It allows chained expressions in place of nested expressions to improve code readability.
+
+```{r, echo=TRUE}
+v <- c(1, 2, 3, 4, 5)
+sum(sqrt(v))
+```
+
+```{r, echo=TRUE}
+v |> 
+  sqrt() |>
+  sum()
+```
+
+Do not confuse it with `+` in `ggplot2`; they are **not** the same thing.
+
+## Packages we use today
+
+Load the following three packages.
+
+```{r, echo=TRUE, eval=FALSE}
+library(isdas)
+library(sf)
+library(tidyverse)
+library(spatstat)
+```
+
+If you have trouble restoring the reproducible environment, you need to manually install the packages first.
+
+```{r, echo=TRUE, eval=FALSE}
+install.packages("remotes")
+remotes::install_github("paezha/isdas")
+
+install.packages("sf")
+
+install.packages("tidyverse")
+
+install.packages("spatstat")
+```
+
+## Activities for today
+
+- We will work on the following chapter from the textbook:
+  - Chapter [12](https://paezha.github.io/spatial-analysis-r/activity-5-point-pattern-analysis-ii.html): Activity 5: Point Pattern Analysis II
+  - Chapter [14](https://paezha.github.io/spatial-analysis-r/activity-6-point-pattern-analysis-iii.html): Activity 6: Point Pattern Analysis III
+- The hard deadline is **Tuesday**, **February 3** (**8:00 am**).
+
+## Reference
+
+- <https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html>

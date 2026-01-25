@@ -32,6 +32,12 @@ The slides provide a high-level overview of key concepts and helpful coding tips
     <td><a href="./slides/3-point-pattern1/index.html">HTML</a></td>
     <td><a href="./slides/3-point-pattern1/Point Pattern I.pdf">PDF</a></td>
   </tr>
+  <tr>
+    <td>4</td>
+    <td>Point Pattern II</td>
+    <td><a href="./slides/4-point-pattern2/index.html">HTML</a></td>
+    <td><a href="./slides/4-point-pattern2/Point Pattern II.pdf">PDF</a></td>
+  </tr>
 </tbody></table>
 ```
 <sup>1</sup> A pre‑recorded video is available on [Avenue](https://avenue.mcmaster.ca/).
