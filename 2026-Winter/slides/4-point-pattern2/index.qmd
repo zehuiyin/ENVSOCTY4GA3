@@ -10,7 +10,7 @@ format:
 
 :::{style="font-size: 0.7em;"}
 - Assignments are evaluated as Satisfactory / Partially Satisfactory / Not Satisfactory, corresponding to full, half, or zero marks.
-  - Late submissions more than one hour past the deadline were penalized according to the syllabus (**20%** on the first day, **10%** for each additional day).
+  - Late submissions will be penalized (next time) according to the syllabus (**20%** on the first day, **10%** for each additional day).
 - Knit your document regularly as you work so that errors can be identified and corrected early.
   - For this activity, submissions that did not knit successfully incurred a **20%** penalty (this will increase to **50%** next time).
 - Choose colour schemes carefully:
