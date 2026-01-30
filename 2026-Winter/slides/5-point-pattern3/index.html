@@ -10,7 +10,7 @@
 <link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-ed96de9b727972fe78a7b5d16c58bf87.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.8.27">
 
-  <title>ENVSOCTY 4GA3 – Area Data II</title>
+  <title>ENVSOCTY 4GA3 – Point Pattern III</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -28,72 +28,6 @@
       margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
       vertical-align: middle;
     }
-    /* CSS for syntax highlighting */
-    html { -webkit-text-size-adjust: 100%; }
-    pre > code.sourceCode { white-space: pre; position: relative; }
-    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
-    pre > code.sourceCode > span:empty { height: 1.2em; }
-    .sourceCode { overflow: visible; }
-    code.sourceCode > span { color: inherit; text-decoration: inherit; }
-    div.sourceCode { margin: 1em 0; }
-    pre.sourceCode { margin: 0; }
-    @media screen {
-    div.sourceCode { overflow: auto; }
-    }
-    @media print {
-    pre > code.sourceCode { white-space: pre-wrap; }
-    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
-    }
-    pre.numberSource code
-      { counter-reset: source-line 0; }
-    pre.numberSource code > span
-      { position: relative; left: -4em; counter-increment: source-line; }
-    pre.numberSource code > span > a:first-child::before
-      { content: counter(source-line);
-        position: relative; left: -1em; text-align: right; vertical-align: baseline;
-        border: none; display: inline-block;
-        -webkit-touch-callout: none; -webkit-user-select: none;
-        -khtml-user-select: none; -moz-user-select: none;
-        -ms-user-select: none; user-select: none;
-        padding: 0 4px; width: 4em;
-        color: #aaaaaa;
-      }
-    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
-    div.sourceCode
-      { color: #003b4f; background-color: #f1f3f5; }
-    @media screen {
-    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-    }
-    code span { color: #003b4f; } /* Normal */
-    code span.al { color: #ad0000; } /* Alert */
-    code span.an { color: #5e5e5e; } /* Annotation */
-    code span.at { color: #657422; } /* Attribute */
-    code span.bn { color: #ad0000; } /* BaseN */
-    code span.bu { } /* BuiltIn */
-    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
-    code span.ch { color: #20794d; } /* Char */
-    code span.cn { color: #8f5902; } /* Constant */
-    code span.co { color: #5e5e5e; } /* Comment */
-    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
-    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
-    code span.dt { color: #ad0000; } /* DataType */
-    code span.dv { color: #ad0000; } /* DecVal */
-    code span.er { color: #ad0000; } /* Error */
-    code span.ex { } /* Extension */
-    code span.fl { color: #ad0000; } /* Float */
-    code span.fu { color: #4758ab; } /* Function */
-    code span.im { color: #00769e; } /* Import */
-    code span.in { color: #5e5e5e; } /* Information */
-    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
-    code span.op { color: #5e5e5e; } /* Operator */
-    code span.ot { color: #003b4f; } /* Other */
-    code span.pp { color: #ad0000; } /* Preprocessor */
-    code span.sc { color: #5e5e5e; } /* SpecialChar */
-    code span.ss { color: #20794d; } /* SpecialString */
-    code span.st { color: #20794d; } /* String */
-    code span.va { color: #111111; } /* Variable */
-    code span.vs { color: #20794d; } /* VerbatimString */
-    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../../site_libs/revealjs/dist/theme/quarto-534cd8e3a96973385dffff3f4709048d.css">
   <link href="../../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -193,99 +127,59 @@
     <div class="slides">
 
 
-<section id="spatial-autocorrelation" class="slide level2">
-<h2>Spatial autocorrelation</h2>
-<blockquote>
-<p>Everything is related to everything else, but near things are more related than distant things.</p>
-<p>—Tobler, W. R.</p>
-</blockquote>
-<p><img data-src="./images/arealdata-SAC-1.png" width="330"> <img data-src="./images/arealdata-SAC-2.png" width="330"> <img data-src="./images/arealdata-SAC-3.png" width="330"></p>
-</section>
-<section id="global-morans-i" class="slide level2">
-<h2>Global Moran’s <span class="math inline">\(I\)</span></h2>
-<p><span class="math display">\[
-I = \frac{n \sum_i \sum_j w_{ij}(Y_i - \overline Y)(Y_j - \overline Y)}
-{(\sum_{i \neq j} w_{ij}) \sum_i (Y_i - \overline Y)^2}
-\]</span></p>
-<p>When we use a row-standardized spatial weight matrix, <span class="math inline">\(W^{st}\)</span>, and denote <span class="math inline">\(z_i \equiv (Y_i-\overline{Y})\)</span>:</p>
-<p><span class="math display">\[
-I = \frac{\sum_{i=1}^n{z_i\sum_{j=1}^n{w_{ij}^{st}z_j}}}{\sum_{i=1}^{n}{z_i^2}}
-\]</span></p>
-</section>
-<section id="global-morans-i-interpretation" class="slide level2">
-<h2>Global Moran’s <span class="math inline">\(I\)</span> interpretation</h2>
+<section id="histogram-binwidth" class="slide level2">
+<h2>Histogram binwidth</h2>
 <ul>
-<li>Moran’s <span class="math inline">\(I\)</span> values usually range from –1 to 1.</li>
-<li>Values significantly above the expected value indicate positive spatial autocorrelation or clustering.</li>
-<li>Values significantly below the expected value indicate negative spatial autocorrelation or dispersion.</li>
+<li>Binwidth has nothing to do with bandwidth in Kernel density.</li>
+<li>Binwidth simply controls for the size of breaks in the histogram.</li>
 </ul>
-</section>
-<section id="local-morans-i" class="slide level2">
-<h2>Local Moran’s <span class="math inline">\(I\)</span></h2>
-<div style="font-size: 0.9em;">
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-1-1.png" width="1536" class="r-stretch"></section>
+<section id="hat-f-function" class="slide level2">
+<h2><span class="math inline">\(\hat F\)</span>-function</h2>
+<div style="font-size: 0.8em;">
+<p>Empty space distances:</p>
+<p><span class="math display">\[d(u, \mathbf x) = \min\{\Vert u - x_i \Vert : x_i \in \mathbf x\}\]</span> from a fixed location <span class="math inline">\(u \in \mathbb R^2\)</span> to the nearest point in a point pattern <span class="math inline">\(\mathbf x\)</span> is called the empty space distance or void distance.</p>
+<p>The empty space function <span class="math inline">\(F\)</span>:</p>
 <p><span class="math display">\[
-I_i = \frac{n (Y_i - \bar Y)}{\sum_j (Y_j - \bar Y)^2} \sum_j w_{ij}(Y_j - \bar Y)
+\hat F(r)=
+\frac{1}{m}\sum_{j}\mathbf{1}\{d(u_j, \mathbf x) \le r\}
 \]</span></p>
-<p>Noting that</p>
+<p>The <span class="math inline">\(F\)</span>-function measures the distribution of all distances from an arbitrary reference location <span class="math inline">\(u\)</span> (random or evenly distributed) in the plane to the nearest observed event <span class="math inline">\(u\)</span>.</p>
+</div>
+</section>
+<section id="hat-k-function" class="slide level2">
+<h2><span class="math inline">\(\hat K\)</span>-function</h2>
 <p><span class="math display">\[
-I = \frac{1}{\sum_{i \neq j} w_{ij}}\sum_i I_i
+\hat K(r) = \frac{1}{\hat\lambda \text{
+area}(W)}\sum_i\sum_{i \ne j}\mathbf 1\{\Vert x_i-x_j \Vert \le
+r\}
 \]</span></p>
-<p>When we use a row-standardized spatial weight matrix, <span class="math inline">\(W^{st}\)</span>, we have <span class="math inline">\(I = \frac{\sum_i I_i}{n} = \overline{I_i}\)</span>.</p>
-</div>
+<p>where <span class="math inline">\(\hat\lambda\)</span> is the estimated intensity of the point patterns.</p>
+<p>Of the distance-based techniques that you have seen so far, <span class="math inline">\(\hat G\)</span> and <span class="math inline">\(\hat F\)</span> are often used as complements. The <span class="math inline">\(\hat K\)</span> is useful when exploring multi-scale patterns.</p>
 </section>
-<section id="multiple-testing" class="slide level2">
-<h2>Multiple testing</h2>
-<div style="font-size: 0.9em;">
-<p>The <span class="math inline">\(\alpha\)</span> in hypothesis testing is the probability of making a type I error (false positive).</p>
-<p>In our context, it means concluding that a truly random spatial pattern is non-random, thus rejecting the null hypothesis.</p>
-<p>When running multiple tests simultaneously using overlapping information, we are more likely to encounter these types of errors purely due to chance.</p>
-<p>Therefore, we must adjust <span class="math inline">\(p\)</span>-values (downward) to ensure that we maintain the desired <span class="math inline">\(\alpha\)</span> level.</p>
-<p>One way to do this is Bonferroni correction: <span class="math inline">\(\alpha_{adjusted}=\frac{\alpha}{m}\)</span>, where <span class="math inline">\(m\)</span> is the number of simultaneous tests.</p>
+<section id="simulation-to-obtain-a-confidence-interval" class="slide level2">
+<h2>Simulation to obtain a confidence interval</h2>
+<div style="font-size: 0.8em;">
+<p>Given the challenge of solving for the standard deviations of test statistics, we employ simulations to derive a confidence interval.</p>
 </div>
-</section>
-<section id="plotly-package" class="slide level2">
-<h2><code>plotly</code> package</h2>
-<div style="font-size: 0.9em;">
-<p>The <code>plotly</code> package in R is a binding to the open-source JavaScript graphing library, <code>plotly.js</code>. It excels at creating interactive web graphics, including maps and figures.</p>
-<p>However, it does <strong>not</strong> support knitting the <code>Rmd</code> file into a PDF since PDFs are static files, unlike HTML outputs.</p>
-<p>To include <code>plotly</code> graphics in a knitted PDF, take a screenshot of the output and insert the screenshot as a static image in the PDF file:</p>
-</div>
-<div style="font-size: 1.2em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>```{r, eval=FALSE}</span>
-<span id="cb1-2"><a></a>Some R codes that you do not want to evaluate during knitting.</span>
-<span id="cb1-3"><a></a>```</span>
-<span id="cb1-4"><a></a>![](path-to-image)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-</div>
-</section>
-<section id="functions-in-r-recap" class="slide level2">
-<h2>Functions in R recap</h2>
-<p>Functions in R use the following syntax. Note that any thing wrapped in <code>&lt;...&gt;</code> indicates that it is just a name and can be called anything you like.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a></a>```{r}</span>
-<span id="cb2-2"><a></a>&lt;function_name&gt; &lt;- function(&lt;parameter1&gt;, &lt;parameter2&gt;) { </span>
-<span id="cb2-3"><a></a>  Some R codes to execute based on the inputs</span>
-<span id="cb2-4"><a></a>  and at last return an output</span>
-<span id="cb2-5"><a></a>}</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a>function_name(&lt;object1&gt;, </span>
-<span id="cb2-8"><a></a>              parameter2 = &lt;object2&gt;)</span>
-<span id="cb2-9"><a></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
-<p>You only need to define functions once in your code. Then, you can call it by its name.</p>
-</section>
+
+<img data-src="index_files/figure-revealjs/unnamed-chunk-2-1.png" width="3000" class="r-stretch"></section>
 <section id="activities-for-today" class="slide level2">
 <h2>Activities for today</h2>
 <ul>
 <li>We will work on the following chapter from the textbook:
 <ul>
-<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-11-area-data-iii.html">24</a>: Activity 11: Area Data III</li>
-<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-12-area-data-iv.html">26</a>: Activity 12: Area Data IV</li>
+<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-7-point-pattern-analysis-iv.html">16</a>: Activity 7: Point Pattern Analysis IV</li>
+<li>Chapter <a href="https://paezha.github.io/spatial-analysis-r/activity-8-point-pattern-analysis-v.html">18</a>: Activity 8: Point Pattern Analysis V</li>
 </ul></li>
-<li>The hard deadline is <strong>Friday</strong>, <strong>March 7</strong>.</li>
+<li>The hard deadline is <strong>Tuesday</strong>, <strong>February 10</strong>.</li>
 </ul>
 </section>
 <section id="reference" class="slide level2">
 <h2>Reference</h2>
 <ul>
-<li><a href="https://www.paulamoraga.com/book-spatial/spatial-autocorrelation.html" class="uri">https://www.paulamoraga.com/book-spatial/spatial-autocorrelation.html</a></li>
+<li><a href="https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html" class="uri">https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html</a></li>
 </ul>
 
 
@@ -293,7 +187,7 @@ I = \frac{1}{\sum_{i \neq j} w_{ij}}\sum_i I_i
     </div>
   <div class="quarto-auto-generated-content" style="display: none;">
 <div class="footer footer-default">
-<p>2025 Zehui Yin</p>
+<p>2026 Zehui Yin</p>
 </div>
 </div></div>
 
