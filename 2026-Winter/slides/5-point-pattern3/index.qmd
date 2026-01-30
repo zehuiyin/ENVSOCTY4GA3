@@ -1,0 +1,108 @@
+---
+format: 
+  revealjs:
+    pagetitle: "Point Pattern III"
+    menu: false
+    footer: "2026 Zehui Yin"
+---
+
+## Histogram binwidth
+
+- Binwidth has nothing to do with bandwidth in Kernel density.
+- Binwidth simply controls for the size of breaks in the histogram.
+
+```{r, fig.width=16}
+library(ggplot2)
+library(patchwork)
+
+p1 <- ggplot(mtcars) +
+  geom_histogram(aes(x = mpg),
+                 binwidth = 5) +
+  theme_minimal()
+
+p2 <- ggplot(mtcars) +
+  geom_histogram(aes(x = mpg),
+                 binwidth = 1) +
+  theme_minimal()
+
+p3 <- ggplot(mtcars) +
+  geom_histogram(aes(x = mpg),
+                 binwidth = 10) +
+  theme_minimal()
+
+p1 + p2 + p3
+```
+
+## $\hat F$-function
+
+:::{style="font-size: 0.8em;"}
+Empty space distances: 
+
+$$d(u, \mathbf x) = \min\{\Vert u - x_i \Vert : x_i \in \mathbf x\}$$
+from a fixed location $u \in \mathbb R^2$ to the nearest point in a point pattern $\mathbf x$ is called the empty space distance or void distance.
+
+The empty space function $F$:
+
+$$
+\hat F(r)=
+\frac{1}{m}\sum_{j}\mathbf{1}\{d(u_j, \mathbf x) \le r\}
+$$
+
+The $F$-function measures the distribution of all distances from an arbitrary reference location $u$ (random or evenly distributed) in the plane to the nearest observed event $u$.
+:::
+
+## $\hat K$-function
+
+$$
+\hat K(r) = \frac{1}{\hat\lambda \text{
+area}(W)}\sum_i\sum_{i \ne j}\mathbf 1\{\Vert x_i-x_j \Vert \le
+r\}
+$$
+
+where $\hat\lambda$ is the estimated intensity of the point patterns.
+
+Of the distance-based techniques that you have seen so far, $\hat G$ and $\hat F$ are often used as complements. The $\hat K$ is useful when exploring multi-scale patterns.
+
+## Simulation to obtain a confidence interval
+
+:::{style="font-size: 0.8em;"}
+Given the challenge of solving for the standard deviations of test statistics, we employ simulations to derive a confidence interval.
+:::
+
+```{r, dpi=300, fig.height=4, fig.width=10}
+library(spatstat)
+
+W <- owin(c(0, 1), c(0, 1))
+set.seed(437988)
+sim1 <- rpoispp(lambda = 81, win = W)
+sim2 <- rpoispp(lambda = 81, win = W)
+g_sim1 <- Gest(sim1, 
+               correction = "none")
+g_sim2 <- Gest(sim2, 
+               correction = "none")
+
+g_all <- data.frame(G = g_sim1$raw, 
+                    x = g_sim1$r, 
+                    Type = "Simulation 1")
+g_all <- rbind(g_all, 
+               data.frame(G = g_sim2$raw, 
+                          x = g_sim2$r, 
+                          Type = "Simulation 2"))
+
+ggplot(g_all) + 
+  geom_line(aes(x = x, y = G)) +
+  geom_line(aes(x = x, y = G, colour = Type),
+            linewidth = 1) +
+  theme_minimal()
+```
+
+## Activities for today
+
+- We will work on the following chapter from the textbook:
+  - Chapter [16](https://paezha.github.io/spatial-analysis-r/activity-7-point-pattern-analysis-iv.html): Activity 7: Point Pattern Analysis IV
+  - Chapter [18](https://paezha.github.io/spatial-analysis-r/activity-8-point-pattern-analysis-v.html): Activity 8: Point Pattern Analysis V
+- The hard deadline is **Tuesday**, **February 10**.
+
+## Reference
+
+- <https://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html>

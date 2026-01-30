@@ -76,6 +76,8 @@ $$
 x)}\sum_{i}\mathbf 1\{d_i \le r\}
 $$
 
+where $d_i = \text{min}_{j \ne i}\Vert x_i-x_j\Vert$
+
 The $\hat{G}$ function represents the number of elements in the set of distances up to some threshold $r$, normalized by the total number of points $n$ in point pattern $\mathbf{x}$.
 
 ## Pipe operator in R

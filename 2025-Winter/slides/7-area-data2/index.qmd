@@ -39,7 +39,7 @@ $$
 
 :::{style="font-size: 0.9em;"}
 $$
-I_i = \frac{n (Y_i - \overline Y)}{\sum_j (Y_j - \overline Y)^2} \sum_j w_{ij}(Y_j - e Y)
+I_i = \frac{n (Y_i - \bar Y)}{\sum_j (Y_j - \bar Y)^2} \sum_j w_{ij}(Y_j - \bar Y)
 $$
 
 Noting that
