@@ -605,6 +605,13 @@
     "text": "RTools 4.4 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the RTools version that matches your installed R version.\nRTools is a set of programs required on Windows to build R packages from source.\nNote: If you are using Mac or Linux, RTools is not required."
   },
   {
+    "objectID": "2026-Winter/slides/1-intro/index.html#windows-11-users-turn-off-smart-app-control",
+    "href": "2026-Winter/slides/1-intro/index.html#windows-11-users-turn-off-smart-app-control",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Windows 11 users: turn off smart app control",
+    "text": "Windows 11 users: turn off smart app control\n\nSettings &gt; Privacy & security &gt; Windows Security &gt; App & browser control &gt; Smart App Control settings &gt; Off"
+  },
+  {
     "objectID": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
     "href": "2026-Winter/slides/1-intro/index.html#xcode-and-gnu-fortran-for-mac-users",
     "title": "ENVSOCTY 4GA3",
