@@ -418,6 +418,12 @@ Applied-Spatial-Statistics/
 - `RTools` is a set of programs required on **Windows** to build R packages from source.
 - Note: If you are using Mac or Linux, `RTools` is **not** required.
 
+## Windows 11 users: turn off smart app control
+
+![](./images/app_control.png){height=300px}
+
+Settings > Privacy & security > Windows Security > App & browser control > Smart App Control settings > Off
+
 ## Xcode and GNU Fortran for Mac users
 
 [mac.r-project.org/tools](https://mac.r-project.org/tools/)
