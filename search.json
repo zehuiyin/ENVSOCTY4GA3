@@ -437,6 +437,93 @@
     "text": "Reference\n\nhttps://www.geo.fu-berlin.de/en/v/soga-r/Advances-statistics/Spatial-Point-Patterns/Analysis-of-Spatial-Point-Patterns/Interactions-in-Point-Pattern-Analysis/index.html"
   },
   {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#area-data",
+    "href": "2026-Winter/slides/6-area-data1/index.html#area-data",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Area data",
+    "text": "Area data\n\nWe are starting to explore area data this week.\nDue to privacy concerns, especially in the social sciences, access to point-level data is rare.\nFor instance, publicly available Canadian census data is aggregated to census geography.\n\nTypical census geographies include Dissemination Areas, Census Tracts, and Census Subdivisions.\nTo explore the size of these geographies, refer to censusmapper.ca"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "href": "2026-Winter/slides/6-area-data1/index.html#modifiable-areal-unit-problem-maup",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Modifiable Areal Unit Problem (MAUP)",
+    "text": "Modifiable Areal Unit Problem (MAUP)\n\nWhen aggregating point data into different spatial units, the choice of spatial units impacts analysis results such as hypothesis tests.\nThis is because any variations within the spatial unit are lost during aggregation.\n\nTypically, we assume the variable is spatially uniformly distributed within each aggregation unit.\nWhen working with aggregated data, additional assumptions must be made."
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#scale-effect",
+    "href": "2026-Winter/slides/6-area-data1/index.html#scale-effect",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Scale effect",
+    "text": "Scale effect"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#zone-effect",
+    "href": "2026-Winter/slides/6-area-data1/index.html#zone-effect",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Zone effect",
+    "text": "Zone effect"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "href": "2026-Winter/slides/6-area-data1/index.html#gerrymandering",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Gerrymandering",
+    "text": "Gerrymandering\n\nIn representative electoral systems, carefully modifying electoral district boundaries can provide advantages to a particular party."
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "href": "2026-Winter/slides/6-area-data1/index.html#rock-and-queen-contiguity",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Rock and queen contiguity",
+    "text": "Rock and queen contiguity"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
+    "href": "2026-Winter/slides/6-area-data1/index.html#spatial-weight-matrix",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial weight matrix",
+    "text": "Spatial weight matrix\n\n\n\n\n\n\\[\n\\textbf{W}=\\left (\\begin{array}{c c c c c c}\n0 & 1 & 1 & 0\\\\\n1 & 0 & 0 & 1\\\\\n1 & 0 & 0 & 1\\\\\n0 & 1 & 1 & 0\\\\\n\\end{array} \\right)\n\\]\n\\[\n\\textbf{W}'=\\left (\\begin{array}{c c c c c c}\n0 & 0.5 & 0.5 & 0\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0.5 & 0 & 0 & 0.5\\\\\n0 & 0.5 & 0.5 & 0\\\\\n\\end{array} \\right)\n\\]"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
+    "href": "2026-Winter/slides/6-area-data1/index.html#linear-algebra-recap",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Linear algebra recap",
+    "text": "Linear algebra recap\n\n\\[\n\\mathbf{W} = \\begin{pmatrix}\na_{11} & a_{12} \\\\\na_{21} & a_{22}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{X} = \\begin{pmatrix}\nb_{11} \\\\\nb_{21}\n\\end{pmatrix}\n\\]\n\\[\n\\mathbf{W} \\cdot \\mathbf{X} = \\begin{pmatrix}\na_{11}\\cdot b_{11} + a_{12} \\cdot b_{21} \\\\\na_{21}\\cdot b_{11} + a_{22} \\cdot b_{21}\n\\end{pmatrix}\n\\]"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#colour-scheme",
+    "href": "2026-Winter/slides/6-area-data1/index.html#colour-scheme",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Colour scheme",
+    "text": "Colour scheme\nhttps://colorbrewer2.org/"
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "href": "2026-Winter/slides/6-area-data1/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 20: Activity 9: Area Data I\nChapter 22: Activity 10: Area Data II\n\nThe hard deadline is Tuesday, February 24."
+  },
+  {
+    "objectID": "2026-Winter/slides/6-area-data1/index.html#reference",
+    "href": "2026-Winter/slides/6-area-data1/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://gisgeography.com/maup-modifiable-areal-unit-problem/"
+  },
+  {
+    "objectID": "2026-Winter/index.html",
+    "href": "2026-Winter/index.html",
+    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
+    "section": "",
+    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nOffice Hours\nOn-demand 15- or 30-minute Zoom meetings, available by request. Please email me to book a time.\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
+    "crumbs": [
+      "Home"
+    ]
+  },
+  {
     "objectID": "2026-Winter/slides/1-intro/index.html#section",
     "href": "2026-Winter/slides/1-intro/index.html#section",
     "title": "ENVSOCTY 4GA3",
@@ -654,16 +741,6 @@
     "text": "References\n\nhttps://r-pkgs.org/\nhttps://book.the-turing-way.org/reproducible-research/renv.html\nhttps://rstudio.github.io/renv/articles/renv.html"
   },
   {
-    "objectID": "2026-Winter/index.html",
-    "href": "2026-Winter/index.html",
-    "title": "ENVSOCTY 4GA3 Lab 1 & 2",
-    "section": "",
-    "text": "Welcome to the website for ENVSOCTY 4GA3 Lab 1 & 2 for the Winter 2026 semester at McMaster University. You can access all the slides used during the lab sessions in the Materials tab.\n\nTeaching Assistant\n Zehui Yin Geography PhD Student School of Earth, Environment & Society McMaster University  yinz39@mcmaster.ca\n\n\nOffice Hours\nOn-demand 15- or 30-minute Zoom meetings, available by request. Please email me to book a time.\n\n\nLab Time\nLab 1\n  \nThursday\n  \n12:30 PM – 2:20 PM\n\nLab 2\n  \nFriday\n  \n10:30 AM – 12:20 PM",
-    "crumbs": [
-      "Home"
-    ]
-  },
-  {
     "objectID": "2026-Winter/slides/3-point-pattern1/index.html#activity-submission-remainder",
     "href": "2026-Winter/slides/3-point-pattern1/index.html#activity-submission-remainder",
     "title": "ENVSOCTY 4GA3",
@@ -822,7 +899,7 @@
     "href": "2026-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
     "crumbs": [
       "Materials"
     ]
