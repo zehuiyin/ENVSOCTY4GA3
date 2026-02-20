@@ -514,6 +514,69 @@
     "text": "Reference\n\nhttps://gisgeography.com/maup-modifiable-areal-unit-problem/"
   },
   {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#spatial-autocorrelation",
+    "href": "2026-Winter/slides/7-area-data2/index.html#spatial-autocorrelation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Spatial autocorrelation",
+    "text": "Spatial autocorrelation\n\nEverything is related to everything else, but near things are more related than distant things.\n—Tobler, W. R."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#global-morans-i",
+    "href": "2026-Winter/slides/7-area-data2/index.html#global-morans-i",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Global Moran’s \\(I\\)",
+    "text": "Global Moran’s \\(I\\)\n\\[\nI = \\frac{n \\sum_i \\sum_j w_{ij}(Y_i - \\overline Y)(Y_j - \\overline Y)}\n{(\\sum_{i \\neq j} w_{ij}) \\sum_i (Y_i - \\overline Y)^2}\n\\]\nWhen we use a row-standardized spatial weight matrix, \\(W^{st}\\), and denote \\(z_i \\equiv (Y_i-\\overline{Y})\\):\n\\[\nI = \\frac{\\sum_{i=1}^n{z_i\\sum_{j=1}^n{w_{ij}^{st}z_j}}}{\\sum_{i=1}^{n}{z_i^2}}\n\\]"
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#global-morans-i-interpretation",
+    "href": "2026-Winter/slides/7-area-data2/index.html#global-morans-i-interpretation",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Global Moran’s \\(I\\) interpretation",
+    "text": "Global Moran’s \\(I\\) interpretation\n\nMoran’s \\(I\\) values usually range from –1 to 1.\nValues significantly above the expected value indicate positive spatial autocorrelation or clustering.\nValues significantly below the expected value indicate negative spatial autocorrelation or dispersion."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#local-morans-i",
+    "href": "2026-Winter/slides/7-area-data2/index.html#local-morans-i",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Local Moran’s \\(I\\)",
+    "text": "Local Moran’s \\(I\\)\n\n\\[\nI_i = \\frac{n (Y_i - \\bar Y)}{\\sum_j (Y_j - \\bar Y)^2} \\sum_j w_{ij}(Y_j - \\bar Y)\n\\]\nNoting that\n\\[\nI = \\frac{1}{\\sum_{i \\neq j} w_{ij}}\\sum_i I_i\n\\]\nWhen we use a row-standardized spatial weight matrix, \\(W^{st}\\), we have \\(I = \\frac{\\sum_i I_i}{n} = \\overline{I_i}\\)."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#multiple-testing",
+    "href": "2026-Winter/slides/7-area-data2/index.html#multiple-testing",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Multiple testing",
+    "text": "Multiple testing\n\nThe \\(\\alpha\\) in hypothesis testing is the probability of making a type I error (false positive).\nIn our context, it means concluding that a truly random spatial pattern is non-random, thus rejecting the null hypothesis.\nWhen running multiple tests simultaneously using overlapping information, we are more likely to encounter these types of errors purely due to chance.\nTherefore, we must adjust \\(p\\)-values (downward) to ensure that we maintain the desired \\(\\alpha\\) level.\nOne way to do this is Bonferroni correction: \\(\\alpha_{adjusted}=\\frac{\\alpha}{m}\\), where \\(m\\) is the number of simultaneous tests."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#plotly-package",
+    "href": "2026-Winter/slides/7-area-data2/index.html#plotly-package",
+    "title": "ENVSOCTY 4GA3",
+    "section": "plotly package",
+    "text": "plotly package\n\nThe plotly package in R is a binding to the open-source JavaScript graphing library, plotly.js. It excels at creating interactive web graphics, including maps and figures.\nHowever, it does not support knitting the Rmd file into a PDF since PDFs are static files, unlike HTML outputs.\nTo include plotly graphics in a knitted PDF, take a screenshot of the output and insert the screenshot as a static image in the PDF file:\n\n\n```{r, eval=FALSE}\nSome R codes that you do not want to evaluate during knitting.\n```\n\n![](path-to-image)"
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#functions-in-r-recap",
+    "href": "2026-Winter/slides/7-area-data2/index.html#functions-in-r-recap",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Functions in R recap",
+    "text": "Functions in R recap\nFunctions in R use the following syntax. Note that any thing wrapped in &lt;...&gt; indicates that it is just a name and can be called anything you like.\n```{r}\n&lt;function_name&gt; &lt;- function(&lt;parameter1&gt;, &lt;parameter2&gt;) { \n  Some R codes to execute based on the inputs\n  and at last return an output\n}\n\nfunction_name(&lt;object1&gt;, \n              parameter2 = &lt;object2&gt;)\n```\nYou only need to define functions once in your code. Then, you can call it by its name."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#activities-for-today",
+    "href": "2026-Winter/slides/7-area-data2/index.html#activities-for-today",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Activities for today",
+    "text": "Activities for today\n\nWe will work on the following chapter from the textbook:\n\nChapter 24: Activity 11: Area Data III\nChapter 26: Activity 12: Area Data IV\n\nThe hard deadline is Tuesday, March 3."
+  },
+  {
+    "objectID": "2026-Winter/slides/7-area-data2/index.html#reference",
+    "href": "2026-Winter/slides/7-area-data2/index.html#reference",
+    "title": "ENVSOCTY 4GA3",
+    "section": "Reference",
+    "text": "Reference\n\nhttps://www.paulamoraga.com/book-spatial/spatial-autocorrelation.html"
+  },
+  {
     "objectID": "2026-Winter/index.html",
     "href": "2026-Winter/index.html",
     "title": "ENVSOCTY 4GA3 Lab 1 & 2",
@@ -899,7 +962,7 @@
     "href": "2026-Winter/materials.html",
     "title": "Materials",
     "section": "",
-    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
+    "text": "The slides provide a high-level overview of key concepts and helpful coding tips. They are not intended to replace the textbook. Please ensure you read the assigned chapters in the textbook for a comprehensive understanding.\n\n\n\nLab\nSection\nSlides\nPDF \n\n\n\n\n1\nIntroduction and setting up R1\nHTML\nPDF\n\n\n2\nMapping in R\nHTML\nPDF\n\n\n3\nPoint Pattern I\nHTML\nPDF\n\n\n4\nPoint Pattern II\nHTML\nPDF\n\n\n5\nPoint Pattern III\nHTML\nPDF\n\n\n6\nArea Data I\nHTML\nPDF\n\n\n7\nArea Data II\nHTML\nPDF\n\n\n\n1 A pre‑recorded video is available on Avenue.",
     "crumbs": [
       "Materials"
     ]
