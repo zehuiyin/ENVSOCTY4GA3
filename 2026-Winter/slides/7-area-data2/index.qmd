@@ -1,0 +1,115 @@
+---
+format: 
+  revealjs:
+    pagetitle: "Area Data II"
+    menu: false
+    footer: "2026 Zehui Yin"
+---
+
+## Spatial autocorrelation
+
+> Everything is related to everything else, but near things are more related than distant things.
+>
+> ---Tobler, W. R.
+
+![](../../../2025-Winter/slides/7-area-data2/images/arealdata-SAC-1.png){width=330px}
+![](../../../2025-Winter/slides/7-area-data2/images/arealdata-SAC-2.png){width=330px}
+![](../../../2025-Winter/slides/7-area-data2/images/arealdata-SAC-3.png){width=330px}
+
+## Global Moran's $I$
+
+$$
+I = \frac{n \sum_i \sum_j w_{ij}(Y_i - \overline Y)(Y_j - \overline Y)}
+{(\sum_{i \neq j} w_{ij}) \sum_i (Y_i - \overline Y)^2}
+$$
+
+When we use a row-standardized spatial weight matrix, $W^{st}$, and denote $z_i \equiv (Y_i-\overline{Y})$:
+
+$$
+I = \frac{\sum_{i=1}^n{z_i\sum_{j=1}^n{w_{ij}^{st}z_j}}}{\sum_{i=1}^{n}{z_i^2}}
+$$
+
+## Global Moran's $I$ interpretation
+
+- Moran’s $I$ values usually range from –1 to 1.
+- Values significantly above the expected value indicate positive spatial autocorrelation or clustering.
+- Values significantly below the expected value indicate negative spatial autocorrelation or dispersion.
+
+## Local Moran's $I$
+
+:::{style="font-size: 0.9em;"}
+$$
+I_i = \frac{n (Y_i - \bar Y)}{\sum_j (Y_j - \bar Y)^2} \sum_j w_{ij}(Y_j - \bar Y)
+$$
+
+Noting that
+
+$$
+I = \frac{1}{\sum_{i \neq j} w_{ij}}\sum_i I_i
+$$
+
+When we use a row-standardized spatial weight matrix, $W^{st}$, we have $I = \frac{\sum_i I_i}{n} = \overline{I_i}$.
+:::
+
+## Multiple testing
+
+:::{style="font-size: 0.9em;"}
+The $\alpha$ in hypothesis testing is the probability of making a type I error (false positive).
+
+In our context, it means concluding that a truly random spatial pattern is non-random, thus rejecting the null hypothesis.
+
+When running multiple tests simultaneously using overlapping information, we are more likely to encounter these types of errors purely due to chance.
+
+Therefore, we must adjust $p$-values (downward) to ensure that we maintain the desired $\alpha$ level.
+
+One way to do this is Bonferroni correction: $\alpha_{adjusted}=\frac{\alpha}{m}$, where $m$ is the number of simultaneous tests.
+:::
+
+## `plotly` package
+
+:::{style="font-size: 0.9em;"}
+The `plotly` package in R is a binding to the open-source JavaScript graphing library, `plotly.js`. It excels at creating interactive web graphics, including maps and figures.
+
+However, it does **not** support knitting the `Rmd` file into a PDF since PDFs are static files, unlike HTML outputs.
+
+To include `plotly` graphics in a knitted PDF, take a screenshot of the output and insert the screenshot as a static image in the PDF file:
+:::
+
+:::{style="font-size: 1.2em;"}
+````{verbatim}
+```{r, eval=FALSE}
+Some R codes that you do not want to evaluate during knitting.
+```
+
+![](path-to-image)
+````
+:::
+
+## Functions in R recap
+
+Functions in R use the following syntax. Note that any thing wrapped in `<...>` indicates that it is just a name and can be called anything you like.
+
+````{verbatim}
+```{r}
+<function_name> <- function(<parameter1>, <parameter2>) { 
+  Some R codes to execute based on the inputs
+  and at last return an output
+}
+
+function_name(<object1>, 
+              parameter2 = <object2>)
+```
+````
+
+You only need to define functions once in your code. Then, you can call it by its name.
+
+## Activities for today
+
+- We will work on the following chapter from the textbook:
+  - Chapter [24](https://paezha.github.io/spatial-analysis-r/activity-11-area-data-iii.html): Activity 11: Area Data III
+  - Chapter [26](https://paezha.github.io/spatial-analysis-r/activity-12-area-data-iv.html): Activity 12: Area Data IV
+- The hard deadline is **Tuesday**, **March 3**.
+
+## Reference
+
+- <https://www.paulamoraga.com/book-spatial/spatial-autocorrelation.html>
