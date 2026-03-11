@@ -62,6 +62,12 @@ The slides provide a high-level overview of key concepts and helpful coding tips
     <td><a href="./slides/8-area-data3/index.html">HTML</a></td>
     <td><a href="./slides/8-area-data3/Area Data III.pdf">PDF</a></td>
   </tr>
+  <tr>
+    <td>9</td>
+    <td>Spatially Continuous Data I</td>
+    <td><a href="./slides/9-continuous-data1/index.html">HTML</a></td>
+    <td><a href="./slides/9-continuous-data1/Spatially Continuous Data I.pdf">PDF</a></td>
+  </tr>
 </tbody></table>
 ```
 <sup>1</sup> A pre‑recorded video is available on [Avenue](https://avenue.mcmaster.ca/).
