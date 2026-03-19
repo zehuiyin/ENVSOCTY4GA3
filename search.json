@@ -1454,18 +1454,18 @@
     "text": "Spatial dependence in spatially continuous data\n\nSpatial interpolation assumes that the data exhibit positive spatial autocorrelation.\nSingle-scale autocorrelation measures, such as the global Moran’s I statistic, are not well-suited for spatially continuous data due to its smooth nature, where neighborhoods are not well-defined.\nConsequently, a measure that quantifies autocorrelation at different scales is required."
   },
   {
-    "objectID": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analyisis",
-    "href": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analyisis",
+    "objectID": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analysis",
+    "href": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analysis",
     "title": "ENVSOCTY 4GA3",
-    "section": "Variographic analyisis",
-    "text": "Variographic analyisis\n\n\n\nWe define a binary spatial weight matrix as:\n\\[\nw_{ij}(h)=\\bigg\\{\\begin{array}{l l}\n1\\text{, if } d_{ij} = h\\\\\n0\\text{, otherwise}\\\\\n\\end{array}\n\\]"
+    "section": "Variographic analysis",
+    "text": "Variographic analysis\n\n\n\nWe define a binary spatial weight matrix as:\n\\[\nw_{ij}(h)=\\bigg\\{\\begin{array}{l l}\n1\\text{, if } d_{ij} = h\\\\\n0\\text{, otherwise}\\\\\n\\end{array}\n\\]"
   },
   {
-    "objectID": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analyisis-1",
-    "href": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analyisis-1",
+    "objectID": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analysis-1",
+    "href": "2026-Winter/slides/10-continuous-data2/index.html#variographic-analysis-1",
     "title": "ENVSOCTY 4GA3",
-    "section": "Variographic analyisis",
-    "text": "Variographic analyisis\nAutocovariance:\n\\[\nC_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i^2 - \\bar{z})(z_j^2 - \\bar{z})}}{\\sum_{i=1}^n{w_{ij}(h)}}\n\\]\nSemivariance:\n\\[\n\\hat{\\gamma}_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i - z_j)^2}}{2\\sum_{i=1}^n{w_{ij}(h)}}\n\\]"
+    "section": "Variographic analysis",
+    "text": "Variographic analysis\nAutocovariance:\n\\[\nC_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i^2 - \\bar{z})(z_j^2 - \\bar{z})}}{\\sum_{i=1}^n{w_{ij}(h)}}\n\\]\nSemivariance:\n\\[\n\\hat{\\gamma}_{z}(h) = \\frac{\\sum_{i=1}^{n}{w_{ij}(h)(z_i - z_j)^2}}{2\\sum_{i=1}^n{w_{ij}(h)}}\n\\]"
   },
   {
     "objectID": "2026-Winter/slides/10-continuous-data2/index.html#covariogram-and-semivariogram",
