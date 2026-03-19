@@ -12,7 +12,7 @@ format:
 - Single-scale autocorrelation measures, such as the global Moran's I statistic, are not well-suited for spatially continuous data due to its smooth nature, where neighborhoods are not well-defined.
 - Consequently, a measure that quantifies autocorrelation at different scales is required.
 
-## Variographic analyisis
+## Variographic analysis
 
 :::{style="text-align:center;"}
 ![](../../../2025-Winter/slides/10-continuous-data2/images/weight.png){width=330}
@@ -27,7 +27,7 @@ w_{ij}(h)=\bigg\{\begin{array}{l l}
 \end{array}
 $$
 
-## Variographic analyisis
+## Variographic analysis
 
 **Autocovariance**:
 
