@@ -12,7 +12,7 @@ format:
 - Single-scale autocorrelation measures, such as the global Moran's I statistic, are not well-suited for spatially continuous data due to its smooth nature, where neighborhoods are not well-defined.
 - Consequently, a measure that quantifies autocorrelation at different scales is required.
 
-## Variographic analyisis
+## Variographic analysis
 
 :::{style="text-align:center;"}
 ![](./images/weight.png){width=330}
@@ -27,7 +27,7 @@ w_{ij}(h)=\bigg\{\begin{array}{l l}
 \end{array}
 $$
 
-## Variographic analyisis
+## Variographic analysis
 
 **Autocovariance**:
 
@@ -79,7 +79,7 @@ Here, $\hat{\epsilon}_p = \sum_{i=1}^n {\lambda_{pi}\epsilon_i}$ and $\epsilon_i
 
 The expected mean squared error or prediction variance is: $\sigma_{\epsilon}^2 = E[(\hat{\epsilon}_p - \epsilon_i)^2]$.
 
-> The expectation of the prediction errors is zero (unbiassedness) Find the weights $\lambda$ that minimize the prediction variance (optimal estimator).
+> The expectation of the prediction errors is zero (unbiassedness). Find the weights $\lambda$ that minimize the prediction variance (optimal estimator).
 
 :::
 
