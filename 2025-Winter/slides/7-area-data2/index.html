@@ -7,8 +7,8 @@
 <script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../../site_libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-845c23b38eaddc0f92fda52bfe77a8c8.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.9.36">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting-64a204ab8560d761af7679ceaba22944.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.10.18">
 
   <title>ENVSOCTY 4GA3 – Area Data II</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
@@ -20,10 +20,13 @@
     /* Default styles provided by pandoc.
     ** See https://pandoc.org/MANUAL.html#variables-for-html for config info.
     */
-    code{white-space: pre-wrap;}
     span.smallcaps{font-variant: small-caps;}
-    div.columns{display: flex; gap: min(4vw, 1.5em);}
-    div.column{flex: auto; overflow-x: auto;}
+    div.columns{display: flex; gap: 1.5em;}
+    div.column{flex: auto;}
+    @media screen {
+    div.columns{gap: min(4vw, 1.5em);}
+    div.column{overflow-x: auto;}
+    }
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
     ul.task-list li input[type="checkbox"] {
@@ -254,24 +257,24 @@ I = \frac{1}{\sum_{i \neq j} w_{ij}}\sum_i I_i
 <p>To include <code>plotly</code> graphics in a knitted PDF, take a screenshot of the output and insert the screenshot as a static image in the PDF file:</p>
 </div>
 <div style="font-size: 1.2em;">
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a></a>```{r, eval=FALSE}</span>
-<span id="cb1-2"><a></a>Some R codes that you do not want to evaluate during knitting.</span>
-<span id="cb1-3"><a></a>```</span>
-<span id="cb1-4"><a></a>![](path-to-image)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb1-1"><a aria-label="1"></a>```{r, eval=FALSE}</span>
+<span id="cb1-2"><a aria-label="2"></a>Some R codes that you do not want to evaluate during knitting.</span>
+<span id="cb1-3"><a aria-label="3"></a>```</span>
+<span id="cb1-4"><a aria-label="4"></a>![](path-to-image)</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 </div>
 </section>
 <section id="functions-in-r-recap" class="slide level2">
 <h2>Functions in R recap</h2>
 <p>Functions in R use the following syntax. Note that any thing wrapped in <code>&lt;...&gt;</code> indicates that it is just a name and can be called anything you like.</p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a></a>```{r}</span>
-<span id="cb2-2"><a></a>&lt;function_name&gt; &lt;- function(&lt;parameter1&gt;, &lt;parameter2&gt;) { </span>
-<span id="cb2-3"><a></a>  Some R codes to execute based on the inputs</span>
-<span id="cb2-4"><a></a>  and at last return an output</span>
-<span id="cb2-5"><a></a>}</span>
-<span id="cb2-6"><a></a></span>
-<span id="cb2-7"><a></a>function_name(&lt;object1&gt;, </span>
-<span id="cb2-8"><a></a>              parameter2 = &lt;object2&gt;)</span>
-<span id="cb2-9"><a></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb2"><pre class="sourceCode numberSource default number-lines code-with-copy"><code class="sourceCode default"><span id="cb2-1"><a aria-label="1"></a>```{r}</span>
+<span id="cb2-2"><a aria-label="2"></a>&lt;function_name&gt; &lt;- function(&lt;parameter1&gt;, &lt;parameter2&gt;) { </span>
+<span id="cb2-3"><a aria-label="3"></a>  Some R codes to execute based on the inputs</span>
+<span id="cb2-4"><a aria-label="4"></a>  and at last return an output</span>
+<span id="cb2-5"><a aria-label="5"></a>}</span>
+<span id="cb2-6"><a aria-label="6"></a></span>
+<span id="cb2-7"><a aria-label="7"></a>function_name(&lt;object1&gt;, </span>
+<span id="cb2-8"><a aria-label="8"></a>              parameter2 = &lt;object2&gt;)</span>
+<span id="cb2-9"><a aria-label="9"></a>```</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
 <p>You only need to define functions once in your code. Then, you can call it by its name.</p>
 </section>
 <section id="activities-for-today" class="slide level2">
