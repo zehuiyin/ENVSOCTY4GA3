@@ -412,11 +412,23 @@ Settings > Privacy & security > Windows Security > App & browser control > Smart
 
 ## Xcode and GNU Fortran for macOS users
 
+:::: {.columns}
+
+::: {.column width="50%"}
+
 [mac.r-project.org/tools](https://mac.r-project.org/tools/)
 
 ![](../../../2025-Winter/slides/1-intro/images/xcode.png){height=350px}
 
-- In order to compile R for macOS, you will need **both** `Xcode` and `GNU Fortran compiler`.
+:::
+
+::: {.column width="50%"}
+
+In order to compile R for macOS, you will need **both** `Xcode` and `GNU Fortran compiler`.
+
+:::
+
+::::
 
 ## Homebrew and GDAL for macOS users
 
