@@ -483,7 +483,7 @@
     "href": "2026-Fall/slides/1-intro/index.html#rtools-4.5-for-windows-users",
     "title": "ENVSOCTY 4GA3",
     "section": "Rtools 4.5 for Windows users",
-    "text": "Rtools 4.5 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nNote: If you are using macOS or Linux, Rtools is not required."
+    "text": "Rtools 4.5 for Windows users\nmirror.csclub.uwaterloo.ca/CRAN/bin/windows/Rtools\n\n\nEnsure you download the Rtools version that matches your installed R version.\nRtools is a set of programs required on Windows to build R packages from source.\nIf you are using macOS or Linux, Rtools is not required."
   },
   {
     "objectID": "2026-Fall/slides/1-intro/index.html#windows-11-users-turn-off-smart-app-control-optional",
