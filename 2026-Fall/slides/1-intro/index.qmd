@@ -402,7 +402,7 @@ Applied-Spatial-Statistics/
 
 - Ensure you download the `Rtools` version that matches your installed R version.
 - `Rtools` is a set of programs required on **Windows** to build R packages from source.
-- Note: If you are using macOS or Linux, `Rtools` is **not** required.
+- If you are using macOS or Linux, `Rtools` is **not** required.
 
 ## Windows 11 users: turn off Smart App Control (Optional)
 
