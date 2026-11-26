@@ -129,7 +129,7 @@ Once the optimal weights $\lambda$ are obtained for location $s_p$, the Gaussian
 - We will work on the following chapter from the textbook:
   - Chapter [36](https://paezha.github.io/spatial-analysis-r/activity-17-spatially-continuous-data-iii.html): Activity 17: Spatially Continuous Data III
   - Chapter [38](https://paezha.github.io/spatial-analysis-r/activity-18-spatially-continuous-data-iv.html): Activity 18: Spatially Continuous Data IV
-- The hard deadline is **Thursday**, **November 26**.
+- The hard deadline is **Thursday**, **December 3**.
 
 ## Reference
 
